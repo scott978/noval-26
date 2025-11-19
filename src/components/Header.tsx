@@ -5,7 +5,7 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
       <nav className="container mx-auto px-6 lg:px-12 py-6">
         <div className="flex items-center justify-between">
-          <NavLink to="/" className="text-2xl font-serif tracking-tight">
+          <NavLink to="/" className="text-2xl font-heading font-extrabold tracking-tight">
             Novalé
           </NavLink>
           

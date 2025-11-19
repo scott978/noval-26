@@ -6,9 +6,9 @@ const Footer = () => {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div>
-            <h3 className="text-2xl font-serif mb-4">Artisan</h3>
+            <h3 className="text-2xl font-serif mb-4">Novalé</h3>
             <p className="text-sm text-muted-foreground">
-              Premium residential renovations for discerning homeowners.
+              Sydney's leading bathroom, kitchen & laundry renovation specialists. We deliver dreams.
             </p>
           </div>
           
@@ -48,18 +48,19 @@ const Footer = () => {
           <div>
             <h4 className="text-sm font-semibold mb-4 tracking-wide">Contact</h4>
             <div className="flex flex-col space-y-2 text-sm text-muted-foreground">
-              <a href="mailto:hello@artisan.com" className="hover:text-foreground transition-colors">
-                hello@artisan.com
+              <a href="mailto:info@novale.com.au" className="hover:text-foreground transition-colors">
+                info@novale.com.au
               </a>
-              <a href="tel:+1234567890" className="hover:text-foreground transition-colors">
-                +1 (234) 567-890
+              <a href="tel:1300668253" className="hover:text-foreground transition-colors">
+                1300 NOVALE
               </a>
+              <p className="mt-2">Sydney, NSW</p>
             </div>
           </div>
         </div>
         
         <div className="mt-12 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Artisan Renovations. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Novalé. All rights reserved.</p>
         </div>
       </div>
     </footer>

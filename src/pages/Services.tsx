@@ -6,42 +6,45 @@ import projectLaundry from "@/assets/project-laundry.jpg";
 const Services = () => {
   const services = [
     {
+      title: "Bathroom Renovations",
+      description: "Transform your bathroom into a stunning sanctuary that enhances your daily routine. Whether it's a compact ensuite or a luxurious master bathroom, Novalé expertly blends premium materials, quality craftsmanship, and timeless style to create functional, beautiful spaces.",
+      image: projectBathroom,
+      link: "/services/bathroom",
+      features: [
+        "Custom vanities and storage solutions",
+        "Premium tiles and natural stone",
+        "High-quality fixtures and fittings",
+        "Frameless shower screens",
+        "Underfloor heating",
+        "Smart storage design"
+      ]
+    },
+    {
       title: "Kitchen Renovations",
-      description: "The heart of the home deserves exceptional design. Our kitchen renovations combine sophisticated aesthetics with practical functionality, creating spaces that inspire culinary creativity and social connection.",
+      description: "Create the kitchen of your dreams—the heart of your home where memories are made. Our team delivers functional, beautiful kitchens that combine sophisticated design with practical layouts, all completed on time and within budget.",
       image: projectKitchen,
       link: "/services/kitchen",
       features: [
         "Custom cabinetry and joinery",
-        "Premium stone benchtops",
-        "Integrated appliances",
-        "Bespoke storage solutions",
-        "Designer lighting schemes"
-      ]
-    },
-    {
-      title: "Bathroom Renovations",
-      description: "Transform your bathroom into a personal sanctuary. We craft serene spaces that balance luxury with functionality, using premium materials and refined design principles.",
-      image: projectBathroom,
-      link: "/services/bathroom",
-      features: [
-        "Natural stone and tile selections",
-        "Custom vanities and storage",
-        "Luxurious fixtures and fittings",
-        "Elegant lighting design",
-        "Heated floors and towel rails"
+        "Stone benchtops (marble, granite, engineered)",
+        "Premium appliance integration",
+        "Designer lighting solutions",
+        "Innovative storage systems",
+        "Quality hardware and fixtures"
       ]
     },
     {
       title: "Laundry Renovations",
-      description: "Elevate your utility spaces. Our laundry renovations prove that practical spaces can be beautiful, combining efficient layouts with considered design.",
+      description: "Elevate your laundry space with clever design and premium finishes. We maximize functionality while maintaining the sophisticated aesthetic throughout your home, creating organized, efficient spaces you'll actually enjoy using.",
       image: projectLaundry,
       link: "/services/laundry",
       features: [
         "Efficient spatial planning",
-        "Custom storage solutions",
-        "Quality fixtures and fittings",
-        "Integrated drying systems",
-        "Durable, easy-care finishes"
+        "Custom cabinetry and benchtops",
+        "Integrated drying solutions",
+        "Quality tapware and fittings",
+        "Durable, easy-care finishes",
+        "Smart storage integration"
       ]
     }
   ];
@@ -52,9 +55,9 @@ const Services = () => {
         <div className="max-w-4xl mx-auto mb-24">
           <h1 className="text-6xl lg:text-7xl font-serif mb-8 fade-in">Our Services</h1>
           <p className="text-xl text-muted-foreground fade-in">
-            We specialise in high-end residential renovations, focusing on the three spaces 
-            that define modern living: kitchens, bathrooms and laundries. Each service is 
-            delivered with the same commitment to design excellence and meticulous craftsmanship.
+            For over 22 years, Novalé has been delivering exceptional bathroom, kitchen and 
+            laundry renovations across Sydney. We handle everything from design to installation, 
+            ensuring a stress-free experience and stunning results.
           </p>
         </div>
 
@@ -102,36 +105,37 @@ const Services = () => {
           ))}
         </div>
 
-        {/* Process Overview */}
+        {/* The Journey Section */}
         <section className="mt-32 pt-32 border-t border-border">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-serif mb-8">How We Work</h2>
+            <h2 className="text-4xl font-serif mb-8">The Journey</h2>
             <p className="text-muted-foreground leading-relaxed mb-12">
-              Every project follows our refined process, ensuring clarity, collaboration and 
-              exceptional results from initial consultation through to final installation.
+              Our proven process ensures your renovation runs smoothly from start to finish. 
+              You'll be guided by experts every step of the way, with clear communication and 
+              transparent timelines.
             </p>
             
             <div className="space-y-8">
               {[
                 { 
-                  phase: "Discovery", 
-                  description: "We begin by understanding your vision, lifestyle and practical requirements. This foundation shapes every decision that follows." 
+                  phase: "Free Consultation", 
+                  description: "Share your vision in a no-obligation consultation. We'll discuss your needs, timeline, and budget, and provide initial advice." 
                 },
                 { 
-                  phase: "Design Development", 
-                  description: "Our team develops detailed designs that balance aesthetic aspiration with functional excellence. You'll see your space come to life through renders and material selections." 
+                  phase: "Design & Quote", 
+                  description: "Receive your detailed quote and stunning 3D renders within days. Our free online estimate gives you accurate cost and timeline expectations—it only takes 2 minutes!" 
                 },
                 { 
-                  phase: "Documentation", 
-                  description: "Comprehensive documentation ensures nothing is left to chance. Every detail is specified, approved and ready for construction." 
+                  phase: "Planning & Approvals", 
+                  description: "We handle all the paperwork, permits, and council approvals. You won't need to worry about any administrative tasks." 
                 },
                 { 
                   phase: "Construction", 
-                  description: "Our skilled craftspeople bring the design to reality, maintaining the highest standards throughout. You'll have regular updates and transparent communication." 
+                  description: "Our experienced team transforms your space with meticulous attention to detail. We keep you informed with regular updates throughout the build." 
                 },
                 { 
-                  phase: "Completion", 
-                  description: "A thorough handover ensures you understand every aspect of your new space. We stand behind our work with comprehensive warranties." 
+                  phase: "Final Handover", 
+                  description: "Walk through your completed renovation with our team. We ensure everything meets your expectations and provide care instructions for your new space." 
                 }
               ].map((step, index) => (
                 <div key={index} className="border-b border-border pb-6">
@@ -143,17 +147,39 @@ const Services = () => {
           </div>
         </section>
 
+        {/* Why Choose Novalé */}
+        <section className="mt-32 pt-32 border-t border-border">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-serif mb-12">Why Choose Novalé?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {[
+                { title: "ISO 9001 Certified", desc: "First bathroom renovation company in Australia to achieve this certification" },
+                { title: "22+ Years Experience", desc: "Thousands of successful renovations across Sydney" },
+                { title: "Free Online Estimates", desc: "Get accurate cost and time expectations in just 2 minutes" },
+                { title: "Stress-Free Process", desc: "We handle everything from design to final installation" },
+                { title: "On Time, On Budget", desc: "We deliver what we promise, every time" },
+                { title: "Award-Winning", desc: "Multiple Houzz and HIA awards for excellence" },
+              ].map((item, index) => (
+                <div key={index} className="fade-in">
+                  <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="mt-32 pt-32 border-t border-border text-center">
-          <h2 className="text-4xl font-serif mb-6">Ready to begin?</h2>
+          <h2 className="text-4xl font-serif mb-6">Ready to start your renovation?</h2>
           <p className="text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Let's discuss your project and explore how we can create something exceptional together
+            Get a free online estimate and discover how Novalé can create your dream space
           </p>
           <NavLink 
             to="/contact"
-            className="inline-block text-sm tracking-wide px-8 py-3 border border-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+            className="inline-block text-sm tracking-wide px-8 py-3 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
           >
-            Get in Touch
+            Get Your Free Quote
           </NavLink>
         </section>
       </div>

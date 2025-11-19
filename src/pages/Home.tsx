@@ -147,7 +147,7 @@ const Home = () => {
               { number: "04", title: "Transformation", description: "Our expert team brings your dream space to life, keeping you informed every step of the way." },
             ].map((step, index) => (
               <div key={index} className="fade-in">
-                <div className="text-6xl font-serif text-accent mb-4">{step.number}</div>
+                <div className="text-6xl font-serif text-primary/40 mb-4">{step.number}</div>
                 <h3 className="text-xl font-serif mb-3">{step.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   {step.description}
@@ -168,7 +168,7 @@ const Home = () => {
           </p>
           <NavLink 
             to="/contact"
-            className="inline-block text-sm tracking-wide px-8 py-3 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors mr-4"
+            className="inline-block text-sm tracking-wide px-8 py-3 bg-primary text-primary-foreground hover:bg-brand-teal-dark transition-colors mr-4"
           >
             Get Your Free Quote
           </NavLink>

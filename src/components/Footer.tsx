@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div>
-            <h3 className="text-2xl font-serif mb-4">Novalé</h3>
+            <h3 className="text-2xl font-heading font-extrabold mb-4">Novalé</h3>
             <p className="text-sm text-muted-foreground">
               Sydney's leading bathroom, kitchen & laundry renovation specialists. We deliver dreams.
             </p>

@@ -13,14 +13,19 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="fade-in">
               <h1 className="text-6xl lg:text-7xl font-serif leading-tight mb-8">
-                Refined spaces,<br />thoughtfully designed
+                We Deliver<br />Dreams
               </h1>
             </div>
             <div className="fade-in">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                For over 22 years, Novalé has been Sydney's trusted choice for stunning 
+                bathroom, kitchen and laundry renovations. We blend premium materials, 
+                quality craftsmanship, and timeless style to deliver dream spaces on time, 
+                within budget, and to specification.
+              </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                We specialise in creating exceptional kitchen, bathroom and laundry spaces 
-                that embody timeless design and meticulous craftsmanship. Each project is 
-                approached with architectural precision and an unwavering commitment to quality.
+                We're refreshingly open, design-driven, knowledgeable, and professional—pairing 
+                old school values with a new school approach.
               </p>
             </div>
           </div>
@@ -32,7 +37,7 @@ const Home = () => {
         <div className="container mx-auto px-6 lg:px-12">
           <img 
             src={heroImage} 
-            alt="Premium kitchen renovation" 
+            alt="Premium kitchen renovation Sydney" 
             className="w-full h-[70vh] object-cover fade-in"
           />
         </div>
@@ -42,8 +47,8 @@ const Home = () => {
       <section className="py-24 border-y border-border">
         <div className="container mx-auto px-6 lg:px-12">
           <p className="text-3xl lg:text-4xl font-serif text-center max-w-4xl mx-auto leading-relaxed">
-            We believe exceptional design emerges from the careful balance of beauty, 
-            functionality, and enduring quality
+            Our highly satisfied clients enjoy a stress-free renovation experience, 
+            guided from start to finish by experts committed to bringing their vision to life
           </p>
         </div>
       </section>
@@ -51,13 +56,13 @@ const Home = () => {
       {/* Featured Projects */}
       <section className="py-32 px-6 lg:px-12">
         <div className="container mx-auto">
-          <h2 className="text-5xl font-serif mb-16">Selected Projects</h2>
+          <h2 className="text-5xl font-serif mb-16">Our Projects</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { image: projectKitchen, title: "Toorak Residence", location: "Kitchen Renovation", category: "kitchen" },
-              { image: projectBathroom, title: "Brighton Manor", location: "Bathroom Renovation", category: "bathroom" },
-              { image: projectLaundry, title: "South Yarra Terrace", location: "Laundry Renovation", category: "laundry" },
+              { image: projectBathroom, title: "Vaucluse Bathroom", location: "Vaucluse, Sydney", category: "bathroom" },
+              { image: projectKitchen, title: "Mosman Kitchen", location: "Mosman, Sydney", category: "kitchen" },
+              { image: projectLaundry, title: "Double Bay Laundry", location: "Double Bay, Sydney", category: "laundry" },
             ].map((project, index) => (
               <NavLink 
                 key={index}
@@ -97,18 +102,18 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
             {[
               {
-                title: "Kitchen Renovations",
-                description: "Crafting culinary spaces that seamlessly blend form and function, where every detail serves both aesthetic and practical purpose.",
-                link: "/services/kitchen"
-              },
-              {
                 title: "Bathroom Renovations",
-                description: "Transforming bathrooms into sanctuaries of tranquility, combining luxurious materials with thoughtful spatial design.",
+                description: "Transform your bathroom into a stunning sanctuary. From compact ensuites to luxurious master bathrooms, we expertly blend premium materials and quality craftsmanship.",
                 link: "/services/bathroom"
               },
               {
+                title: "Kitchen Renovations",
+                description: "Create the kitchen of your dreams. Whether contemporary or classic, our team delivers functional, beautiful spaces that become the heart of your home.",
+                link: "/services/kitchen"
+              },
+              {
                 title: "Laundry Renovations",
-                description: "Elevating utility spaces through intelligent design, creating efficient environments that don't compromise on style.",
+                description: "Elevate your laundry space with clever design and premium finishes. We maximize functionality while maintaining the sophisticated aesthetic throughout your home.",
                 link: "/services/laundry"
               },
             ].map((service, index) => (
@@ -129,17 +134,17 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Process Snapshot */}
+      {/* The Journey / Process */}
       <section className="py-32 px-6 lg:px-12">
         <div className="container mx-auto">
-          <h2 className="text-5xl font-serif mb-16 text-center">Our Process</h2>
+          <h2 className="text-5xl font-serif mb-16 text-center">The Journey</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             {[
-              { number: "01", title: "Consultation", description: "Understanding your vision, lifestyle and aspirations for the space" },
-              { number: "02", title: "Design", description: "Developing concepts that balance aesthetics with functional excellence" },
-              { number: "03", title: "Refinement", description: "Perfecting every detail through collaborative iteration" },
-              { number: "04", title: "Execution", description: "Bringing the design to life with precision and care" },
+              { number: "01", title: "Discovery", description: "Share your vision with us in a free consultation. We'll discuss your needs, timeline, and budget." },
+              { number: "02", title: "Design & Quote", description: "Receive your detailed quote and 3D renders within days. Get accurate cost and timeline expectations." },
+              { number: "03", title: "Documentation", description: "We handle all permits, plans, and approvals so you don't have to worry about the paperwork." },
+              { number: "04", title: "Transformation", description: "Our expert team brings your dream space to life, keeping you informed every step of the way." },
             ].map((step, index) => (
               <div key={index} className="fade-in">
                 <div className="text-6xl font-serif text-accent mb-4">{step.number}</div>
@@ -153,18 +158,70 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Free Estimate CTA */}
+      <section className="py-32 px-6 lg:px-12 bg-secondary/30">
+        <div className="container mx-auto text-center max-w-4xl">
+          <h2 className="text-5xl font-serif mb-6">Get a Free Online Estimate</h2>
+          <p className="text-lg text-muted-foreground mb-10">
+            Want to know how much your renovation will cost and how long it will take? 
+            Complete our free online estimate to get accurate expectations. It only takes 2 minutes!
+          </p>
+          <NavLink 
+            to="/contact"
+            className="inline-block text-sm tracking-wide px-8 py-3 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors mr-4"
+          >
+            Get Your Free Quote
+          </NavLink>
+          <NavLink 
+            to="/projects"
+            className="inline-block text-sm tracking-wide px-8 py-3 border border-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+          >
+            View Our Work
+          </NavLink>
+        </div>
+      </section>
+
+      {/* Awards & Credentials */}
+      <section className="py-32 px-6 lg:px-12">
+        <div className="container mx-auto text-center">
+          <h2 className="text-5xl font-serif mb-8">Awards & Qualifications</h2>
+          <p className="text-lg text-muted-foreground mb-16 max-w-3xl mx-auto">
+            Novalé is proud to be the first bathroom renovation company to receive ISO 9001 certification. 
+            We're also award-winning members of Master Builders and HIA.
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-12 opacity-60">
+            <div className="text-center">
+              <div className="text-4xl font-serif mb-2">ISO 9001</div>
+              <p className="text-sm text-muted-foreground">Certified</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-serif mb-2">Houzz</div>
+              <p className="text-sm text-muted-foreground">2021-2025</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-serif mb-2">HIA</div>
+              <p className="text-sm text-muted-foreground">Finalist</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-serif mb-2">MBA</div>
+              <p className="text-sm text-muted-foreground">Member</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-32 px-6 lg:px-12 bg-primary text-primary-foreground">
         <div className="container mx-auto text-center">
-          <h2 className="text-5xl font-serif mb-6">Begin your renovation journey</h2>
+          <h2 className="text-5xl font-serif mb-6">Ready to create your dream space?</h2>
           <p className="text-lg mb-10 max-w-2xl mx-auto opacity-90">
-            Let's discuss how we can transform your space into something extraordinary
+            Let's bring your vision to life with a stress-free renovation experience
           </p>
           <NavLink 
             to="/contact"
             className="inline-block text-sm tracking-wide px-8 py-3 border border-primary-foreground hover:bg-primary-foreground hover:text-primary transition-colors"
           >
-            Get in Touch
+            Start Your Journey
           </NavLink>
         </div>
       </section>

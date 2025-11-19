@@ -4,49 +4,49 @@ import projectBathroom from "@/assets/project-bathroom.jpg";
 import projectLaundry from "@/assets/project-laundry.jpg";
 import { NavLink } from "@/components/NavLink";
 
-type ProjectCategory = "all" | "kitchen" | "bathroom" | "laundry";
+type ProjectCategory = "all" | "bathroom" | "kitchen" | "laundry";
 
 const projects = [
   { 
     id: 1, 
-    image: projectKitchen, 
-    title: "Toorak Residence", 
-    location: "Toorak, VIC", 
-    category: "kitchen" as ProjectCategory 
+    image: projectBathroom, 
+    title: "Vaucluse Bathroom", 
+    location: "Vaucluse, Sydney", 
+    category: "bathroom" as ProjectCategory 
   },
   { 
     id: 2, 
-    image: projectBathroom, 
-    title: "Brighton Manor", 
-    location: "Brighton, VIC", 
-    category: "bathroom" as ProjectCategory 
+    image: projectKitchen, 
+    title: "Mosman Kitchen", 
+    location: "Mosman, Sydney", 
+    category: "kitchen" as ProjectCategory 
   },
   { 
     id: 3, 
     image: projectLaundry, 
-    title: "South Yarra Terrace", 
-    location: "South Yarra, VIC", 
+    title: "Double Bay Laundry", 
+    location: "Double Bay, Sydney", 
     category: "laundry" as ProjectCategory 
   },
   { 
     id: 4, 
-    image: projectKitchen, 
-    title: "Armadale House", 
-    location: "Armadale, VIC", 
-    category: "kitchen" as ProjectCategory 
+    image: projectBathroom, 
+    title: "Bellevue Hill Ensuite", 
+    location: "Bellevue Hill, Sydney", 
+    category: "bathroom" as ProjectCategory 
   },
   { 
     id: 5, 
-    image: projectBathroom, 
-    title: "Malvern Estate", 
-    location: "Malvern, VIC", 
-    category: "bathroom" as ProjectCategory 
+    image: projectKitchen, 
+    title: "Rose Bay Kitchen", 
+    location: "Rose Bay, Sydney", 
+    category: "kitchen" as ProjectCategory 
   },
   { 
     id: 6, 
     image: projectLaundry, 
-    title: "St Kilda Apartment", 
-    location: "St Kilda, VIC", 
+    title: "Paddington Laundry", 
+    location: "Paddington, Sydney", 
     category: "laundry" as ProjectCategory 
   },
 ];
@@ -63,10 +63,10 @@ const Projects = () => {
       <div className="container mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="mb-16">
-          <h1 className="text-6xl lg:text-7xl font-serif mb-8 fade-in">Projects</h1>
+          <h1 className="text-6xl lg:text-7xl font-serif mb-8 fade-in">Our Projects</h1>
           <p className="text-xl text-muted-foreground max-w-2xl fade-in">
-            A collection of our recent work, showcasing our commitment to refined design 
-            and exceptional craftsmanship
+            Explore our portfolio of stunning bathroom, kitchen and laundry renovations 
+            across Sydney's most prestigious suburbs
           </p>
         </div>
 
@@ -74,10 +74,10 @@ const Projects = () => {
         <div className="mb-16 pb-8 border-b border-border">
           <div className="flex flex-wrap gap-6">
             {[
-              { label: "All", value: "all" },
-              { label: "Kitchen", value: "kitchen" },
-              { label: "Bathroom", value: "bathroom" },
-              { label: "Laundry", value: "laundry" },
+              { label: "All Projects", value: "all" },
+              { label: "Bathrooms", value: "bathroom" },
+              { label: "Kitchens", value: "kitchen" },
+              { label: "Laundries", value: "laundry" },
             ].map((option) => (
               <button
                 key={option.value}
@@ -121,6 +121,20 @@ const Projects = () => {
             </NavLink>
           ))}
         </div>
+
+        {/* CTA */}
+        <section className="mt-32 pt-32 border-t border-border text-center">
+          <h2 className="text-4xl font-serif mb-6">Ready for your own transformation?</h2>
+          <p className="text-muted-foreground mb-10 max-w-2xl mx-auto">
+            Get a free online estimate and discover how we can create your dream space
+          </p>
+          <NavLink 
+            to="/contact"
+            className="inline-block text-sm tracking-wide px-8 py-3 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+          >
+            Get Your Free Quote
+          </NavLink>
+        </section>
       </div>
     </div>
   );

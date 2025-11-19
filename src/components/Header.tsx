@@ -6,7 +6,7 @@ const Header = () => {
       <nav className="container mx-auto px-6 lg:px-12 py-6">
         <div className="flex items-center justify-between">
           <NavLink to="/" className="text-2xl font-serif tracking-tight">
-            Artisan
+            Novalé
           </NavLink>
           
           <div className="hidden md:flex items-center space-x-8">

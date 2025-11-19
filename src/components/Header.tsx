@@ -40,7 +40,7 @@ const Header = () => {
             </NavLink>
             <NavLink 
               to="/contact" 
-              className="text-sm tracking-wide px-6 py-2 border border-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+              className="text-sm tracking-wide px-6 py-2 bg-primary text-primary-foreground hover:bg-brand-teal-dark transition-colors"
             >
               Contact
             </NavLink>

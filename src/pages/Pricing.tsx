@@ -1,0 +1,182 @@
+import { NavLink } from "react-router-dom";
+import { Check } from "lucide-react";
+
+const Pricing = () => {
+  return (
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div>
+              <h1 className="text-5xl lg:text-6xl font-serif mb-6 fade-in">
+                Bathroom Pricing
+              </h1>
+            </div>
+            <div className="fade-in">
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                Transparent pricing for your bathroom renovation. We believe in complete honesty 
+                throughout your journey, starting with clear pricing guides to help you plan your 
+                dream renovation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Tiers */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Essential */}
+            <div className="border border-border p-8 fade-in">
+              <h3 className="text-2xl font-serif mb-4">Essential</h3>
+              <div className="mb-6">
+                <span className="text-4xl font-serif">$18,000</span>
+                <span className="text-muted-foreground"> - $25,000</span>
+              </div>
+              <p className="text-sm text-muted-foreground mb-6">
+                Perfect for small bathrooms or those on a tighter budget seeking quality craftsmanship.
+              </p>
+              <ul className="space-y-3 mb-8">
+                {[
+                  "Quality fixtures and fittings",
+                  "Professional waterproofing",
+                  "Standard tile selection",
+                  "Basic lighting package",
+                  "Full project management",
+                ].map((feature, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Premium */}
+            <div className="border-2 border-primary p-8 relative fade-in">
+              <div className="absolute -top-4 left-8 bg-primary text-primary-foreground px-4 py-1 text-xs tracking-wide">
+                MOST POPULAR
+              </div>
+              <h3 className="text-2xl font-serif mb-4">Premium</h3>
+              <div className="mb-6">
+                <span className="text-4xl font-serif">$25,000</span>
+                <span className="text-muted-foreground"> - $35,000</span>
+              </div>
+              <p className="text-sm text-muted-foreground mb-6">
+                Our most popular package, combining quality materials with sophisticated design.
+              </p>
+              <ul className="space-y-3 mb-8">
+                {[
+                  "Premium fixtures and fittings",
+                  "Designer tile selection",
+                  "Feature lighting package",
+                  "Custom cabinetry options",
+                  "Heated towel rail",
+                  "Full project management",
+                  "Online project tracking",
+                ].map((feature, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Luxury */}
+            <div className="border border-border p-8 fade-in">
+              <h3 className="text-2xl font-serif mb-4">Luxury</h3>
+              <div className="mb-6">
+                <span className="text-4xl font-serif">$35,000</span>
+                <span className="text-muted-foreground"> +</span>
+              </div>
+              <p className="text-sm text-muted-foreground mb-6">
+                The ultimate bathroom experience with high-end finishes and custom design.
+              </p>
+              <ul className="space-y-3 mb-8">
+                {[
+                  "Luxury fixtures and fittings",
+                  "Designer tile and stone selection",
+                  "Architectural lighting design",
+                  "Fully custom cabinetry",
+                  "Underfloor heating",
+                  "Smart bathroom technology",
+                  "Dedicated project manager",
+                  "Online project tracking",
+                ].map((feature, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What's Included */}
+      <section className="py-20 px-6 bg-secondary/30">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl font-serif mb-12 fade-in">What's Always Included</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                title: "Design Consultation",
+                description: "Work with our experienced designers to create your perfect bathroom layout and style.",
+              },
+              {
+                title: "Project Management",
+                description: "Dedicated project manager overseeing every aspect of your renovation from start to finish.",
+              },
+              {
+                title: "Quality Tradespeople",
+                description: "Licensed, insured, and experienced tradespeople committed to exceptional workmanship.",
+              },
+              {
+                title: "Waterproofing Guarantee",
+                description: "Professional waterproofing with comprehensive warranties for your peace of mind.",
+              },
+              {
+                title: "Progress Updates",
+                description: "Stay informed with regular updates through our online project management system.",
+              },
+              {
+                title: "ISO 9001 Certified",
+                description: "Quality management system ensuring consistent excellence in every project.",
+              },
+            ].map((item, index) => (
+              <div key={index} className="fade-in">
+                <h3 className="text-xl font-serif mb-3">{item.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center fade-in">
+          <h2 className="text-4xl font-serif mb-6">
+            Get Your Free Online Estimate
+          </h2>
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Start your journey with a free, no-obligation online estimate. Our team will work with 
+            you to understand your vision and provide a detailed quote.
+          </p>
+          <NavLink 
+            to="/contact"
+            className="inline-block text-sm tracking-wide px-8 py-3 bg-primary text-primary-foreground hover:bg-brand-teal-dark transition-colors"
+          >
+            Get Your Free Quote
+          </NavLink>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Pricing;

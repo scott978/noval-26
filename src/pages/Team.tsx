@@ -24,26 +24,29 @@ const Team = () => {
           alt="Novalé Team" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-foreground/30 flex items-center justify-center">
-          <div className="text-center text-background px-6">
-            <h1 className="text-5xl lg:text-6xl font-serif mb-6 fade-in">
-              Meet Our Team
-            </h1>
-            <p className="text-lg leading-relaxed max-w-2xl mx-auto fade-in">
-              The passionate professionals behind your dream renovations
-            </p>
-          </div>
-        </div>
+        <div className="absolute inset-0 bg-foreground/20"></div>
       </section>
 
       {/* Team Introduction */}
       <section className="py-24 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-xl text-muted-foreground leading-relaxed mb-16 fade-in">
-            At Novalé, our team is our greatest asset. Founded by husband and wife duo Steve and Marina 
-            Novkovic, we've grown into an extended family of skilled professionals who share a passion 
-            for delivering exceptional renovations.
-          </p>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div>
+              <h1 className="text-5xl lg:text-6xl font-serif mb-6 fade-in">
+                Meet Our Team
+              </h1>
+            </div>
+            <div className="space-y-6 fade-in">
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                At Novalé, our team is our greatest asset. Founded by husband and wife duo Steve and Marina 
+                Novkovic, we've grown into an extended family of skilled professionals who share a passion 
+                for delivering exceptional renovations.
+              </p>
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                The passionate professionals behind your dream renovations, dedicated to bringing your vision to life.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

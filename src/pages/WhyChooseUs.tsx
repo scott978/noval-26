@@ -13,15 +13,29 @@ const WhyChooseUs = () => {
           alt="Why Choose Novalé" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-foreground/30 flex items-center justify-center">
-          <div className="text-center text-background px-6">
-            <h1 className="text-5xl lg:text-6xl font-serif mb-6 fade-in">
-              Why Choose Novalé
-            </h1>
-            <p className="text-lg leading-relaxed max-w-2xl mx-auto fade-in">
-              We set out to be leaders in the bathroom renovation space by being refreshingly open, 
-              design driven, knowledgeable and professional.
-            </p>
+        <div className="absolute inset-0 bg-foreground/20"></div>
+      </section>
+
+      {/* Introduction */}
+      <section className="py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div>
+              <h1 className="text-5xl lg:text-6xl font-serif mb-6 fade-in">
+                Why Choose Novalé
+              </h1>
+            </div>
+            <div className="space-y-6 fade-in">
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                We set out to be leaders in the bathroom renovation space by being refreshingly open, 
+                design driven, knowledgeable and professional. Old school values with a new school approach.
+              </p>
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                Our aim is to make it easy for you by joining the dots throughout your journey, from 
+                design, layout and materials to quotation and installation; demystifying all the 
+                stumbling blocks along the way.
+              </p>
+            </div>
           </div>
         </div>
       </section>

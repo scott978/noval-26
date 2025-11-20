@@ -1,7 +1,9 @@
 import { NavLink } from "@/components/NavLink";
+import { CheckCircle2, ClipboardCheck, HardHat, Home, Sparkles } from "lucide-react";
 import projectKitchen from "@/assets/project-kitchen.jpg";
 import projectBathroom from "@/assets/project-bathroom.jpg";
 import projectLaundry from "@/assets/project-laundry.jpg";
+import aboutHero from "@/assets/about-hero.jpg";
 
 const Services = () => {
   const services = [
@@ -118,53 +120,77 @@ const Services = () => {
             <div className="space-y-8">
               {[
                 { 
-                  phase: "Free Consultation", 
+                  phase: "Free Consultation",
+                  icon: Home,
                   description: "Share your vision in a no-obligation consultation. We'll discuss your needs, timeline, and budget, and provide initial advice." 
                 },
                 { 
-                  phase: "Design & Quote", 
+                  phase: "Design & Quote",
+                  icon: ClipboardCheck,
                   description: "Receive your detailed quote and stunning 3D renders within days. Our free online estimate gives you accurate cost and timeline expectations—it only takes 2 minutes!" 
                 },
                 { 
-                  phase: "Planning & Approvals", 
+                  phase: "Planning & Approvals",
+                  icon: CheckCircle2,
                   description: "We handle all the paperwork, permits, and council approvals. You won't need to worry about any administrative tasks." 
                 },
                 { 
-                  phase: "Construction", 
+                  phase: "Construction",
+                  icon: HardHat,
                   description: "Our experienced team transforms your space with meticulous attention to detail. We keep you informed with regular updates throughout the build." 
                 },
                 { 
-                  phase: "Final Handover", 
+                  phase: "Final Handover",
+                  icon: Sparkles,
                   description: "Walk through your completed renovation with our team. We ensure everything meets your expectations and provide care instructions for your new space." 
                 }
-              ].map((step, index) => (
-                <div key={index} className="border-b border-border pb-6">
-                  <h3 className="text-xl font-serif mb-2">{step.phase}</h3>
-                  <p className="text-sm text-muted-foreground">{step.description}</p>
-                </div>
-              ))}
+              ].map((step, index) => {
+                const Icon = step.icon;
+                return (
+                  <div key={index} className="border-l-2 border-brand-teal pl-6 pb-6">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-brand-teal/10 p-3 rounded-full">
+                        <Icon className="w-6 h-6 text-brand-teal" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-serif mb-2">{step.phase}</h3>
+                        <p className="text-sm text-muted-foreground">{step.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
 
         {/* Why Choose Novalé */}
         <section className="mt-32 pt-32 border-t border-border">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-serif mb-12">Why Choose Novalé?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {[
-                { title: "ISO 9001 Certified", desc: "First bathroom renovation company in Australia to achieve this certification" },
-                { title: "22+ Years Experience", desc: "Thousands of successful renovations across Sydney" },
-                { title: "Free Online Estimates", desc: "Get accurate cost and time expectations in just 2 minutes" },
-                { title: "Stress-Free Process", desc: "We handle everything from design to final installation" },
-                { title: "On Time, On Budget", desc: "We deliver what we promise, every time" },
-                { title: "Award-Winning", desc: "Multiple Houzz and HIA awards for excellence" },
-              ].map((item, index) => (
-                <div key={index} className="fade-in">
-                  <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground">{item.desc}</p>
-                </div>
-              ))}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <img 
+                  src={aboutHero} 
+                  alt="Novalé craftsmanship" 
+                  className="w-full h-[500px] object-cover"
+                />
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {[
+                  { title: "ISO 9001 Certified", desc: "First bathroom renovation company in Australia to achieve this certification" },
+                  { title: "22+ Years Experience", desc: "Thousands of successful renovations across Sydney" },
+                  { title: "Free Online Estimates", desc: "Get accurate cost and time expectations in just 2 minutes" },
+                  { title: "Stress-Free Process", desc: "We handle everything from design to final installation" },
+                  { title: "On Time, On Budget", desc: "We deliver what we promise, every time" },
+                  { title: "Award-Winning", desc: "Multiple Houzz and HIA awards for excellence" },
+                ].map((item, index) => (
+                  <div key={index} className="fade-in">
+                    <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>

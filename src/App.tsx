@@ -14,6 +14,7 @@ import WhyChooseUs from "./pages/WhyChooseUs";
 import WhoIsNovale from "./pages/WhoIsNovale";
 import BathroomProjects from "./pages/BathroomProjects";
 import Pricing from "./pages/Pricing";
+import Team from "./pages/Team";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/why-choose-us" element={<WhyChooseUs />} />
           <Route path="/who-is-novale" element={<WhoIsNovale />} />
+          <Route path="/team" element={<Team />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/bathroom-projects" element={<BathroomProjects />} />
           <Route path="/services" element={<Services />} />

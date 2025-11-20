@@ -1,29 +1,44 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { ArrowUpRight } from "lucide-react";
 import projectBathroom from "@/assets/project-bathroom.jpg";
 import projectKitchen from "@/assets/project-kitchen.jpg";
 import projectLaundry from "@/assets/project-laundry.jpg";
 
 type FilterType = "all" | "classic" | "modern" | "sleek" | "tranquil";
+type RoomType = "all" | "bathroom" | "kitchen" | "laundry";
+type Location = string;
 
 const BathroomProjects = () => {
-  const [filter, setFilter] = useState<FilterType>("all");
+  const [moodFilter, setMoodFilter] = useState<FilterType>("all");
+  const [roomFilter, setRoomFilter] = useState<RoomType>("all");
+  const [locationFilter, setLocationFilter] = useState<Location>("all");
+  const [keywordFilter, setKeywordFilter] = useState("");
 
   const projects = [
-    { id: 1, image: projectBathroom, title: "Modern Luxury", location: "Stanmore", mood: "modern" as FilterType },
-    { id: 2, image: projectKitchen, title: "Classic Charm", location: "Randwick", mood: "classic" as FilterType },
-    { id: 3, image: projectLaundry, title: "Sleek Sanctuary", location: "Balgowlah", mood: "sleek" as FilterType },
-    { id: 4, image: projectBathroom, title: "Tranquil Retreat", location: "Glebe", mood: "tranquil" as FilterType },
-    { id: 5, image: projectKitchen, title: "Modern Elegance", location: "Kirribilli", mood: "modern" as FilterType },
-    { id: 6, image: projectLaundry, title: "Classic Sophistication", location: "Maroubra", mood: "classic" as FilterType },
-    { id: 7, image: projectBathroom, title: "Sleek Minimalism", location: "Seaforth", mood: "sleek" as FilterType },
-    { id: 8, image: projectKitchen, title: "Tranquil Spa", location: "Marrickville", mood: "tranquil" as FilterType },
-    { id: 9, image: projectLaundry, title: "Modern Serenity", location: "Rozelle", mood: "modern" as FilterType },
+    { id: 1, image: projectBathroom, title: "Modern Luxury", location: "Stanmore", mood: "modern" as FilterType, room: "bathroom" as RoomType },
+    { id: 2, image: projectKitchen, title: "Classic Charm", location: "Randwick", mood: "classic" as FilterType, room: "kitchen" as RoomType },
+    { id: 3, image: projectLaundry, title: "Sleek Sanctuary", location: "Balgowlah", mood: "sleek" as FilterType, room: "laundry" as RoomType },
+    { id: 4, image: projectBathroom, title: "Tranquil Retreat", location: "Glebe", mood: "tranquil" as FilterType, room: "bathroom" as RoomType },
+    { id: 5, image: projectKitchen, title: "Modern Elegance", location: "Kirribilli", mood: "modern" as FilterType, room: "kitchen" as RoomType },
+    { id: 6, image: projectLaundry, title: "Classic Sophistication", location: "Maroubra", mood: "classic" as FilterType, room: "laundry" as RoomType },
+    { id: 7, image: projectBathroom, title: "Sleek Minimalism", location: "Seaforth", mood: "sleek" as FilterType, room: "bathroom" as RoomType },
+    { id: 8, image: projectKitchen, title: "Tranquil Spa", location: "Marrickville", mood: "tranquil" as FilterType, room: "kitchen" as RoomType },
+    { id: 9, image: projectLaundry, title: "Modern Serenity", location: "Rozelle", mood: "modern" as FilterType, room: "laundry" as RoomType },
   ];
 
-  const filteredProjects = filter === "all" 
-    ? projects 
-    : projects.filter(project => project.mood === filter);
+  const uniqueLocations = ["all", ...Array.from(new Set(projects.map(p => p.location)))];
+
+  const filteredProjects = projects.filter(project => {
+    const matchesMood = moodFilter === "all" || project.mood === moodFilter;
+    const matchesRoom = roomFilter === "all" || project.room === roomFilter;
+    const matchesLocation = locationFilter === "all" || project.location === locationFilter;
+    const matchesKeyword = keywordFilter === "" || 
+      project.title.toLowerCase().includes(keywordFilter.toLowerCase()) ||
+      project.location.toLowerCase().includes(keywordFilter.toLowerCase());
+    
+    return matchesMood && matchesRoom && matchesLocation && matchesKeyword;
+  });
 
   return (
     <div className="min-h-screen">
@@ -42,31 +57,82 @@ const BathroomProjects = () => {
       </section>
 
       {/* Filter Bar */}
-      <section className="py-8 px-6 border-t border-b border-border">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-2">
-            <span className="text-sm text-muted-foreground mr-4">Browse by Mood:</span>
-            <div className="flex flex-wrap gap-2">
-              {[
-                { label: "All", value: "all" as FilterType },
-                { label: "Classic Charm", value: "classic" as FilterType },
-                { label: "Modern Luxe", value: "modern" as FilterType },
-                { label: "Sleek Sanctuary", value: "sleek" as FilterType },
-                { label: "Tranquil Retreat", value: "tranquil" as FilterType },
-              ].map((item) => (
-                <button
-                  key={item.value}
-                  onClick={() => setFilter(item.value)}
-                  className={`text-sm tracking-wide px-4 py-2 transition-colors ${
-                    filter === item.value
-                      ? "bg-primary text-primary-foreground"
-                      : "border border-input hover:bg-secondary"
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
+      <section className="py-8 px-6 border-t border-b border-border bg-secondary/30">
+        <div className="max-w-7xl mx-auto space-y-6">
+          {/* Keyword Search */}
+          <div>
+            <input
+              type="text"
+              placeholder="Search by keyword..."
+              value={keywordFilter}
+              onChange={(e) => setKeywordFilter(e.target.value)}
+              className="w-full px-4 py-2 border border-border bg-background focus:outline-none focus:ring-1 focus:ring-primary"
+            />
+          </div>
+
+          {/* Mood Filter */}
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="text-sm text-muted-foreground mr-2">Mood:</span>
+            {[
+              { label: "All", value: "all" as FilterType },
+              { label: "Classic Charm", value: "classic" as FilterType },
+              { label: "Modern Luxe", value: "modern" as FilterType },
+              { label: "Sleek Sanctuary", value: "sleek" as FilterType },
+              { label: "Tranquil Retreat", value: "tranquil" as FilterType },
+            ].map((item) => (
+              <button
+                key={item.value}
+                onClick={() => setMoodFilter(item.value)}
+                className={`text-sm tracking-wide px-4 py-2 transition-colors ${
+                  moodFilter === item.value
+                    ? "bg-primary text-primary-foreground"
+                    : "border border-input hover:bg-secondary"
+                }`}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Room Type Filter */}
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="text-sm text-muted-foreground mr-2">Room:</span>
+            {[
+              { label: "All", value: "all" as RoomType },
+              { label: "Bathroom", value: "bathroom" as RoomType },
+              { label: "Kitchen", value: "kitchen" as RoomType },
+              { label: "Laundry", value: "laundry" as RoomType },
+            ].map((item) => (
+              <button
+                key={item.value}
+                onClick={() => setRoomFilter(item.value)}
+                className={`text-sm tracking-wide px-4 py-2 transition-colors ${
+                  roomFilter === item.value
+                    ? "bg-primary text-primary-foreground"
+                    : "border border-input hover:bg-secondary"
+                }`}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Location Filter */}
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="text-sm text-muted-foreground mr-2">Location:</span>
+            {uniqueLocations.map((location) => (
+              <button
+                key={location}
+                onClick={() => setLocationFilter(location)}
+                className={`text-sm tracking-wide px-4 py-2 transition-colors ${
+                  locationFilter === location
+                    ? "bg-primary text-primary-foreground"
+                    : "border border-input hover:bg-secondary"
+                }`}
+              >
+                {location.charAt(0).toUpperCase() + location.slice(1)}
+              </button>
+            ))}
           </div>
         </div>
       </section>
@@ -88,6 +154,9 @@ const BathroomProjects = () => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/70 transition-colors duration-500">
+                  <div className="absolute top-4 right-4 bg-brand-teal p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <ArrowUpRight className="w-6 h-6 text-white" />
+                  </div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-background translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                     <h3 className="text-2xl font-serif mb-2">{project.title}</h3>
                     <p className="text-sm">{project.location}</p>

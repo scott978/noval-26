@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import aboutHero from "@/assets/about-hero.jpg";
 
 const About = () => {
@@ -35,38 +36,53 @@ const About = () => {
         </div>
       </section>
 
-      {/* What Sets Us Apart */}
+      {/* Navigation Cards */}
       <section className="py-32 px-6 lg:px-12 bg-secondary/30">
         <div className="container mx-auto">
-          <h2 className="text-5xl font-serif mb-16 text-center">What sets us apart</h2>
+          <h2 className="text-5xl font-serif mb-16 text-center">Discover More About Us</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 max-w-6xl mx-auto">
-            <div className="fade-in">
-              <h3 className="text-2xl font-serif mb-4">ISO 9001 Certified</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                We're the first bathroom renovation company in Australia to receive ISO 9001 
-                certification, demonstrating our commitment to quality management systems and 
-                consistent, reliable service delivery.
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <NavLink 
+              to="/why-choose-us"
+              className="group bg-background p-8 hover:shadow-lg transition-all duration-300"
+            >
+              <h3 className="text-2xl font-serif mb-4 group-hover:text-brand-teal transition-colors">
+                Why Choose Us
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Discover what sets Novalé apart—from our ISO 9001 certification to our stress-free 
+                renovation process.
               </p>
-            </div>
+              <span className="text-sm text-brand-teal group-hover:underline">Learn More →</span>
+            </NavLink>
             
-            <div className="fade-in">
-              <h3 className="text-2xl font-serif mb-4">22+ Years Experience</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                With over two decades of experience, we've completed thousands of successful 
-                renovations across Sydney. Our expertise ensures your project runs smoothly 
-                from start to finish.
+            <NavLink 
+              to="/who-is-novale"
+              className="group bg-background p-8 hover:shadow-lg transition-all duration-300"
+            >
+              <h3 className="text-2xl font-serif mb-4 group-hover:text-brand-teal transition-colors">
+                Who is Novalé
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Learn about our story, our values, and the family-driven approach that guides 
+                everything we do.
               </p>
-            </div>
+              <span className="text-sm text-brand-teal group-hover:underline">Learn More →</span>
+            </NavLink>
             
-            <div className="fade-in">
-              <h3 className="text-2xl font-serif mb-4">Stress-Free Process</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                We handle everything—from initial design to final installation. Our dedicated 
-                team manages permits, approvals, and all the details so you can enjoy a 
-                hassle-free experience.
+            <NavLink 
+              to="/team"
+              className="group bg-background p-8 hover:shadow-lg transition-all duration-300"
+            >
+              <h3 className="text-2xl font-serif mb-4 group-hover:text-brand-teal transition-colors">
+                Our Team
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Meet the dedicated professionals who bring your renovation dreams to life with 
+                expertise and care.
               </p>
-            </div>
+              <span className="text-sm text-brand-teal group-hover:underline">Learn More →</span>
+            </NavLink>
           </div>
         </div>
       </section>
@@ -110,32 +126,39 @@ const About = () => {
         </div>
       </section>
 
-      {/* Awards Section */}
+      {/* Accreditations CTA */}
       <section className="py-32 px-6 lg:px-12 bg-secondary/30">
-        <div className="container mx-auto text-center">
-          <h2 className="text-5xl font-serif mb-8">Awards & Recognition</h2>
-          <p className="text-lg text-muted-foreground mb-16 max-w-3xl mx-auto">
-            Our commitment to excellence has been recognized with multiple industry awards 
-            and certifications, including Houzz Service Awards and HIA finalist honors.
+        <div className="container mx-auto text-center max-w-4xl">
+          <h2 className="text-5xl font-serif mb-8">Our Accreditations</h2>
+          <p className="text-lg text-muted-foreground mb-12">
+            Our commitment to excellence has been recognized with multiple industry certifications 
+            and awards. We're the first bathroom renovation company in Australia to receive ISO 9001 
+            certification, alongside recognition from Houzz and HIA.
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            <div className="text-center p-6 bg-background rounded">
-              <div className="text-3xl font-serif mb-2">ISO 9001</div>
-              <p className="text-sm text-muted-foreground">First in Australia</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+            <div className="bg-brand-teal/10 p-6 border border-brand-teal/20">
+              <div className="text-2xl font-serif mb-2 text-brand-teal">ISO 9001</div>
+              <p className="text-xs text-muted-foreground">Quality Certified</p>
             </div>
-            <div className="text-center p-6 bg-background rounded">
-              <div className="text-3xl font-serif mb-2">Houzz</div>
-              <p className="text-sm text-muted-foreground">2021-2025 Awards</p>
+            <div className="bg-brand-teal/10 p-6 border border-brand-teal/20">
+              <div className="text-2xl font-serif mb-2 text-brand-teal">Houzz</div>
+              <p className="text-xs text-muted-foreground">2021-2025 Awards</p>
             </div>
-            <div className="text-center p-6 bg-background rounded">
-              <div className="text-3xl font-serif mb-2">HIA</div>
-              <p className="text-sm text-muted-foreground">NSW Finalist</p>
+            <div className="bg-brand-teal/10 p-6 border border-brand-teal/20">
+              <div className="text-2xl font-serif mb-2 text-brand-teal">HIA</div>
+              <p className="text-xs text-muted-foreground">NSW Finalist</p>
             </div>
-            <div className="text-center p-6 bg-background rounded">
-              <div className="text-3xl font-serif mb-2">MBA</div>
-              <p className="text-sm text-muted-foreground">Member</p>
+            <div className="bg-brand-teal/10 p-6 border border-brand-teal/20">
+              <div className="text-2xl font-serif mb-2 text-brand-teal">MBA</div>
+              <p className="text-xs text-muted-foreground">Member</p>
             </div>
           </div>
+          <NavLink 
+            to="/contact"
+            className="inline-block text-sm tracking-wide px-8 py-3 bg-primary text-primary-foreground hover:bg-brand-teal-dark transition-colors"
+          >
+            Work With a Certified Team
+          </NavLink>
         </div>
       </section>
 

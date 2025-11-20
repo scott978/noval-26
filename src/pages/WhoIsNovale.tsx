@@ -83,6 +83,25 @@ const WhoIsNovale = () => {
         </div>
       </section>
 
+      {/* Team CTA Section */}
+      <section className="py-20 px-6 bg-secondary/30">
+        <div className="max-w-4xl mx-auto text-center fade-in">
+          <h2 className="text-4xl font-serif mb-6">
+            Meet the Novalé Team
+          </h2>
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Behind every successful renovation is a dedicated team of professionals. Learn more about 
+            the people who make your dream spaces a reality.
+          </p>
+          <NavLink 
+            to="/team"
+            className="inline-block text-sm tracking-wide px-8 py-3 bg-primary text-primary-foreground hover:bg-brand-teal-dark transition-colors"
+          >
+            Meet Our Team
+          </NavLink>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center fade-in">

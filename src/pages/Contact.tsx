@@ -170,20 +170,20 @@ const Contact = () => {
           {/* Trust Indicators */}
           <div className="mt-16 pt-16 border-t border-border">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div>
-                <div className="text-3xl font-serif mb-2">22+</div>
+              <div className="bg-brand-teal/10 p-8 border border-brand-teal/20">
+                <div className="text-3xl font-serif mb-2 text-brand-teal">22+</div>
                 <p className="text-sm text-muted-foreground">Years Experience</p>
               </div>
-              <div>
-                <div className="text-3xl font-serif mb-2">ISO</div>
+              <div className="bg-brand-teal/10 p-8 border border-brand-teal/20">
+                <div className="text-3xl font-serif mb-2 text-brand-teal">ISO</div>
                 <p className="text-sm text-muted-foreground">9001 Certified</p>
               </div>
-              <div>
-                <div className="text-3xl font-serif mb-2">1000+</div>
+              <div className="bg-brand-teal/10 p-8 border border-brand-teal/20">
+                <div className="text-3xl font-serif mb-2 text-brand-teal">1000+</div>
                 <p className="text-sm text-muted-foreground">Happy Clients</p>
               </div>
-              <div>
-                <div className="text-3xl font-serif mb-2">5★</div>
+              <div className="bg-brand-teal/10 p-8 border border-brand-teal/20">
+                <div className="text-3xl font-serif mb-2 text-brand-teal">5★</div>
                 <p className="text-sm text-muted-foreground">Award Winning</p>
               </div>
             </div>

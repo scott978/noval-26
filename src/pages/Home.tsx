@@ -15,24 +15,28 @@ const Home = () => {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-foreground/40 flex items-center justify-center">
-          <div className="container mx-auto px-6 lg:px-12">
-            <div className="max-w-4xl text-background">
-              <h1 className="text-6xl lg:text-7xl font-serif leading-tight mb-8 fade-in">
-                We Deliver<br />Dreams
-              </h1>
-              <div className="max-w-2xl fade-in">
-                <p className="text-lg leading-relaxed mb-6">
-                  For over 22 years, Novalé has been Sydney's trusted choice for stunning 
-                  bathroom, kitchen and laundry renovations. We blend premium materials, 
-                  quality craftsmanship, and timeless style to deliver dream spaces on time, 
-                  within budget, and to specification.
-                </p>
-                <p className="text-lg leading-relaxed">
-                  We're refreshingly open, design-driven, knowledgeable, and professional—pairing 
-                  old school values with a new school approach.
-                </p>
-              </div>
-            </div>
+          <div className="container mx-auto px-6 lg:px-12 text-center">
+            <h1 className="text-7xl lg:text-8xl xl:text-9xl font-serif leading-tight text-background fade-in">
+              We Deliver<br />Dreams
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      {/* Introduction Text */}
+      <section className="py-24 px-6 lg:px-12">
+        <div className="container mx-auto max-w-5xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <p className="text-lg text-muted-foreground leading-relaxed fade-in">
+              For over 22 years, Novalé has been Sydney's trusted choice for stunning 
+              bathroom, kitchen and laundry renovations. We blend premium materials, 
+              quality craftsmanship, and timeless style to deliver dream spaces on time, 
+              within budget, and to specification.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed fade-in">
+              We're refreshingly open, design-driven, knowledgeable, and professional—pairing 
+              old school values with a new school approach.
+            </p>
           </div>
         </div>
       </section>

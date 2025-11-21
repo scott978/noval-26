@@ -7,39 +7,33 @@ import projectLaundry from "@/assets/project-laundry.jpg";
 const Home = () => {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="pt-32 pb-24 px-6 lg:px-12">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="fade-in">
-              <h1 className="text-6xl lg:text-7xl font-serif leading-tight mb-8">
+      {/* Full Width Hero Banner */}
+      <section className="relative h-[90vh] w-full">
+        <img 
+          src={heroImage} 
+          alt="Premium kitchen renovation Sydney" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-foreground/40 flex items-center justify-center">
+          <div className="container mx-auto px-6 lg:px-12">
+            <div className="max-w-4xl text-background">
+              <h1 className="text-6xl lg:text-7xl font-serif leading-tight mb-8 fade-in">
                 We Deliver<br />Dreams
               </h1>
-            </div>
-            <div className="fade-in">
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                For over 22 years, Novalé has been Sydney's trusted choice for stunning 
-                bathroom, kitchen and laundry renovations. We blend premium materials, 
-                quality craftsmanship, and timeless style to deliver dream spaces on time, 
-                within budget, and to specification.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                We're refreshingly open, design-driven, knowledgeable, and professional—pairing 
-                old school values with a new school approach.
-              </p>
+              <div className="max-w-2xl fade-in">
+                <p className="text-lg leading-relaxed mb-6">
+                  For over 22 years, Novalé has been Sydney's trusted choice for stunning 
+                  bathroom, kitchen and laundry renovations. We blend premium materials, 
+                  quality craftsmanship, and timeless style to deliver dream spaces on time, 
+                  within budget, and to specification.
+                </p>
+                <p className="text-lg leading-relaxed">
+                  We're refreshingly open, design-driven, knowledgeable, and professional—pairing 
+                  old school values with a new school approach.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Hero Image */}
-      <section className="mb-32">
-        <div className="container mx-auto px-6 lg:px-12">
-          <img 
-            src={heroImage} 
-            alt="Premium kitchen renovation Sydney" 
-            className="w-full h-[70vh] object-cover fade-in"
-          />
         </div>
       </section>
 

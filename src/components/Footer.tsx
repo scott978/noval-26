@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="bg-[#2d2d2d] text-white py-20">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-16">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <h3 className="text-3xl font-serif mb-6 text-white">Novalé</h3>
@@ -43,9 +43,9 @@ const Footer = () => {
             </div>
           </div>
           
-          {/* Quick Links */}
+          {/* Company */}
           <div>
-            <h4 className="text-sm font-semibold mb-6 tracking-wider text-white uppercase">Quick Links</h4>
+            <h4 className="text-sm font-semibold mb-6 tracking-wider text-white uppercase">Company</h4>
             <nav className="flex flex-col space-y-3">
               <NavLink to="/" className="text-gray-300 hover:text-brand-teal transition-colors">
                 Home
@@ -68,6 +68,25 @@ const Footer = () => {
               <NavLink to="/contact" className="text-gray-300 hover:text-brand-teal transition-colors">
                 Contact Us
               </NavLink>
+            </nav>
+          </div>
+          
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-sm font-semibold mb-6 tracking-wider text-white uppercase">Quick Links</h4>
+            <nav className="flex flex-col space-y-3">
+              <a href="#" className="text-gray-300 hover:text-brand-teal transition-colors">
+                Finance Options
+              </a>
+              <a href="#" className="text-gray-300 hover:text-brand-teal transition-colors">
+                Promotions
+              </a>
+              <a href="#" className="text-gray-300 hover:text-brand-teal transition-colors">
+                Referral Program
+              </a>
+              <a href="#" className="text-gray-300 hover:text-brand-teal transition-colors">
+                Careers
+              </a>
             </nav>
           </div>
           
@@ -101,10 +120,13 @@ const Footer = () => {
             <h4 className="text-sm font-semibold mb-6 tracking-wider text-white uppercase">Resources</h4>
             <nav className="flex flex-col space-y-3 mb-8">
               <a href="#" className="text-gray-300 hover:text-brand-teal transition-colors">
-                Design Gallery
+                Pricing & Guides
               </a>
               <a href="#" className="text-gray-300 hover:text-brand-teal transition-colors">
-                Renovation Guide
+                Podcast
+              </a>
+              <a href="#" className="text-gray-300 hover:text-brand-teal transition-colors">
+                Novalé TV
               </a>
               <a href="#" className="text-gray-300 hover:text-brand-teal transition-colors">
                 FAQs

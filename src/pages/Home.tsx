@@ -17,9 +17,25 @@ const Home = () => {
         />
         <div className="absolute inset-0 bg-foreground/40 flex items-center justify-center">
           <div className="container mx-auto px-6 lg:px-12 text-center">
-            <h1 className="text-7xl lg:text-8xl font-serif leading-tight text-background fade-in">
+            <h1 className="text-7xl lg:text-8xl font-serif leading-tight text-background fade-in mb-12">
               We Deliver<br />Dreams
             </h1>
+            <div className="flex flex-wrap justify-center gap-4 mt-8">
+              {[
+                { label: "Bathrooms", link: "/services/bathroom" },
+                { label: "Kitchens", link: "/services/kitchen" },
+                { label: "Laundries", link: "/services/laundry" },
+                { label: "All Services", link: "/services" },
+              ].map((service, index) => (
+                <NavLink
+                  key={index}
+                  to={service.link}
+                  className="px-6 py-3 bg-background/10 backdrop-blur-sm border border-background/30 text-background hover:bg-background hover:text-foreground transition-all duration-300 text-sm tracking-wide"
+                >
+                  {service.label}
+                </NavLink>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -27,7 +43,7 @@ const Home = () => {
       {/* Introduction Text */}
       <section className="py-24 px-6 lg:px-12">
         <div className="container mx-auto max-w-5xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <p className="text-lg text-muted-foreground leading-relaxed fade-in">
               For over 22 years, Novalé has been Sydney's trusted choice for stunning 
               bathroom, kitchen and laundry renovations. We blend premium materials, 
@@ -38,6 +54,26 @@ const Home = () => {
               We're refreshingly open, design-driven, knowledgeable, and professional—pairing 
               old school values with a new school approach.
             </p>
+          </div>
+          
+          {/* Social Proof */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 py-12 border-y border-border">
+            <div className="text-center fade-in">
+              <div className="text-5xl font-serif text-brand-teal mb-2">22+</div>
+              <p className="text-base text-muted-foreground">Years Experience</p>
+            </div>
+            <div className="text-center fade-in">
+              <div className="text-5xl font-serif text-brand-teal mb-2">1000+</div>
+              <p className="text-base text-muted-foreground">Projects Completed</p>
+            </div>
+            <div className="text-center fade-in">
+              <div className="text-5xl font-serif text-brand-teal mb-2">98%</div>
+              <p className="text-base text-muted-foreground">Client Satisfaction</p>
+            </div>
+            <div className="text-center fade-in">
+              <div className="text-5xl font-serif text-brand-teal mb-2">ISO 9001</div>
+              <p className="text-base text-muted-foreground">Certified Quality</p>
+            </div>
           </div>
         </div>
       </section>

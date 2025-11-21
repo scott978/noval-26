@@ -1,4 +1,5 @@
 import { NavLink } from "@/components/NavLink";
+import { Star } from "lucide-react";
 import heroImage from "@/assets/hero-kitchen.jpg";
 import projectKitchen from "@/assets/project-kitchen.jpg";
 import projectBathroom from "@/assets/project-bathroom.jpg";
@@ -67,8 +68,21 @@ const Home = () => {
               <p className="text-base text-muted-foreground">Projects Completed</p>
             </div>
             <div className="text-center fade-in">
-              <div className="text-5xl font-serif text-brand-teal mb-2">98%</div>
-              <p className="text-base text-muted-foreground">Client Satisfaction</p>
+              <div className="flex justify-center items-center gap-1 mb-2">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-8 h-8 fill-[#FBBC04] text-[#FBBC04]" />
+                ))}
+              </div>
+              <p className="text-base text-muted-foreground font-semibold mb-1">5.0</p>
+              <p className="text-sm text-muted-foreground flex items-center justify-center gap-1">
+                <span className="text-[#4285F4] font-bold">G</span>
+                <span className="text-[#EA4335] font-bold">o</span>
+                <span className="text-[#FBBC04] font-bold">o</span>
+                <span className="text-[#4285F4] font-bold">g</span>
+                <span className="text-[#34A853] font-bold">l</span>
+                <span className="text-[#EA4335] font-bold">e</span>
+                <span className="ml-1">Reviews</span>
+              </p>
             </div>
             <div className="text-center fade-in">
               <div className="text-5xl font-serif text-brand-teal mb-2">ISO 9001</div>

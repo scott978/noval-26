@@ -10,13 +10,8 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Full Width Hero Banner */}
-      <section className="relative h-[90vh] w-full">
-        <img 
-          src={heroImage} 
-          alt="Premium kitchen renovation Sydney" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-foreground/40 flex items-center justify-center">
+      <section className="relative h-[90vh] w-full bg-black">
+        <div className="absolute inset-0 flex items-center justify-center">
           <div className="container mx-auto px-6 lg:px-12 text-center">
             <h1 className="text-7xl lg:text-8xl font-serif leading-tight text-background fade-in mb-12">
               We Deliver<br />Dreams

@@ -37,7 +37,7 @@ const Footer = () => {
                 <Clock className="w-5 h-5 text-brand-teal mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300">Mon - Fri: 8:00am - 5:00pm</p>
-                  <p className="text-sm text-gray-400">Saturday: By appointment</p>
+                  <p className="text-sm text-gray-400">Appointments by Request</p>
                 </div>
               </div>
             </div>
@@ -94,9 +94,6 @@ const Footer = () => {
           <div>
             <h4 className="text-sm font-semibold mb-6 tracking-wider text-white uppercase">Our Services</h4>
             <nav className="flex flex-col space-y-3">
-              <NavLink to="/services" className="text-gray-300 hover:text-brand-teal transition-colors">
-                All Services
-              </NavLink>
               <NavLink to="/services/bathroom" className="text-gray-300 hover:text-brand-teal transition-colors">
                 Bathroom Renovations
               </NavLink>
@@ -108,9 +105,6 @@ const Footer = () => {
               </NavLink>
               <NavLink to="/bathroom-projects" className="text-gray-300 hover:text-brand-teal transition-colors">
                 Bathroom Projects
-              </NavLink>
-              <NavLink to="/pricing" className="text-gray-300 hover:text-brand-teal transition-colors">
-                Pricing Guide
               </NavLink>
             </nav>
           </div>

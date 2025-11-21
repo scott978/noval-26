@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Top Black Bar */}
-      <div className="bg-[#2d2d2d] text-white">
+      <div className="bg-black text-white">
         <div className="container mx-auto px-6 lg:px-12 py-2">
           <div className="flex justify-between items-center">
             {/* Social Icons - Left */}

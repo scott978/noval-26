@@ -3,6 +3,7 @@ import heroImage from "@/assets/hero-kitchen.jpg";
 import projectKitchen from "@/assets/project-kitchen.jpg";
 import projectBathroom from "@/assets/project-bathroom.jpg";
 import projectLaundry from "@/assets/project-laundry.jpg";
+import aboutHero from "@/assets/about-hero.jpg";
 
 const Home = () => {
   return (
@@ -187,7 +188,7 @@ const Home = () => {
       {/* Philosophy Strip */}
       <section className="py-24 border-y border-border">
         <div className="container mx-auto px-6 lg:px-12">
-          <p className="text-5xl font-serif text-center max-w-4xl mx-auto leading-relaxed">
+          <p className="text-5xl font-serif text-center max-w-4xl mx-auto leading-relaxed text-brand-teal">
             Our highly satisfied clients enjoy a stress-free renovation experience, 
             guided from start to finish by experts committed to bringing their vision to life
           </p>
@@ -237,6 +238,14 @@ const Home = () => {
       <section className="py-32 px-6 lg:px-12">
         <div className="container mx-auto">
           <h2 className="text-5xl font-serif mb-16 text-center">About Novalé</h2>
+          
+          <div className="mb-16">
+            <img 
+              src={aboutHero} 
+              alt="Novalé team and showroom" 
+              className="w-full h-[500px] object-cover"
+            />
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
             <NavLink 

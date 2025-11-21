@@ -58,35 +58,31 @@ const Home = () => {
           </div>
           
           {/* Social Proof */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 py-12 border-y border-border">
-            <div className="text-center fade-in">
-              <div className="text-5xl font-serif text-brand-teal mb-2">22+</div>
-              <p className="text-base text-muted-foreground">Years Experience</p>
+          <div className="py-12 border-y border-border text-center">
+            <div className="flex justify-center items-center gap-1 mb-8">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-10 h-10 fill-[#FBBC04] text-[#FBBC04]" />
+              ))}
             </div>
-            <div className="text-center fade-in">
-              <div className="text-5xl font-serif text-brand-teal mb-2">1000+</div>
-              <p className="text-base text-muted-foreground">Projects Completed</p>
-            </div>
-            <div className="text-center fade-in">
-              <div className="flex justify-center items-center gap-1 mb-2">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-8 h-8 fill-[#FBBC04] text-[#FBBC04]" />
-                ))}
+            <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12">
+              <div className="flex items-center gap-2">
+                <span className="text-[#4285F4] text-2xl font-bold">G</span>
+                <span className="text-[#EA4335] text-2xl font-bold">o</span>
+                <span className="text-[#FBBC04] text-2xl font-bold">o</span>
+                <span className="text-[#4285F4] text-2xl font-bold">g</span>
+                <span className="text-[#34A853] text-2xl font-bold">l</span>
+                <span className="text-[#EA4335] text-2xl font-bold">e</span>
               </div>
-              <p className="text-base text-muted-foreground font-semibold mb-1">5.0</p>
-              <p className="text-sm text-muted-foreground flex items-center justify-center gap-1">
-                <span className="text-[#4285F4] font-bold">G</span>
-                <span className="text-[#EA4335] font-bold">o</span>
-                <span className="text-[#FBBC04] font-bold">o</span>
-                <span className="text-[#4285F4] font-bold">g</span>
-                <span className="text-[#34A853] font-bold">l</span>
-                <span className="text-[#EA4335] font-bold">e</span>
-                <span className="ml-1">Reviews</span>
-              </p>
-            </div>
-            <div className="text-center fade-in">
-              <div className="text-5xl font-serif text-brand-teal mb-2">ISO 9001</div>
-              <p className="text-base text-muted-foreground">Certified Quality</p>
+              <div className="text-[#1877F2] text-2xl font-bold">
+                facebook
+              </div>
+              <div className="text-[#7AC142] text-2xl font-bold">
+                houzz
+              </div>
+              <div className="text-2xl font-bold">
+                <span className="text-[#FF6B35]">Product</span>
+                <span className="text-foreground">Review</span>
+              </div>
             </div>
           </div>
         </div>

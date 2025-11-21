@@ -44,7 +44,7 @@ const Home = () => {
       {/* Introduction Text */}
       <section className="py-24 px-6 lg:px-12">
         <div className="container mx-auto max-w-5xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
             <p className="text-lg text-muted-foreground leading-relaxed fade-in">
               For over 22 years, Novalé has been Sydney's trusted choice for stunning 
               bathroom, kitchen and laundry renovations. We blend premium materials, 
@@ -57,9 +57,9 @@ const Home = () => {
             </p>
           </div>
           
-          {/* Social Proof */}
-          <div className="py-12 border-y border-border text-center">
-            <div className="flex justify-center items-center gap-1 mb-8">
+          {/* Reviews */}
+          <div className="text-center pt-8">
+            <div className="flex justify-center items-center gap-1 mb-6">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-10 h-10 fill-[#FBBC04] text-[#FBBC04]" />
               ))}

@@ -18,10 +18,11 @@ const Home = () => {
             </h1>
             <div className="flex flex-wrap justify-center gap-4 mt-8">
               {[
-                { label: "Bathrooms", link: "/services/bathroom" },
-                { label: "Kitchens", link: "/services/kitchen" },
-                { label: "Laundries", link: "/services/laundry" },
-                { label: "All Services", link: "/services" },
+                { label: "Bathroom Renovations", link: "/services/bathroom" },
+                { label: "Kitchen Renovations", link: "/services/kitchen" },
+                { label: "Laundry Renovations", link: "/services/laundry" },
+                { label: "Multi-room Renovations", link: "/services" },
+                { label: "Apartment Renovations", link: "/services" },
               ].map((service, index) => (
                 <NavLink
                   key={index}

@@ -59,7 +59,7 @@ const Header = () => {
       </div>
 
       {/* Main White Navigation */}
-      <nav className="bg-background/80 backdrop-blur-sm border-b border-border">
+      <nav className="bg-background border-b border-border">
         <div className="container mx-auto px-6 lg:px-12 py-6">
           <div className="flex items-center justify-between">
             <NavLink to="/" className="text-2xl font-serif tracking-tight">

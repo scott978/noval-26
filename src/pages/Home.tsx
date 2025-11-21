@@ -16,7 +16,7 @@ const Home = () => {
         />
         <div className="absolute inset-0 bg-foreground/40 flex items-center justify-center">
           <div className="container mx-auto px-6 lg:px-12 text-center">
-            <h1 className="text-7xl lg:text-8xl xl:text-9xl font-serif leading-tight text-background fade-in">
+            <h1 className="text-7xl lg:text-8xl font-serif leading-tight text-background fade-in">
               We Deliver<br />Dreams
             </h1>
           </div>
@@ -89,7 +89,7 @@ const Home = () => {
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300" />
                 </div>
                 <h3 className="text-2xl font-serif mb-4">{service.title}</h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-base text-muted-foreground mb-6 leading-relaxed">
                   {service.description}
                 </p>
                 <NavLink 
@@ -128,8 +128,8 @@ const Home = () => {
                   />
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300" />
                 </div>
-                <h3 className="text-xl font-serif mb-1">{project.title}</h3>
-                <p className="text-sm text-muted-foreground">{project.location}</p>
+                <h3 className="text-2xl font-serif mb-1">{project.title}</h3>
+                <p className="text-base text-muted-foreground">{project.location}</p>
               </NavLink>
             ))}
           </div>
@@ -160,8 +160,8 @@ const Home = () => {
               ].map((step, index) => (
                 <div key={index} className="fade-in">
                   <div className="text-6xl font-serif text-brand-teal mb-4">{step.number}</div>
-                  <h3 className="text-xl font-serif mb-3">{step.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <h3 className="text-2xl font-serif mb-3">{step.title}</h3>
+                  <p className="text-base text-muted-foreground leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -187,7 +187,7 @@ const Home = () => {
       {/* Philosophy Strip */}
       <section className="py-24 border-y border-border">
         <div className="container mx-auto px-6 lg:px-12">
-          <p className="text-3xl lg:text-4xl font-serif text-center max-w-4xl mx-auto leading-relaxed">
+          <p className="text-5xl font-serif text-center max-w-4xl mx-auto leading-relaxed">
             Our highly satisfied clients enjoy a stress-free renovation experience, 
             guided from start to finish by experts committed to bringing their vision to life
           </p>
@@ -218,10 +218,10 @@ const Home = () => {
                 to={guide.link}
                 className="group block p-8 border-2 border-border hover:border-brand-teal bg-background hover:bg-brand-teal/5 transition-all duration-300"
               >
-                <h3 className="text-xl font-serif mb-4 group-hover:text-brand-teal transition-colors">
+                <h3 className="text-2xl font-serif mb-4 group-hover:text-brand-teal transition-colors">
                   {guide.title}
                 </h3>
-                <p className="text-sm text-muted-foreground mb-4">
+                <p className="text-base text-muted-foreground mb-4">
                   View detailed pricing guide
                 </p>
                 <span className="text-sm text-brand-teal underline group-hover:no-underline">
@@ -246,7 +246,7 @@ const Home = () => {
               <h3 className="text-2xl font-serif mb-4 group-hover:text-brand-teal transition-colors">
                 Who is Novalé
               </h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-base text-muted-foreground mb-6 leading-relaxed">
                 Discover our story, values, and the passionate team behind Sydney's most trusted renovation company.
               </p>
               <span className="text-sm text-brand-teal underline group-hover:no-underline">
@@ -261,7 +261,7 @@ const Home = () => {
               <h3 className="text-2xl font-serif mb-4 group-hover:text-brand-teal transition-colors">
                 Why Choose Us
               </h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-base text-muted-foreground mb-6 leading-relaxed">
                 Learn what sets us apart: design-driven excellence, transparent communication, and 22 years of expertise.
               </p>
               <span className="text-sm text-brand-teal underline group-hover:no-underline">
@@ -276,7 +276,7 @@ const Home = () => {
               <h3 className="text-2xl font-serif mb-4 group-hover:text-brand-teal transition-colors">
                 Accreditations
               </h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-base text-muted-foreground mb-6 leading-relaxed">
                 First bathroom renovator with ISO 9001 certification. Award-winning members of Master Builders and HIA.
               </p>
               <span className="text-sm text-brand-teal underline group-hover:no-underline">

@@ -13,6 +13,7 @@ import Contact from "./pages/Contact";
 import WhyChooseUs from "./pages/WhyChooseUs";
 import WhoIsNovale from "./pages/WhoIsNovale";
 import BathroomProjects from "./pages/BathroomProjects";
+import BathroomRenovations from "./pages/BathroomRenovations";
 import Pricing from "./pages/Pricing";
 import Team from "./pages/Team";
 import NotFound from "./pages/NotFound";
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/team" element={<Team />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/bathroom-projects" element={<BathroomProjects />} />
+          <Route path="/bathroom-renovations" element={<BathroomRenovations />} />
           <Route path="/services" element={<Services />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<Contact />} />

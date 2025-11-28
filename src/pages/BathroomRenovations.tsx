@@ -82,8 +82,40 @@ const BathroomRenovations = () => {
       </div>
     </section>
 
+    {/* Projects */}
+      <section className="py-32 px-6 lg:px-12 bg-secondary/30">
+        <div className="container mx-auto">
+          <h2 className="text-5xl font-serif mb-6 text-center">Recent Projects</h2>
+          <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+            See how we've transformed bathrooms across Sydney
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { title: "Vaucluse Bathroom", location: "Vaucluse", type: "House", budget: "$35,000" },
+              { title: "Bondi Apartment", location: "Bondi Beach", type: "Apartment", budget: "$28,000" },
+              { title: "Mosman Ensuite", location: "Mosman", type: "House", budget: "$42,000" },
+            ].map((project, index) => (
+              <div key={index} className="group fade-in">
+                <div className="relative overflow-hidden mb-4">
+                  <img
+                    src={projectBathroom}
+                    alt={project.title}
+                    className="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300" />
+                </div>
+                <h3 className="text-2xl font-serif mb-2">{project.title}</h3>
+                <p className="text-base text-muted-foreground mb-1">{project.location} • {project.type}</p>
+                <p className="text-base text-brand-teal">{project.budget}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
     {/* Social Proof - Testimonials */}
-    <section className="py-32 px-6 lg:px-12 bg-secondary/30">
+    <section className="py-32 px-6 lg:px-12 bg-background">
       <div className="container mx-auto">
         <h2 className="text-5xl font-serif mb-16 text-center">What Our Clients Say</h2>
 
@@ -124,153 +156,6 @@ const BathroomRenovations = () => {
         </div>
       </div>
     </section>
-
-    {/* Why Novale */}
-      <section className="py-32 px-6 lg:px-12 bg-secondary/30">
-        <div className="container mx-auto">
-          <h2 className="text-5xl font-serif mb-6 text-center">Why Choose Novalé</h2>
-          <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
-            Sydney's leading bathroom renovation specialists for houses and apartments across Greater Sydney
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {[
-              {
-                icon: Award,
-                title: "ISO 9001 Certified",
-                description: "First bathroom renovator in Australia to achieve ISO 9001 certification for quality management systems."
-              },
-              {
-                icon: FileCheck,
-                title: "Transparent Pricing",
-                description: "No hidden costs. Detailed quotes with clear breakdowns so you know exactly what you're paying for."
-              },
-              {
-                icon: Paintbrush,
-                title: "Complimentary Design Services",
-                description: "Work with our expert designers to create your perfect bathroom. 3D renders included at no extra cost."
-              },
-              {
-                icon: CheckCircle2,
-                title: "BuilderTrend Technology",
-                description: "Track your renovation progress in real-time with our advanced project management platform."
-              },
-              {
-                icon: Shield,
-                title: "10 Year Waterproofing Warranty",
-                description: "Industry-leading 10-year warranty on all waterproofing. Your investment is protected."
-              },
-              {
-                icon: Users,
-                title: "Fully Licensed & Insured",
-                description: "NSW licensed builder with comprehensive insurance. Member of Master Builders Association and HIA."
-              },
-            ].map((usp, index) => (
-              <div key={index} className="fade-in">
-                <usp.icon className="w-12 h-12 text-brand-teal mb-6" />
-                <h3 className="text-2xl font-serif mb-4">{usp.title}</h3>
-                <p className="text-base text-muted-foreground leading-relaxed">
-                  {usp.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process */}
-      <section className="py-32 px-6 lg:px-12">
-        <div className="container mx-auto">
-          <h2 className="text-5xl font-serif mb-6 text-center">Our Process</h2>
-          <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
-            A seamless, stress-free renovation journey from start to finish
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            {[
-              {
-                number: "01",
-                title: "Initial Consultation & Design",
-                description: "Meet with our team to discuss your vision, needs, and budget. We'll provide expert advice and design concepts tailored to your space."
-              },
-              {
-                number: "02",
-                title: "Quote & Planning",
-                description: "Receive a detailed, transparent quote with 3D renders. We'll refine the design until it's perfect and plan every detail of your renovation."
-              },
-              {
-                number: "03",
-                title: "Approvals & Documentation",
-                description: "We handle all council approvals, strata coordination, and necessary permits. Sit back while we take care of the paperwork."
-              },
-              {
-                number: "04",
-                title: "Construction & Completion",
-                description: "Our expert team transforms your bathroom with minimal disruption. Track progress via BuilderTrend and enjoy your stunning new space."
-              },
-            ].map((step, index) => (
-              <div key={index} className="fade-in">
-                <div className="text-6xl font-serif text-brand-teal mb-6">{step.number}</div>
-                <h3 className="text-2xl font-serif mb-4">{step.title}</h3>
-                <p className="text-base text-muted-foreground leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA to start the process */}
-      <section className="py-20 px-6 lg:px-12 bg-brand-teal text-white">
-        <div className="container mx-auto text-center">
-          <h2 className="text-4xl font-serif mb-6">Ready to Start Your Bathroom Renovation?</h2>
-          <p className="text-lg mb-10 max-w-2xl mx-auto opacity-90">
-            Get a free consultation and quote. No obligation, just expert advice and transparent pricing.
-          </p>
-          <NavLink
-            to="/contact"
-            className="inline-block text-sm tracking-wide px-10 py-4 border-2 border-white hover:bg-white hover:text-brand-teal transition-colors"
-          >
-            Get a Free Quote
-          </NavLink>
-        </div>
-      </section>
-
-      {/* Projects */}
-      <section className="py-32 px-6 lg:px-12 bg-secondary/30">
-        <div className="container mx-auto">
-          <h2 className="text-5xl font-serif mb-6 text-center">Recent Projects</h2>
-          <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
-            See how we've transformed bathrooms across Sydney
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { title: "Vaucluse Bathroom", location: "Vaucluse", type: "House", budget: "$35,000" },
-              { title: "Bondi Apartment", location: "Bondi Beach", type: "Apartment", budget: "$28,000" },
-              { title: "Mosman Ensuite", location: "Mosman", type: "House", budget: "$42,000" },
-              { title: "Double Bay Renovation", location: "Double Bay", type: "Apartment", budget: "$38,000" },
-              { title: "Paddington Heritage", location: "Paddington", type: "House", budget: "$45,000" },
-              { title: "North Sydney Modern", location: "North Sydney", type: "Apartment", budget: "$32,000" },
-            ].map((project, index) => (
-              <div key={index} className="group fade-in">
-                <div className="relative overflow-hidden mb-4">
-                  <img
-                    src={projectBathroom}
-                    alt={project.title}
-                    className="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300" />
-                </div>
-                <h3 className="text-2xl font-serif mb-2">{project.title}</h3>
-                <p className="text-base text-muted-foreground mb-1">{project.location} • {project.type}</p>
-                <p className="text-base text-brand-teal">{project.budget}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Pricing & Timeframe */}
       <section className="py-32 px-6 lg:px-12">

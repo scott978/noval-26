@@ -79,10 +79,53 @@ const BathroomRenovations = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
+      </div>
+    </section>
 
-      {/* Why Novale */}
+    {/* Social Proof - Testimonials */}
+    <section className="py-32 px-6 lg:px-12 bg-secondary/30">
+      <div className="container mx-auto">
+        <h2 className="text-5xl font-serif mb-16 text-center">What Our Clients Say</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            {
+              name: "Sarah M.",
+              location: "Mosman",
+              text: "Novalé transformed our dated bathroom into a stunning modern space. The team was professional, punctual, and the quality is exceptional. Highly recommend!",
+              rating: 5
+            },
+            {
+              name: "David & Lisa K.",
+              location: "Double Bay",
+              text: "From design to completion, the entire process was seamless. The BuilderTrend app kept us informed every step of the way. Our bathroom is beyond our expectations!",
+              rating: 5
+            },
+            {
+              name: "Michael T.",
+              location: "Bondi",
+              text: "As an apartment owner, I was worried about the renovation process. Novalé handled all strata approvals and completed the work with minimal disruption. Fantastic result!",
+              rating: 5
+            },
+          ].map((testimonial, index) => (
+            <div key={index} className="p-8 bg-background border border-border fade-in">
+              <div className="flex gap-1 mb-4">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-[#FBBC04] text-[#FBBC04]" />
+                ))}
+              </div>
+              <p className="text-base mb-6 leading-relaxed">"{testimonial.text}"</p>
+              <div>
+                <p className="font-serif text-lg">{testimonial.name}</p>
+                <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Why Novale */}
       <section className="py-32 px-6 lg:px-12 bg-secondary/30">
         <div className="container mx-auto">
           <h2 className="text-5xl font-serif mb-6 text-center">Why Choose Novalé</h2>
@@ -191,53 +234,6 @@ const BathroomRenovations = () => {
           >
             Get a Free Quote
           </NavLink>
-        </div>
-      </section>
-
-      {/* Find Your Bathroom Style */}
-      <section className="py-32 px-6 lg:px-12">
-        <div className="container mx-auto">
-          <h2 className="text-5xl font-serif mb-6 text-center">Find Your Bathroom Style</h2>
-          <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
-            Explore our curated collection of bathroom designs and find inspiration for your renovation
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { title: "Contemporary", description: "Clean lines and modern minimalism", image: projectBathroom },
-              { title: "Classic", description: "Timeless elegance and sophistication", image: projectBathroom },
-              { title: "Luxury", description: "Premium finishes and spa-like features", image: projectBathroom },
-              { title: "Coastal", description: "Light, bright and breezy aesthetics", image: projectBathroom },
-              { title: "Industrial", description: "Bold textures and urban appeal", image: projectBathroom },
-              { title: "Traditional", description: "Heritage charm with modern comfort", image: projectBathroom },
-            ].map((style, index) => (
-              <div key={index} className="group fade-in">
-                <div className="relative overflow-hidden mb-4">
-                  <img
-                    src={style.image}
-                    alt={style.title}
-                    className="w-full h-[350px] object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
-                  <div className="absolute inset-0 flex items-end p-6">
-                    <div className="text-white">
-                      <h3 className="text-2xl font-serif mb-2">{style.title}</h3>
-                      <p className="text-sm">{style.description}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <NavLink
-              to="/bathroom-projects"
-              className="inline-block text-sm tracking-wide px-8 py-3 border border-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-            >
-              View All Bathroom Projects
-            </NavLink>
-          </div>
         </div>
       </section>
 
@@ -355,49 +351,6 @@ const BathroomRenovations = () => {
         </div>
       </section>
 
-      {/* Social Proof - Testimonials */}
-      <section className="py-32 px-6 lg:px-12 bg-secondary/30">
-        <div className="container mx-auto">
-          <h2 className="text-5xl font-serif mb-16 text-center">What Our Clients Say</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Sarah M.",
-                location: "Mosman",
-                text: "Novalé transformed our dated bathroom into a stunning modern space. The team was professional, punctual, and the quality is exceptional. Highly recommend!",
-                rating: 5
-              },
-              {
-                name: "David & Lisa K.",
-                location: "Double Bay",
-                text: "From design to completion, the entire process was seamless. The BuilderTrend app kept us informed every step of the way. Our bathroom is beyond our expectations!",
-                rating: 5
-              },
-              {
-                name: "Michael T.",
-                location: "Bondi",
-                text: "As an apartment owner, I was worried about the renovation process. Novalé handled all strata approvals and completed the work with minimal disruption. Fantastic result!",
-                rating: 5
-              },
-            ].map((testimonial, index) => (
-              <div key={index} className="p-8 bg-background border border-border fade-in">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-[#FBBC04] text-[#FBBC04]" />
-                  ))}
-                </div>
-                <p className="text-base mb-6 leading-relaxed">"{testimonial.text}"</p>
-                <div>
-                  <p className="font-serif text-lg">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.location}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Service Areas */}
       <section className="py-32 px-6 lg:px-12">
         <div className="container mx-auto">
@@ -489,56 +442,6 @@ const BathroomRenovations = () => {
                     </p>
                   </div>
                 )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Related Blogs */}
-      <section className="py-32 px-6 lg:px-12">
-        <div className="container mx-auto">
-          <h2 className="text-5xl font-serif mb-6 text-center">Bathroom Renovation Insights</h2>
-          <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
-            Expert tips, trends, and inspiration for your bathroom renovation
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "2024 Bathroom Design Trends",
-                excerpt: "Discover the latest bathroom design trends for 2024, from natural materials to smart technology integration.",
-                date: "March 2024"
-              },
-              {
-                title: "How to Choose Bathroom Tiles",
-                excerpt: "A comprehensive guide to selecting the perfect tiles for your bathroom renovation, covering materials, sizes, and styles.",
-                date: "February 2024"
-              },
-              {
-                title: "Maximizing Small Bathroom Space",
-                excerpt: "Expert tips and clever design solutions to make your small bathroom feel spacious and luxurious.",
-                date: "January 2024"
-              },
-            ].map((blog, index) => (
-              <div key={index} className="group fade-in">
-                <div className="relative overflow-hidden mb-4 bg-muted h-[250px]">
-                  <img
-                    src={projectBathroom}
-                    alt={blog.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-                <p className="text-sm text-muted-foreground mb-2">{blog.date}</p>
-                <h3 className="text-2xl font-serif mb-3 group-hover:text-brand-teal transition-colors">
-                  {blog.title}
-                </h3>
-                <p className="text-base text-muted-foreground mb-4 leading-relaxed">
-                  {blog.excerpt}
-                </p>
-                <a href="#" className="text-sm text-brand-teal underline hover:no-underline">
-                  Read More →
-                </a>
               </div>
             ))}
           </div>

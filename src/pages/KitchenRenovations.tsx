@@ -64,51 +64,48 @@ const KitchenRenovations = () => {
         </div>
       </section>
 
-      {/* Social Proofing - Awards/Reviews */}
-      <section className="py-20 px-6 lg:px-12 bg-background">
+      {/* Testimonials */}
+      <section className="py-32 px-6 lg:px-12 bg-background">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <div className="flex justify-center items-center gap-1 mb-6">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-10 h-10 fill-[#FBBC04] text-[#FBBC04]" />
-              ))}
-            </div>
-            <p className="text-2xl font-serif mb-8">Rated 5 Stars by Over 500 Happy Clients</p>
-            <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12">
-              <div className="flex items-center gap-2">
-                <span className="text-[#4285F4] text-2xl font-bold">G</span>
-                <span className="text-[#EA4335] text-2xl font-bold">o</span>
-                <span className="text-[#FBBC04] text-2xl font-bold">o</span>
-                <span className="text-[#4285F4] text-2xl font-bold">g</span>
-                <span className="text-[#34A853] text-2xl font-bold">l</span>
-                <span className="text-[#EA4335] text-2xl font-bold">e</span>
-              </div>
-              <div className="text-[#1877F2] text-2xl font-bold">facebook</div>
-              <div className="text-[#7AC142] text-2xl font-bold">houzz</div>
-              <div className="text-2xl font-bold">
-                <span className="text-[#FF6B35]">Product</span>
-                <span className="text-foreground">Review</span>
-              </div>
-            </div>
-          </div>
+          <h2 className="text-5xl font-serif mb-16 text-center">What Our Clients Say</h2>
 
-          {/* Awards */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { year: "2023", title: "Best Kitchen Renovator" },
-              { year: "2022", title: "Excellence in Design" },
-              { year: "2021", title: "Customer Choice Award" },
-              { year: "2020", title: "Innovation Award" },
-            ].map((award, index) => (
-              <div key={index} className="text-center p-6 border border-border">
-                <Award className="w-12 h-12 mx-auto mb-4 text-brand-teal" />
-                <p className="text-sm text-muted-foreground mb-2">{award.year}</p>
-                <p className="font-serif text-sm">{award.title}</p>
+              {
+                name: "Emma & James R.",
+                location: "Mosman",
+                text: "Novalé transformed our dated kitchen into a stunning modern space perfect for our family. The craftsmanship is outstanding and the team was incredibly professional throughout.",
+                rating: 5
+              },
+              {
+                name: "Catherine L.",
+                location: "Double Bay",
+                text: "From the initial design consultation to the final reveal, the entire process exceeded our expectations. Our new kitchen is not just beautiful, it's so much more functional. Worth every dollar!",
+                rating: 5
+              },
+              {
+                name: "Robert & Sophie H.",
+                location: "Bondi",
+                text: "As apartment owners, we were concerned about noise and access. Novalé handled everything professionally, kept disruption minimal, and delivered an absolutely gorgeous kitchen. Highly recommend!",
+                rating: 5
+              },
+            ].map((testimonial, index) => (
+              <div key={index} className="p-8 bg-background border border-border fade-in">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-[#FBBC04] text-[#FBBC04]" />
+                  ))}
+                </div>
+                <p className="text-base mb-6 leading-relaxed">"{testimonial.text}"</p>
+                <div>
+                  <p className="font-serif text-lg">{testimonial.name}</p>
+                  <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                </div>
               </div>
             ))}
           </div>
-      </div>
-    </section>
+        </div>
+      </section>
 
     {/* Projects */}
       <section className="py-32 px-6 lg:px-12 bg-secondary/30">
@@ -142,48 +139,6 @@ const KitchenRenovations = () => {
         </div>
       </section>
 
-    {/* Social Proof - Testimonials */}
-    <section className="py-32 px-6 lg:px-12 bg-background">
-      <div className="container mx-auto">
-        <h2 className="text-5xl font-serif mb-16 text-center">What Our Clients Say</h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            {
-              name: "Emma & James R.",
-              location: "Mosman",
-              text: "Novalé transformed our dated kitchen into a stunning modern space perfect for our family. The craftsmanship is outstanding and the team was incredibly professional throughout.",
-              rating: 5
-            },
-            {
-              name: "Catherine L.",
-              location: "Double Bay",
-              text: "From the initial design consultation to the final reveal, the entire process exceeded our expectations. Our new kitchen is not just beautiful, it's so much more functional. Worth every dollar!",
-              rating: 5
-            },
-            {
-              name: "Robert & Sophie H.",
-              location: "Bondi",
-              text: "As apartment owners, we were concerned about noise and access. Novalé handled everything professionally, kept disruption minimal, and delivered an absolutely gorgeous kitchen. Highly recommend!",
-              rating: 5
-            },
-          ].map((testimonial, index) => (
-            <div key={index} className="p-8 bg-background border border-border fade-in">
-              <div className="flex gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-[#FBBC04] text-[#FBBC04]" />
-                ))}
-              </div>
-              <p className="text-base mb-6 leading-relaxed">"{testimonial.text}"</p>
-              <div>
-                <p className="font-serif text-lg">{testimonial.name}</p>
-                <p className="text-sm text-muted-foreground">{testimonial.location}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
 
       {/* What Impacts Kitchen Renovation Costs */}
       <section className="py-32 px-6 lg:px-12 bg-secondary/30">

@@ -280,7 +280,16 @@ const BathroomRenovations = () => {
             Transparent pricing guides for every bathroom renovation
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="relative h-[500px] overflow-hidden">
+              <img
+                src={projectBathroom}
+                alt="Luxury bathroom renovation"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            <div className="space-y-8">
             {[
               {
                 title: "Standard Bathroom",
@@ -319,25 +328,26 @@ const BathroomRenovations = () => {
                 ]
               },
             ].map((tier, index) => (
-              <div key={index} className="p-8 border-2 border-border hover:border-brand-teal bg-background transition-all duration-300 fade-in">
-                <h3 className="text-2xl font-serif mb-4">{tier.title}</h3>
-                <div className="mb-6">
-                  <p className="text-3xl font-bold text-brand-teal mb-2">{tier.price}</p>
+              <div key={index} className="p-6 border-2 border-border hover:border-brand-teal bg-background transition-all duration-300 fade-in">
+                <h3 className="text-xl font-serif mb-3">{tier.title}</h3>
+                <div className="mb-4">
+                  <p className="text-2xl font-bold text-brand-teal mb-1">{tier.price}</p>
                   <p className="text-sm text-muted-foreground flex items-center gap-2">
                     <Clock className="w-4 h-4" />
                     {tier.timeframe}
                   </p>
                 </div>
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-2">
                   {tier.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-sm">
-                      <CheckCircle2 className="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-brand-teal flex-shrink-0 mt-0.5" />
                       <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
+            </div>
           </div>
 
           <div className="text-center">
@@ -356,24 +366,46 @@ const BathroomRenovations = () => {
         <div className="container mx-auto">
           <h2 className="text-5xl font-serif mb-6 text-center">Areas We Service</h2>
           <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
-            Proudly serving bathroom renovations across Greater Sydney
+            Novalé Bathrooms have a talented team of bathroom renovators servicing clients throughout all of Sydney
           </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-5xl mx-auto mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {[
-              "Mosman", "Vaucluse", "Double Bay", "Bondi", "Paddington", "Woollahra",
-              "North Sydney", "Cremorne", "Neutral Bay", "Manly", "Balmain", "Rozelle",
-              "Newtown", "Surry Hills", "Darlinghurst", "Potts Point", "Eastern Suburbs", "North Shore"
+              { name: "Eastern Suburbs", link: "/services-area/eastern-suburbs" },
+              { name: "Lower North Shore", link: "/services-area/lower-north-shore" },
+              { name: "Upper North Shore", link: "/services-area/upper-north-shore" },
+              { name: "Northern Beaches", link: "/services-area/northern-beaches" },
+              { name: "Inner West", link: "/services-area/inner-west" },
+              { name: "South Sydney", link: "/services-area/south-sydney" },
+              { name: "St George", link: "/services-area/st-george" },
+              { name: "Sutherland Shire", link: "/services-area/sutherland-shire" },
+              { name: "Hills District", link: "/services-area/hills-district" },
+              { name: "Kellyville & Richmond", link: "/services-area/kellyville-richmond" },
+              { name: "Western Sydney", link: "/services-area/western-sydney" },
             ].map((area, index) => (
-              <div key={index} className="text-center p-4 border border-border hover:border-brand-teal transition-colors">
-                <MapPin className="w-6 h-6 mx-auto mb-2 text-brand-teal" />
-                <p className="text-sm">{area}</p>
-              </div>
+              <NavLink
+                key={index}
+                to={area.link}
+                className="group relative overflow-hidden block h-[280px] fade-in"
+              >
+                <img
+                  src={projectBathroom}
+                  alt={`Bathroom Renovations ${area.name}`}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors duration-300" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center text-white">
+                    <MapPin className="w-8 h-8 mx-auto mb-3" />
+                    <h3 className="text-2xl font-serif">{area.name}</h3>
+                  </div>
+                </div>
+              </NavLink>
             ))}
           </div>
 
           <div className="text-center">
-            <p className="text-lg text-muted-foreground mb-6">Don't see your area? Contact us to confirm service availability</p>
+            <p className="text-lg text-muted-foreground mb-6">Not sure if you're within our coverage area? We're happy to check your area and talk to you about how we can help transform your bathroom</p>
             <NavLink
               to="/contact"
               className="inline-block text-sm tracking-wide px-8 py-3 border border-primary hover:bg-primary hover:text-primary-foreground transition-colors"

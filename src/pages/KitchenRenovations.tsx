@@ -59,10 +59,32 @@ const KitchenRenovations = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Why Choose Novale */}
       <section className="py-32 px-6 lg:px-12 bg-background">
         <div className="container mx-auto">
-          <h2 className="text-5xl font-serif mb-16 text-center">What Our Clients Say</h2>
+          <h2 className="text-5xl font-serif mb-6 text-center">Why Choose Novalé</h2>
+          <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+            Industry-leading standards and service excellence
+          </p>
+
+          {/* USPs */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-20">
+            {[
+              { icon: <Award className="w-8 h-8" />, label: "ISO Certified" },
+              { icon: <FileCheck className="w-8 h-8" />, label: "Transparent Pricing" },
+              { icon: <Paintbrush className="w-8 h-8" />, label: "Design Services" },
+              { icon: <Users className="w-8 h-8" />, label: "Buildertrend" },
+              { icon: <Shield className="w-8 h-8" />, label: "10 Year Waterproofing" },
+              { icon: <CheckCircle2 className="w-8 h-8" />, label: "Licensed & Insured" },
+            ].map((usp, index) => (
+              <div key={index} className="flex flex-col items-center text-center p-4 fade-in">
+                <div className="text-brand-teal mb-3">
+                  {usp.icon}
+                </div>
+                <p className="text-sm font-medium">{usp.label}</p>
+              </div>
+            ))}
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[

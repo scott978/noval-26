@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Check, Palette, ClipboardList, Users, ShieldCheck, Bell, Award } from "lucide-react";
+import bathroomHero from "@/assets/project-bathroom.jpg";
 
 const Pricing = () => {
   return (
@@ -9,6 +10,16 @@ const Pricing = () => {
         <div className="max-w-7xl mx-auto">
           <p className="text-white text-sm text-center">Transparent Pricing for Your Dream Bathroom</p>
         </div>
+      </section>
+
+      {/* Image Header Banner */}
+      <section className="relative w-full h-[400px] overflow-hidden">
+        <img 
+          src={bathroomHero} 
+          alt="Luxury bathroom renovation" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/20" />
       </section>
 
       {/* Hero Section */}

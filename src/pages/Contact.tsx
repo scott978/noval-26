@@ -1,4 +1,5 @@
 import { NavLink } from "@/components/NavLink";
+import { ChevronRight } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -64,36 +65,43 @@ const Contact = () => {
           </div>
 
           {/* Areas We Service */}
-          <div className="my-16 fade-in">
-            <h2 className="text-3xl font-serif mb-6 text-center">Areas We Service</h2>
-            <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Novalé has a talented team of renovators servicing clients throughout all of Sydney
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
-              {[
-                "South Sydney",
-                "Kellyville & Richmond",
-                "Eastern Suburbs",
-                "Northern Beaches",
-                "Sutherland Shire",
-                "Hills District",
-                "St George",
-                "Inner West",
-                "Upper North Shore",
-                "Lower North Shore",
-                "Western Sydney"
-              ].map((area, index) => (
-                <div key={index} className="p-4 border border-border text-center hover:border-primary transition-colors">
-                  <p className="text-sm">{area}</p>
-                </div>
-              ))}
+          <div className="my-16 fade-in bg-primary text-primary-foreground py-16 px-8 -mx-6 lg:-mx-12">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-serif mb-6 text-center">Areas We Service</h2>
+              <p className="text-center opacity-90 mb-8">
+                Novalé has a talented team of renovators servicing clients throughout all of Sydney
+              </p>
+              <div className="flex flex-wrap justify-center items-center gap-2 text-sm">
+                {[
+                  "South Sydney",
+                  "Kellyville & Richmond",
+                  "Eastern Suburbs",
+                  "Northern Beaches",
+                  "Sutherland Shire",
+                  "Hills District",
+                  "St George",
+                  "Inner West",
+                  "Upper North Shore",
+                  "Lower North Shore",
+                  "Western Sydney"
+                ].map((area, index, array) => (
+                  <div key={index} className="flex items-center gap-2">
+                    <a href="#" className="hover:underline opacity-90 hover:opacity-100 transition-opacity">
+                      {area}
+                    </a>
+                    {index < array.length - 1 && (
+                      <ChevronRight className="w-4 h-4 opacity-50" />
+                    )}
+                  </div>
+                ))}
+              </div>
+              <p className="text-center text-sm opacity-90 mt-8">
+                Not sure if you're within our coverage area? Give us a call on{" "}
+                <a href="tel:1800668253" className="underline hover:no-underline">
+                  1800 NOVALÉ
+                </a>
+              </p>
             </div>
-            <p className="text-center text-sm text-muted-foreground mt-8">
-              Not sure if you're within our coverage area? Give us a call on{" "}
-              <a href="tel:1800668253" className="text-primary hover:underline">
-                1800 NOVALÉ
-              </a>
-            </p>
           </div>
 
           {/* Map Placeholder */}

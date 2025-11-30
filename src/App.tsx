@@ -17,6 +17,7 @@ import BathroomRenovations from "./pages/BathroomRenovations";
 import KitchenRenovations from "./pages/KitchenRenovations";
 import Pricing from "./pages/Pricing";
 import Team from "./pages/Team";
+import AreasWeService from "./pages/AreasWeService";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/kitchen-renovations" element={<KitchenRenovations />} />
           <Route path="/services" element={<Services />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/areas-we-service" element={<AreasWeService />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

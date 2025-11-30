@@ -116,7 +116,7 @@ const Contact = () => {
         </div>
 
         <div className="border-t border-border pt-16 fade-in max-w-4xl mx-auto">
-          <h2 className="text-2xl font-serif mb-2">GENERAL ENQUIRIES</h2>
+          <h2 className="text-2xl font-serif mb-2">General Enquires</h2>
           <p className="text-muted-foreground mb-8">
             For general enquiries, please use the form below and one of our admin staff will be in contact
           </p>
@@ -192,7 +192,7 @@ const Contact = () => {
                 required
               />
               <label htmlFor="acknowledgment" className="text-sm text-muted-foreground">
-                I acknowledge that this is a general enquiry form and not a sales related. *
+                I acknowledge that this is a general enquiry form and not sales related. *
               </label>
             </div>
 

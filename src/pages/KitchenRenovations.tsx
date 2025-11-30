@@ -2,14 +2,9 @@ import { NavLink } from "@/components/NavLink";
 import { Star, CheckCircle2, Award, Shield, Clock, Paintbrush, FileCheck, Users, Phone, MapPin, ChevronDown } from "lucide-react";
 import heroKitchen from "@/assets/hero-kitchen.jpg";
 import projectKitchen from "@/assets/project-kitchen.jpg";
-import { useState } from "react";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 const KitchenRenovations = () => {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
-
-  const toggleFaq = (index: number) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
 
   return (
     <div className="min-h-screen">
@@ -251,24 +246,33 @@ const KitchenRenovations = () => {
                 ]
               },
             ].map((tier, index) => (
-              <div key={index} className="p-6 border-2 border-border hover:border-brand-teal bg-background transition-all duration-300 fade-in">
-                <h3 className="text-xl font-serif mb-3">{tier.title}</h3>
-                <div className="mb-4">
-                  <p className="text-2xl font-bold text-brand-teal mb-1">{tier.price}</p>
-                  <p className="text-sm text-muted-foreground flex items-center gap-2">
-                    <Clock className="w-4 h-4" />
-                    {tier.timeframe}
-                  </p>
+              <Collapsible key={index}>
+                <div className="p-6 border-2 border-border hover:border-brand-teal bg-background transition-all duration-300 fade-in">
+                  <h3 className="text-xl font-serif mb-3">{tier.title}</h3>
+                  <div className="mb-4">
+                    <p className="text-2xl font-bold text-brand-teal mb-1">{tier.price}</p>
+                    <p className="text-sm text-muted-foreground flex items-center gap-2">
+                      <Clock className="w-4 h-4" />
+                      {tier.timeframe}
+                    </p>
+                  </div>
+                  <CollapsibleTrigger className="w-full mb-4">
+                    <button className="w-full px-4 py-2 border border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white transition-colors text-sm">
+                      View Details
+                    </button>
+                  </CollapsibleTrigger>
+                  <CollapsibleContent>
+                    <ul className="space-y-2">
+                      {tier.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-sm">
+                          <CheckCircle2 className="w-4 h-4 text-brand-teal flex-shrink-0 mt-0.5" />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CollapsibleContent>
                 </div>
-                <ul className="space-y-2">
-                  {tier.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-sm">
-                      <CheckCircle2 className="w-4 h-4 text-brand-teal flex-shrink-0 mt-0.5" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              </Collapsible>
             ))}
             </div>
           </div>

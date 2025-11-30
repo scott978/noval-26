@@ -262,19 +262,68 @@ const Pricing = () => {
         </div>
       </section>
 
+      {/* Blog Section */}
+      <section className="py-20 px-6 bg-secondary/30">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-serif mb-12 fade-in">Pricing Guides & Insights</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Complete Bathroom Renovation Cost Breakdown",
+                excerpt: "Understand exactly where your money goes in a bathroom renovation. From fixtures to labour, we break down every cost.",
+                readTime: "5 min read",
+                category: "Cost Guides"
+              },
+              {
+                title: "Essential vs Premium: Which Package is Right for You?",
+                excerpt: "Compare our renovation packages side-by-side and discover which option best fits your budget and design goals.",
+                readTime: "4 min read",
+                category: "Planning"
+              },
+              {
+                title: "Hidden Costs in Bathroom Renovations",
+                excerpt: "Learn about common unexpected expenses and how to budget properly for your bathroom renovation project.",
+                readTime: "6 min read",
+                category: "Cost Guides"
+              }
+            ].map((post, index) => (
+              <article key={index} className="bg-background border border-border p-6 fade-in hover:shadow-lg transition-shadow group">
+                <span className="text-xs tracking-wide text-primary mb-3 block">{post.category}</span>
+                <h3 className="text-xl font-serif mb-3 group-hover:text-primary transition-colors">{post.title}</h3>
+                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{post.excerpt}</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-muted-foreground">{post.readTime}</span>
+                  <NavLink to="/contact" className="text-xs tracking-wide text-primary hover:underline">
+                    READ MORE →
+                  </NavLink>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center fade-in">
-          <h2 className="text-4xl font-serif mb-6">
+      <section className="py-20 px-6 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src={bathroomHero} 
+            alt="Luxury bathroom" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/60" />
+        </div>
+        <div className="max-w-4xl mx-auto text-center fade-in relative z-10">
+          <h2 className="text-4xl font-serif mb-6 text-white">
             Get Your Free Online Estimate
           </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
             Start your journey with a free, no-obligation online estimate. Our team will work with 
             you to understand your vision and provide a detailed quote.
           </p>
           <NavLink 
             to="/contact"
-            className="inline-block text-sm tracking-wide px-8 py-3 bg-primary text-primary-foreground hover:bg-brand-teal-dark transition-colors"
+            className="inline-block text-sm tracking-wide px-8 py-3 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
           >
             TRY OUR ESTIMATOR TOOL
           </NavLink>

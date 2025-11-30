@@ -115,7 +115,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="border-t border-border pt-16 fade-in max-w-4xl mx-auto">
+        <div className="border-t border-border pt-16 fade-in">
           <h2 className="text-2xl font-serif mb-2">General Enquires</h2>
           <p className="text-muted-foreground mb-8">
             For general enquiries, please use the form below and one of our admin staff will be in contact

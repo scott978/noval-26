@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { Check, Palette, ClipboardList, Users, ShieldCheck, Bell, Award } from "lucide-react";
+import { Check, Palette, ClipboardList, Users, ShieldCheck, Bell, Award, MessageSquare, FileText, Hammer, Wrench, Sparkles } from "lucide-react";
 import bathroomHero from "@/assets/project-bathroom.jpg";
 
 const Pricing = () => {
@@ -47,7 +47,7 @@ const Pricing = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Essential */}
-            <div className="border border-border p-8 fade-in">
+            <div className="border border-border p-8 fade-in relative group hover:shadow-lg transition-shadow">
               <h3 className="text-2xl font-serif mb-4">Essential</h3>
               <div className="mb-6">
                 <span className="text-4xl font-serif">$18,000</span>
@@ -70,10 +70,16 @@ const Pricing = () => {
                   </li>
                 ))}
               </ul>
+              <NavLink 
+                to="/contact"
+                className="absolute inset-x-8 bottom-8 bg-primary text-primary-foreground py-3 text-center text-sm tracking-wide opacity-0 group-hover:opacity-100 transition-opacity hover:bg-primary/90"
+              >
+                GET A QUOTE
+              </NavLink>
             </div>
 
             {/* Premium */}
-            <div className="border-2 border-primary p-8 relative fade-in">
+            <div className="border-2 border-primary p-8 relative fade-in group hover:shadow-xl transition-shadow">
               <div className="absolute -top-4 left-8 bg-primary text-primary-foreground px-4 py-1 text-xs tracking-wide">
                 MOST POPULAR
               </div>
@@ -101,10 +107,16 @@ const Pricing = () => {
                   </li>
                 ))}
               </ul>
+              <NavLink 
+                to="/contact"
+                className="absolute inset-x-8 bottom-8 bg-primary text-primary-foreground py-3 text-center text-sm tracking-wide opacity-0 group-hover:opacity-100 transition-opacity hover:bg-primary/90"
+              >
+                GET A QUOTE
+              </NavLink>
             </div>
 
             {/* Luxury */}
-            <div className="border border-border p-8 fade-in">
+            <div className="border border-border p-8 fade-in relative group hover:shadow-lg transition-shadow">
               <h3 className="text-2xl font-serif mb-4">Luxury</h3>
               <div className="mb-6">
                 <span className="text-4xl font-serif">$35,000</span>
@@ -130,6 +142,70 @@ const Pricing = () => {
                   </li>
                 ))}
               </ul>
+              <NavLink 
+                to="/contact"
+                className="absolute inset-x-8 bottom-8 bg-primary text-primary-foreground py-3 text-center text-sm tracking-wide opacity-0 group-hover:opacity-100 transition-opacity hover:bg-primary/90"
+              >
+                GET A QUOTE
+              </NavLink>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-serif mb-16 text-center fade-in">Your Renovation Journey</h2>
+          <div className="relative">
+            {/* Timeline Line */}
+            <div className="absolute top-12 left-0 right-0 h-0.5 bg-border hidden md:block" />
+            
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4">
+              {[
+                {
+                  icon: MessageSquare,
+                  title: "Consultation",
+                  duration: "Week 1",
+                  description: "Initial meeting and design planning"
+                },
+                {
+                  icon: FileText,
+                  title: "Quote & Contract",
+                  duration: "Week 1-2",
+                  description: "Detailed quote and documentation"
+                },
+                {
+                  icon: Hammer,
+                  title: "Demolition",
+                  duration: "Week 3",
+                  description: "Removal of old fixtures"
+                },
+                {
+                  icon: Wrench,
+                  title: "Installation",
+                  duration: "Week 4-6",
+                  description: "Construction and fitting"
+                },
+                {
+                  icon: Sparkles,
+                  title: "Completion",
+                  duration: "Week 7",
+                  description: "Final touches and handover"
+                },
+              ].map((stage, index) => {
+                const IconComponent = stage.icon;
+                return (
+                  <div key={index} className="relative fade-in flex flex-col items-center text-center">
+                    <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center mb-4 relative z-10 border-4 border-background">
+                      <IconComponent className="w-10 h-10 text-primary" />
+                    </div>
+                    <h3 className="text-lg font-serif mb-2">{stage.title}</h3>
+                    <p className="text-sm font-semibold text-primary mb-2">{stage.duration}</p>
+                    <p className="text-sm text-muted-foreground">{stage.description}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

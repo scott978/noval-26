@@ -57,10 +57,24 @@ const Projects = () => {
   const [mood, setMood] = useState<string>("any");
   const [roomType, setRoomType] = useState<string>("any");
   const [location, setLocation] = useState<string>("any");
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const itemsPerPage = 9;
 
   const filteredProjects = filter === "all" 
     ? projects 
     : projects.filter(p => p.category === filter);
+
+  // Calculate pagination
+  const totalPages = Math.ceil(filteredProjects.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentProjects = filteredProjects.slice(startIndex, endIndex);
+
+  // Reset to page 1 when filters change
+  const handleFilterChange = (newFilter: ProjectCategory) => {
+    setFilter(newFilter);
+    setCurrentPage(1);
+  };
 
   return (
     <div className="min-h-screen pt-32 pb-24">
@@ -85,7 +99,7 @@ const Projects = () => {
             ].map((option) => (
               <button
                 key={option.value}
-                onClick={() => setFilter(option.value as ProjectCategory)}
+                onClick={() => handleFilterChange(option.value as ProjectCategory)}
                 className={`text-sm tracking-wide transition-colors ${
                   filter === option.value 
                     ? "text-primary underline" 
@@ -186,7 +200,7 @@ const Projects = () => {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project) => (
+          {currentProjects.map((project) => (
             <NavLink
               key={project.id}
               to={`/projects/${project.category}/${project.id}`}
@@ -211,6 +225,44 @@ const Projects = () => {
             </NavLink>
           ))}
         </div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="mt-16 flex justify-center items-center gap-2">
+            <button
+              onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+              disabled={currentPage === 1}
+              className="px-4 py-2 text-sm border border-border disabled:opacity-50 disabled:cursor-not-allowed hover:border-primary transition-colors"
+            >
+              Previous
+            </button>
+            
+            {[...Array(totalPages)].map((_, index) => {
+              const pageNumber = index + 1;
+              return (
+                <button
+                  key={pageNumber}
+                  onClick={() => setCurrentPage(pageNumber)}
+                  className={`w-10 h-10 text-sm border transition-colors ${
+                    currentPage === pageNumber
+                      ? "border-primary bg-primary text-primary-foreground"
+                      : "border-border hover:border-primary"
+                  }`}
+                >
+                  {pageNumber}
+                </button>
+              );
+            })}
+            
+            <button
+              onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+              disabled={currentPage === totalPages}
+              className="px-4 py-2 text-sm border border-border disabled:opacity-50 disabled:cursor-not-allowed hover:border-primary transition-colors"
+            >
+              Next
+            </button>
+          </div>
+        )}
 
         {/* CTA */}
         <section className="mt-32 py-32 px-6 lg:px-12 bg-primary text-primary-foreground -mx-6 lg:-mx-12">

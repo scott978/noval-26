@@ -80,7 +80,7 @@ const KitchenRenovations = () => {
                 <div className="text-brand-teal mb-3">
                   {usp.icon}
                 </div>
-                <p className="text-sm font-medium">{usp.label}</p>
+                <p className="text-sm font-serif font-medium">{usp.label}</p>
               </div>
             ))}
           </div>

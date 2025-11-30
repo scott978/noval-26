@@ -50,6 +50,48 @@ const projects = [
     location: "Paddington, Sydney", 
     category: "laundry" as ProjectCategory 
   },
+  { 
+    id: 7, 
+    image: projectBathroom, 
+    title: "Bondi Beach Bathroom", 
+    location: "Bondi Beach, Sydney", 
+    category: "bathroom" as ProjectCategory 
+  },
+  { 
+    id: 8, 
+    image: projectKitchen, 
+    title: "Surry Hills Kitchen", 
+    location: "Surry Hills, Sydney", 
+    category: "kitchen" as ProjectCategory 
+  },
+  { 
+    id: 9, 
+    image: projectLaundry, 
+    title: "Darlinghurst Laundry", 
+    location: "Darlinghurst, Sydney", 
+    category: "laundry" as ProjectCategory 
+  },
+  { 
+    id: 10, 
+    image: projectBathroom, 
+    title: "Coogee Master Bathroom", 
+    location: "Coogee, Sydney", 
+    category: "bathroom" as ProjectCategory 
+  },
+  { 
+    id: 11, 
+    image: projectKitchen, 
+    title: "Glebe Modern Kitchen", 
+    location: "Glebe, Sydney", 
+    category: "kitchen" as ProjectCategory 
+  },
+  { 
+    id: 12, 
+    image: projectLaundry, 
+    title: "Pyrmont Laundry Room", 
+    location: "Pyrmont, Sydney", 
+    category: "laundry" as ProjectCategory 
+  },
 ];
 
 const Projects = () => {

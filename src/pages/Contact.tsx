@@ -1,3 +1,5 @@
+import { NavLink } from "@/components/NavLink";
+
 const Contact = () => {
   return (
     <div className="min-h-screen pt-32 pb-24">
@@ -51,6 +53,22 @@ const Contact = () => {
                 <p className="mt-6 text-foreground font-medium">
                   22+ years of experience | ISO 9001 Certified | Award-winning service
                 </p>
+                <NavLink
+                  to="/pricing"
+                  className="inline-block mt-6 text-sm tracking-wide px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                >
+                  Try our Online Estimation Tool
+                </NavLink>
+              </div>
+            </div>
+          </div>
+
+          {/* Map Placeholder */}
+          <div className="my-16 fade-in">
+            <div className="w-full h-[400px] bg-secondary/30 border border-border flex items-center justify-center">
+              <div className="text-center text-muted-foreground">
+                <p className="text-lg mb-2">Sydney Service Area Map</p>
+                <p className="text-sm">Google Maps integration coming soon</p>
               </div>
             </div>
           </div>

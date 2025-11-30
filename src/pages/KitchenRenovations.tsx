@@ -182,18 +182,9 @@ const KitchenRenovations = () => {
               ))}
             </div>
           </div>
-        </div>
-      </section>
 
-    {/* Projects */}
-      <section className="py-32 px-6 lg:px-12 bg-secondary/30">
-        <div className="container mx-auto">
-          <h2 className="text-5xl font-serif mb-6 text-center">Recent Kitchen Projects</h2>
-          <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
-            See how we've transformed kitchens across Sydney
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Projects Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-24">
             {[
               { title: "Vaucluse Kitchen", location: "Vaucluse", type: "House", budget: "$65,000" },
               { title: "Bondi Apartment", location: "Bondi Beach", type: "Apartment", budget: "$45,000" },

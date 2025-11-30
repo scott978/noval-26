@@ -28,7 +28,7 @@ const Pricing = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <h1 className="text-5xl lg:text-6xl font-serif mb-6 fade-in">
-                Bathroom Pricing
+                Bathroom Pricing & Guide
               </h1>
             </div>
             <div className="fade-in">
@@ -156,7 +156,6 @@ const Pricing = () => {
       {/* Timeline Section */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-serif mb-16 text-center fade-in">Your Renovation Journey</h2>
           <div className="relative">
             {/* Timeline Line */}
             <div className="absolute top-12 left-0 right-0 h-0.5 bg-border hidden md:block" />
@@ -197,8 +196,8 @@ const Pricing = () => {
                 const IconComponent = stage.icon;
                 return (
                   <div key={index} className="relative fade-in flex flex-col items-center text-center">
-                    <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center mb-4 relative z-10 border-4 border-background">
-                      <IconComponent className="w-10 h-10 text-primary" />
+                    <div className="w-24 h-24 rounded-full bg-primary flex items-center justify-center mb-4 relative z-10 border-4 border-background">
+                      <IconComponent className="w-10 h-10 text-primary-foreground" />
                     </div>
                     <h3 className="text-lg font-serif mb-2">{stage.title}</h3>
                     <p className="text-sm font-semibold text-primary mb-2">{stage.duration}</p>

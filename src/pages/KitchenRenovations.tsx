@@ -209,7 +209,10 @@ const KitchenRenovations = () => {
           {/* Find Your Style Banner */}
           <div className="mt-16 bg-brand-teal py-12 px-6">
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-              <h3 className="text-3xl font-serif text-white">Find Your Style</h3>
+              <div>
+                <p className="text-lg text-white/90 mb-2">Dreaming of your new Kitchen?</p>
+                <h3 className="text-3xl font-serif text-white">Find your Style Here</h3>
+              </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <NavLink
                   to="/projects"

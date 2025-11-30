@@ -5,6 +5,9 @@ import planningImg from "@/assets/process/planning.jpg";
 import designSelectionImg from "@/assets/process/design-selection.jpg";
 import constructionImg from "@/assets/process/construction.jpg";
 import completionImg from "@/assets/process/completion.jpg";
+import projectKitchen from "@/assets/project-kitchen.jpg";
+import projectBathroom from "@/assets/project-bathroom.jpg";
+import projectLaundry from "@/assets/project-laundry.jpg";
 
 const Process = () => {
   const steps = [
@@ -159,6 +162,74 @@ const Process = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Featured Projects Section */}
+      <section className="container mx-auto px-6 lg:px-12 mt-32">
+        <div className="text-center mb-16">
+          <h2 className="text-2xl font-serif mb-6">
+            See Our Process in Action
+          </h2>
+          <p className="text-base text-muted-foreground max-w-2xl mx-auto">
+            Discover how our proven process delivers exceptional results across bathrooms, kitchens, and laundries throughout Sydney.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <NavLink to="/projects" className="group block">
+            <div className="relative overflow-hidden mb-4">
+              <img 
+                src={projectBathroom} 
+                alt="Vaucluse Bathroom Renovation"
+                className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
+            </div>
+            <h3 className="text-lg font-serif mb-2 group-hover:text-brand-teal transition-colors">
+              Vaucluse Bathroom
+            </h3>
+            <p className="text-sm text-muted-foreground">Luxury spa-like retreat</p>
+          </NavLink>
+
+          <NavLink to="/projects" className="group block">
+            <div className="relative overflow-hidden mb-4">
+              <img 
+                src={projectKitchen} 
+                alt="Mosman Kitchen Renovation"
+                className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
+            </div>
+            <h3 className="text-lg font-serif mb-2 group-hover:text-brand-teal transition-colors">
+              Mosman Kitchen
+            </h3>
+            <p className="text-sm text-muted-foreground">Modern family hub</p>
+          </NavLink>
+
+          <NavLink to="/projects" className="group block">
+            <div className="relative overflow-hidden mb-4">
+              <img 
+                src={projectLaundry} 
+                alt="Double Bay Laundry Renovation"
+                className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
+            </div>
+            <h3 className="text-lg font-serif mb-2 group-hover:text-brand-teal transition-colors">
+              Double Bay Laundry
+            </h3>
+            <p className="text-sm text-muted-foreground">Practical elegance</p>
+          </NavLink>
+        </div>
+
+        <div className="text-center">
+          <NavLink
+            to="/projects"
+            className="inline-block text-sm tracking-wide px-8 py-3 border border-border hover:border-brand-teal hover:bg-brand-teal/5 transition-all"
+          >
+            View All Projects
+          </NavLink>
         </div>
       </section>
 

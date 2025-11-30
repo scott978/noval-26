@@ -10,10 +10,6 @@ const KitchenRenovations = () => {
     <div className="min-h-screen">
       {/* Hero Banner with Pricing & CTA */}
       <section className="relative h-[90vh] w-full bg-black">
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-40"
-          style={{ backgroundImage: `url(${heroKitchen})` }}
-        />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="container mx-auto px-6 lg:px-12 text-center">
             <h1 className="text-6xl lg:text-7xl font-serif leading-tight text-background fade-in mb-6">

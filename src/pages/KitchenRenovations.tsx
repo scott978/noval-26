@@ -68,12 +68,11 @@ const KitchenRenovations = () => {
           </p>
 
           {/* USPs */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-20">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-20">
             {[
               { icon: <Award className="w-8 h-8" />, label: "ISO Certified" },
               { icon: <FileCheck className="w-8 h-8" />, label: "Transparent Pricing" },
               { icon: <Paintbrush className="w-8 h-8" />, label: "Design Services" },
-              { icon: <Users className="w-8 h-8" />, label: "Buildertrend" },
               { icon: <Shield className="w-8 h-8" />, label: "10 Year Waterproofing" },
               { icon: <CheckCircle2 className="w-8 h-8" />, label: "Licensed & Insured" },
             ].map((usp, index) => (

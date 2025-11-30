@@ -55,7 +55,7 @@ const Contact = () => {
               </p>
               <NavLink
                 to="/pricing"
-                className="inline-block mt-8 text-sm tracking-wide px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                className="inline-block mt-12 text-sm tracking-wide px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
               >
                 Try our Online Estimation Tool
               </NavLink>

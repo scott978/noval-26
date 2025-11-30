@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { Check, Palette, ClipboardList, Users, ShieldCheck, Bell, Award, MessageSquare, FileText, Hammer, Wrench, Sparkles } from "lucide-react";
+import { Check, Palette, ClipboardList, Users, ShieldCheck, Bell, Award, MessageSquare, FileText, Hammer, Wrench, Sparkles, Info } from "lucide-react";
 import bathroomHero from "@/assets/project-bathroom.jpg";
 
 const Pricing = () => {
@@ -30,6 +30,10 @@ const Pricing = () => {
               <h1 className="text-5xl lg:text-6xl font-serif mb-6 fade-in">
                 Bathroom Pricing & Guide
               </h1>
+              <p className="text-primary text-2xl flex items-center gap-2 fade-in">
+                Kellyville
+                <Info className="w-5 h-5" />
+              </p>
             </div>
             <div className="fade-in">
               <p className="text-lg leading-relaxed text-muted-foreground">

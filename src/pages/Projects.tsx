@@ -3,6 +3,7 @@ import projectKitchen from "@/assets/project-kitchen.jpg";
 import projectBathroom from "@/assets/project-bathroom.jpg";
 import projectLaundry from "@/assets/project-laundry.jpg";
 import { NavLink } from "@/components/NavLink";
+import { ChevronDown } from "lucide-react";
 
 type ProjectCategory = "all" | "bathroom" | "kitchen" | "laundry";
 
@@ -53,6 +54,9 @@ const projects = [
 
 const Projects = () => {
   const [filter, setFilter] = useState<ProjectCategory>("all");
+  const [mood, setMood] = useState<string>("any");
+  const [roomType, setRoomType] = useState<string>("any");
+  const [location, setLocation] = useState<string>("any");
 
   const filteredProjects = filter === "all" 
     ? projects 
@@ -91,6 +95,92 @@ const Projects = () => {
                 {option.label}
               </button>
             ))}
+          </div>
+        </div>
+
+        {/* Sub Filters */}
+        <div className="mb-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Browse by Mood */}
+          <div>
+            <label className="block text-sm font-medium mb-3">Browse by Mood</label>
+            <select
+              value={mood}
+              onChange={(e) => setMood(e.target.value)}
+              className="w-full px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:border-primary transition-colors appearance-none cursor-pointer"
+            >
+              <option value="any">Any</option>
+              <option value="classic-charm">Classic Charm</option>
+              <option value="modern-luxe">Modern Luxe</option>
+              <option value="sleek-sanctuary">Sleek Sanctuary</option>
+              <option value="tranquil-retreat">Tranquil Retreat</option>
+            </select>
+          </div>
+
+          {/* Room Type */}
+          <div>
+            <label className="block text-sm font-medium mb-3">Room Type</label>
+            <select
+              value={roomType}
+              onChange={(e) => setRoomType(e.target.value)}
+              className="w-full px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:border-primary transition-colors appearance-none cursor-pointer"
+            >
+              <option value="any">Any</option>
+              <option value="3-way-bathroom">3 Way Bathroom</option>
+              <option value="powder-room">Powder Room</option>
+              <option value="bathroom-with-bath">Bathroom (With Bath)</option>
+              <option value="bathroom-no-bath">Bathroom (No Bath)</option>
+              <option value="main-wc">Main & WC</option>
+              <option value="laundry-bathroom">Laundry & Bathroom</option>
+              <option value="laundry">Laundry</option>
+            </select>
+          </div>
+
+          {/* Location */}
+          <div>
+            <label className="block text-sm font-medium mb-3">Location</label>
+            <select
+              value={location}
+              onChange={(e) => setLocation(e.target.value)}
+              className="w-full px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:border-primary transition-colors appearance-none cursor-pointer"
+            >
+              <option value="any">Any Location</option>
+              <option value="stanmore">Stanmore</option>
+              <option value="randwick">Randwick</option>
+              <option value="hills-district">Hills District</option>
+              <option value="carlingford">Carlingford</option>
+              <option value="beaumont-hills">Beaumont Hills</option>
+              <option value="balgowlah">Balgowlah</option>
+              <option value="glebe">Glebe</option>
+              <option value="kirribilli">Kirribilli</option>
+              <option value="maroubra">Maroubra</option>
+              <option value="north-manly">North Manly</option>
+              <option value="petersham">Petersham</option>
+              <option value="putney">Putney</option>
+              <option value="seaforth">Seaforth</option>
+              <option value="terrey-hills">Terrey Hills</option>
+              <option value="marrickville">Marrickville</option>
+              <option value="lilyfield">Lilyfield</option>
+              <option value="quakers-hill">Quakers Hill</option>
+              <option value="tempe">Tempe</option>
+              <option value="rozelle">Rozelle</option>
+              <option value="waverley">Waverley</option>
+              <option value="elizabeth-bay">Elizabeth Bay</option>
+              <option value="five-dock">Five Dock</option>
+              <option value="pymble">Pymble</option>
+              <option value="haberfield">Haberfield</option>
+              <option value="double-bay">Double Bay</option>
+              <option value="chatswood">Chatswood</option>
+              <option value="clovelly">Clovelly</option>
+              <option value="surry-hills">Surry Hills</option>
+              <option value="darlinghurst">Darlinghurst</option>
+              <option value="pyrmont">Pyrmont</option>
+              <option value="coogee">Coogee</option>
+              <option value="dee-why">Dee Why</option>
+              <option value="mosman">Mosman</option>
+              <option value="vaucluse">Vaucluse</option>
+              <option value="bondi">Bondi</option>
+              <option value="paddington">Paddington</option>
+            </select>
           </div>
         </div>
 

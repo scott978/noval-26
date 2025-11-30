@@ -99,14 +99,14 @@ const Projects = () => {
         </div>
 
         {/* Sub Filters */}
-        <div className="mb-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="mb-12 flex flex-wrap gap-6 text-sm">
           {/* Browse by Mood */}
-          <div>
-            <label className="block text-sm font-medium mb-3">Browse by Mood</label>
+          <div className="flex items-center gap-3">
+            <label className="text-muted-foreground">Browse by Mood:</label>
             <select
               value={mood}
               onChange={(e) => setMood(e.target.value)}
-              className="w-full px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:border-primary transition-colors appearance-none cursor-pointer"
+              className="px-3 py-1 border border-border bg-background text-muted-foreground hover:text-foreground focus:outline-none focus:text-foreground transition-colors text-sm cursor-pointer"
             >
               <option value="any">Any</option>
               <option value="classic-charm">Classic Charm</option>
@@ -117,12 +117,12 @@ const Projects = () => {
           </div>
 
           {/* Room Type */}
-          <div>
-            <label className="block text-sm font-medium mb-3">Room Type</label>
+          <div className="flex items-center gap-3">
+            <label className="text-muted-foreground">Room Type:</label>
             <select
               value={roomType}
               onChange={(e) => setRoomType(e.target.value)}
-              className="w-full px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:border-primary transition-colors appearance-none cursor-pointer"
+              className="px-3 py-1 border border-border bg-background text-muted-foreground hover:text-foreground focus:outline-none focus:text-foreground transition-colors text-sm cursor-pointer"
             >
               <option value="any">Any</option>
               <option value="3-way-bathroom">3 Way Bathroom</option>
@@ -136,12 +136,12 @@ const Projects = () => {
           </div>
 
           {/* Location */}
-          <div>
-            <label className="block text-sm font-medium mb-3">Location</label>
+          <div className="flex items-center gap-3">
+            <label className="text-muted-foreground">Location:</label>
             <select
               value={location}
               onChange={(e) => setLocation(e.target.value)}
-              className="w-full px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:border-primary transition-colors appearance-none cursor-pointer"
+              className="px-3 py-1 border border-border bg-background text-muted-foreground hover:text-foreground focus:outline-none focus:text-foreground transition-colors text-sm cursor-pointer"
             >
               <option value="any">Any Location</option>
               <option value="stanmore">Stanmore</option>

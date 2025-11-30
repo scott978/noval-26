@@ -152,6 +152,27 @@ const KitchenRenovations = () => {
               </div>
             ))}
           </div>
+
+          {/* Find Your Style Banner */}
+          <div className="mt-16 bg-secondary/50 py-12 px-6">
+            <div className="max-w-3xl mx-auto text-center">
+              <h3 className="text-3xl font-serif mb-6">Find Your Style</h3>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <NavLink
+                  to="/projects"
+                  className="inline-block px-8 py-3 bg-brand-teal text-white hover:bg-brand-teal-dark transition-colors text-sm tracking-wide"
+                >
+                  Projects
+                </NavLink>
+                <NavLink
+                  to="/pricing"
+                  className="inline-block px-8 py-3 border-2 border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white transition-colors text-sm tracking-wide"
+                >
+                  Style Quiz
+                </NavLink>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -220,12 +241,49 @@ const KitchenRenovations = () => {
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <div className="relative h-[500px] overflow-hidden">
-              <img
-                src={projectKitchen}
-                alt="Luxury kitchen renovation"
-                className="w-full h-full object-cover"
-              />
+            <div>
+              <div className="relative h-[500px] overflow-hidden mb-12">
+                <img
+                  src={projectKitchen}
+                  alt="Luxury kitchen renovation"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* FAQs */}
+              <div className="space-y-4">
+                <h3 className="text-2xl font-serif mb-6">Common Questions</h3>
+                {[
+                  {
+                    question: "What's included in the price?",
+                    answer: "Our pricing includes all labor, materials, project management, and cleanup. This covers demolition, cabinetry, benchtops, plumbing, electrical, tiling, painting, and appliance installation."
+                  },
+                  {
+                    question: "How long does a kitchen renovation take?",
+                    answer: "Most kitchen renovations take 4-8 weeks depending on the scope. Standard kitchens typically take 4-5 weeks, while premium and luxury kitchens with custom features may take 6-8 weeks."
+                  },
+                  {
+                    question: "Do you handle council approvals?",
+                    answer: "Yes, we manage all necessary approvals including council permits and strata applications. For apartment renovations, we coordinate with building management to ensure compliance with all regulations."
+                  }
+                ].map((faq, index) => (
+                  <Collapsible key={index}>
+                    <div className="border border-border bg-background">
+                      <CollapsibleTrigger className="w-full">
+                        <div className="flex items-center justify-between p-4 hover:bg-secondary/30 transition-colors">
+                          <h4 className="text-left font-serif text-base">{faq.question}</h4>
+                          <ChevronDown className="w-5 h-5 text-brand-teal transition-transform" />
+                        </div>
+                      </CollapsibleTrigger>
+                      <CollapsibleContent>
+                        <div className="px-4 pb-4 text-sm text-muted-foreground">
+                          {faq.answer}
+                        </div>
+                      </CollapsibleContent>
+                    </div>
+                  </Collapsible>
+                ))}
+              </div>
             </div>
 
             <div className="space-y-8">
@@ -298,54 +356,6 @@ const KitchenRenovations = () => {
             </div>
           </div>
 
-          <div className="bg-secondary/30 p-8 mb-12">
-            <h3 className="text-2xl font-serif mb-4 text-center">How Location Affects Your Kitchen Renovation</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <div>
-                <h4 className="text-lg font-serif mb-3 text-brand-teal">House Renovations</h4>
-                <ul className="space-y-2 text-base">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" />
-                    <span>Direct material access and delivery</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" />
-                    <span>Flexible working hours</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" />
-                    <span>Simpler approval process</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" />
-                    <span>More storage space for materials</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-lg font-serif mb-3 text-brand-teal">Apartment Renovations</h4>
-                <ul className="space-y-2 text-base">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" />
-                    <span>Strata approval coordination (we handle this)</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" />
-                    <span>Building access and lift booking management</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" />
-                    <span>Restricted working hours (usually 7am-5pm)</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" />
-                    <span>Additional coordination may add 1-2 weeks</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
           <div className="text-center">
             <NavLink
               to="/pricing"
@@ -353,6 +363,52 @@ const KitchenRenovations = () => {
             >
               Download Full Kitchen Renovation Guide
             </NavLink>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Blog Section */}
+      <section className="py-32 px-6 lg:px-12 bg-secondary/30">
+        <div className="container mx-auto">
+          <h2 className="text-5xl font-serif mb-6 text-center">Kitchen Renovation Insights</h2>
+          <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+            Expert tips and inspiration for your kitchen transformation
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Top Kitchen Trends for 2024",
+                excerpt: "Discover the latest design trends shaping modern Sydney kitchens, from sustainable materials to smart appliances.",
+                readTime: "5 min read"
+              },
+              {
+                title: "Maximizing Storage in Small Kitchens",
+                excerpt: "Expert tips on clever storage solutions that make the most of compact kitchen spaces without compromising style.",
+                readTime: "4 min read"
+              },
+              {
+                title: "Choosing the Right Benchtop Material",
+                excerpt: "A comprehensive guide to benchtop materials—from stone to laminate—to help you make the best choice for your lifestyle.",
+                readTime: "6 min read"
+              }
+            ].map((article, index) => (
+              <div key={index} className="bg-background border border-border hover:border-brand-teal transition-all duration-300 fade-in">
+                <div className="h-[200px] bg-secondary/50"></div>
+                <div className="p-6">
+                  <p className="text-xs text-brand-teal mb-3 uppercase tracking-wide">{article.readTime}</p>
+                  <h3 className="text-xl font-serif mb-3">{article.title}</h3>
+                  <p className="text-sm text-muted-foreground mb-4">{article.excerpt}</p>
+                  <NavLink
+                    to="/contact"
+                    className="text-sm text-brand-teal hover:underline inline-flex items-center gap-2"
+                  >
+                    Read More
+                    <span>→</span>
+                  </NavLink>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

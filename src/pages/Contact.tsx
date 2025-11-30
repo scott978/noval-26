@@ -116,7 +116,7 @@ const Contact = () => {
         </div>
 
         <div className="border-t border-border pt-16 fade-in max-w-4xl mx-auto">
-          <h2 className="text-2xl font-serif mb-2">Get in Touch</h2>
+          <h2 className="text-2xl font-serif mb-2">GENERAL ENQUIRIES</h2>
           <p className="text-muted-foreground mb-8">
             For general enquiries, please use the form below and one of our admin staff will be in contact
           </p>
@@ -182,6 +182,18 @@ const Contact = () => {
                 className="w-full px-4 py-3 border border-border bg-background focus:outline-none focus:ring-1 focus:ring-primary"
                 placeholder="Share your enquiry or any questions you have..."
               />
+            </div>
+
+            <div className="flex items-start gap-3">
+              <input 
+                type="checkbox" 
+                id="acknowledgment"
+                className="mt-1"
+                required
+              />
+              <label htmlFor="acknowledgment" className="text-sm text-muted-foreground">
+                I acknowledge that this is a general enquiry form and not a sales related. *
+              </label>
             </div>
 
             <div className="flex items-start gap-3">

@@ -1,5 +1,5 @@
 import { NavLink } from "@/components/NavLink";
-import { Star, CheckCircle2, Award, Shield, Clock, Paintbrush, FileCheck, Users, Phone, MapPin, ChevronDown, LayoutGrid, Sparkles } from "lucide-react";
+import { Star, CheckCircle2, Award, Shield, Clock, Paintbrush, FileCheck, Users, Phone, MapPin, ChevronDown, LayoutGrid, Sparkles, ClipboardCheck, Pencil, Hammer, Sparkle, Key } from "lucide-react";
 import heroKitchen from "@/assets/hero-kitchen.jpg";
 import projectKitchen from "@/assets/project-kitchen.jpg";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
@@ -115,6 +115,72 @@ const KitchenRenovations = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Process Timeline */}
+      <section className="py-32 px-6 lg:px-12 bg-secondary/30">
+        <div className="container mx-auto">
+          <h2 className="text-5xl font-serif mb-6 text-center">Our Process</h2>
+          <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+            A streamlined approach to transforming your kitchen
+          </p>
+
+          <div className="relative max-w-6xl mx-auto">
+            {/* Timeline line */}
+            <div className="absolute top-12 left-0 right-0 h-0.5 bg-border hidden lg:block" />
+            
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-4">
+              {[
+                {
+                  icon: <ClipboardCheck className="w-8 h-8" />,
+                  step: "01",
+                  title: "Consultation",
+                  description: "Initial meeting to discuss your vision, budget, and timeline"
+                },
+                {
+                  icon: <Pencil className="w-8 h-8" />,
+                  step: "02",
+                  title: "Design",
+                  description: "Detailed plans and 3D renders of your new kitchen"
+                },
+                {
+                  icon: <FileCheck className="w-8 h-8" />,
+                  step: "03",
+                  title: "Approval",
+                  description: "Quote finalization and project scheduling"
+                },
+                {
+                  icon: <Hammer className="w-8 h-8" />,
+                  step: "04",
+                  title: "Renovation",
+                  description: "Expert construction with regular progress updates"
+                },
+                {
+                  icon: <Key className="w-8 h-8" />,
+                  step: "05",
+                  title: "Handover",
+                  description: "Final inspection and enjoy your new kitchen"
+                }
+              ].map((process, index) => (
+                <div key={index} className="relative flex flex-col items-center text-center fade-in">
+                  {/* Timeline dot */}
+                  <div className="relative z-10 w-24 h-24 rounded-full bg-brand-teal flex items-center justify-center mb-6">
+                    <div className="text-white">
+                      {process.icon}
+                    </div>
+                  </div>
+                  
+                  <div className="mb-3">
+                    <span className="text-sm font-bold text-brand-teal">{process.step}</span>
+                  </div>
+                  
+                  <h3 className="text-xl font-serif mb-2">{process.title}</h3>
+                  <p className="text-sm text-muted-foreground">{process.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

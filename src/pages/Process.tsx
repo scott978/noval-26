@@ -132,7 +132,7 @@ const Process = () => {
       </section>
 
       {/* Why Choose Our Process Section */}
-      <section className="bg-brand-teal py-24 mt-32">
+      <section className="bg-black py-24 mt-32">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-2xl font-serif mb-8 text-white">

@@ -271,33 +271,34 @@ const Pricing = () => {
               {
                 title: "Complete Bathroom Renovation Cost Breakdown",
                 excerpt: "Understand exactly where your money goes in a bathroom renovation. From fixtures to labour, we break down every cost.",
-                readTime: "5 min read",
-                category: "Cost Guides"
+                readTime: "5 min read"
               },
               {
                 title: "Essential vs Premium: Which Package is Right for You?",
                 excerpt: "Compare our renovation packages side-by-side and discover which option best fits your budget and design goals.",
-                readTime: "4 min read",
-                category: "Planning"
+                readTime: "4 min read"
               },
               {
                 title: "Hidden Costs in Bathroom Renovations",
                 excerpt: "Learn about common unexpected expenses and how to budget properly for your bathroom renovation project.",
-                readTime: "6 min read",
-                category: "Cost Guides"
+                readTime: "6 min read"
               }
-            ].map((post, index) => (
-              <article key={index} className="bg-background border border-border p-6 fade-in hover:shadow-lg transition-shadow group">
-                <span className="text-xs tracking-wide text-primary mb-3 block">{post.category}</span>
-                <h3 className="text-xl font-serif mb-3 group-hover:text-primary transition-colors">{post.title}</h3>
-                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{post.excerpt}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-muted-foreground">{post.readTime}</span>
-                  <NavLink to="/contact" className="text-xs tracking-wide text-primary hover:underline">
-                    READ MORE →
+            ].map((article, index) => (
+              <div key={index} className="bg-background border border-border hover:border-primary transition-all duration-300 fade-in">
+                <div className="h-[200px] bg-secondary/50"></div>
+                <div className="p-6">
+                  <p className="text-xs text-primary mb-3 uppercase tracking-wide">{article.readTime}</p>
+                  <h3 className="text-xl font-serif mb-3">{article.title}</h3>
+                  <p className="text-sm text-muted-foreground mb-4">{article.excerpt}</p>
+                  <NavLink
+                    to="/contact"
+                    className="text-sm text-primary hover:underline inline-flex items-center gap-2"
+                  >
+                    Read More
+                    <span>→</span>
                   </NavLink>
                 </div>
-              </article>
+              </div>
             ))}
           </div>
         </div>

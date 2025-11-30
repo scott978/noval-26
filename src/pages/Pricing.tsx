@@ -1,9 +1,16 @@
 import { NavLink } from "react-router-dom";
-import { Check } from "lucide-react";
+import { Check, Palette, ClipboardList, Users, ShieldCheck, Bell, Award } from "lucide-react";
 
 const Pricing = () => {
   return (
     <div className="min-h-screen">
+      {/* Header Banner */}
+      <section className="bg-black py-3 px-6">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-white text-sm text-center">Transparent Pricing for Your Dream Bathroom</p>
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
@@ -124,35 +131,47 @@ const Pricing = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
+                icon: Palette,
                 title: "Design Consultation",
                 description: "Work with our experienced designers to create your perfect bathroom layout and style.",
               },
               {
+                icon: ClipboardList,
                 title: "Project Management",
                 description: "Dedicated project manager overseeing every aspect of your renovation from start to finish.",
               },
               {
+                icon: Users,
                 title: "Quality Tradespeople",
                 description: "Licensed, insured, and experienced tradespeople committed to exceptional workmanship.",
               },
               {
+                icon: ShieldCheck,
                 title: "Waterproofing Guarantee",
                 description: "Professional waterproofing with comprehensive warranties for your peace of mind.",
               },
               {
+                icon: Bell,
                 title: "Progress Updates",
                 description: "Stay informed with regular updates through our online project management system.",
               },
               {
+                icon: Award,
                 title: "ISO 9001 Certified",
                 description: "Quality management system ensuring consistent excellence in every project.",
               },
-            ].map((item, index) => (
-              <div key={index} className="fade-in">
-                <h3 className="text-xl font-serif mb-3">{item.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{item.description}</p>
-              </div>
-            ))}
+            ].map((item, index) => {
+              const IconComponent = item.icon;
+              return (
+                <div key={index} className="fade-in flex gap-4">
+                  <IconComponent className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-serif mb-3">{item.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -171,7 +190,7 @@ const Pricing = () => {
             to="/contact"
             className="inline-block text-sm tracking-wide px-8 py-3 bg-primary text-primary-foreground hover:bg-brand-teal-dark transition-colors"
           >
-            Get Your Free Quote
+            TRY OUR ESTIMATOR TOOL
           </NavLink>
         </div>
       </section>

@@ -113,9 +113,9 @@ const Footer = () => {
           <div>
             <h4 className="text-sm font-semibold mb-6 tracking-wider text-white uppercase">Resources</h4>
             <nav className="flex flex-col space-y-3 mb-8">
-              <a href="#" className="text-white hover:text-brand-teal transition-colors">
+              <NavLink to="/pricing" className="text-white hover:text-brand-teal transition-colors">
                 Pricing & Guides
-              </a>
+              </NavLink>
               <a href="#" className="text-white hover:text-brand-teal transition-colors">
                 Podcast
               </a>

@@ -63,6 +63,39 @@ const Contact = () => {
             </div>
           </div>
 
+          {/* Areas We Service */}
+          <div className="my-16 fade-in">
+            <h2 className="text-3xl font-serif mb-6 text-center">Areas We Service</h2>
+            <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Novalé has a talented team of renovators servicing clients throughout all of Sydney
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+              {[
+                "South Sydney",
+                "Kellyville & Richmond",
+                "Eastern Suburbs",
+                "Northern Beaches",
+                "Sutherland Shire",
+                "Hills District",
+                "St George",
+                "Inner West",
+                "Upper North Shore",
+                "Lower North Shore",
+                "Western Sydney"
+              ].map((area, index) => (
+                <div key={index} className="p-4 border border-border text-center hover:border-primary transition-colors">
+                  <p className="text-sm">{area}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-center text-sm text-muted-foreground mt-8">
+              Not sure if you're within our coverage area? Give us a call on{" "}
+              <a href="tel:1800668253" className="text-primary hover:underline">
+                1800 NOVALÉ
+              </a>
+            </p>
+          </div>
+
           {/* Map Placeholder */}
           <div className="my-16 fade-in">
             <div className="w-full h-[400px] bg-secondary/30 border border-border flex items-center justify-center">
@@ -74,23 +107,26 @@ const Contact = () => {
           </div>
 
           <div className="border-t border-border pt-16 fade-in">
-            <h2 className="text-2xl font-serif mb-6">Get Your Free Online Estimate</h2>
+            <h2 className="text-2xl font-serif mb-2">Get in Touch</h2>
+            <p className="text-muted-foreground mb-8">
+              For general enquiries, please use the form below and one of our admin staff will be in contact
+            </p>
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm mb-2">Full Name *</label>
+                  <label htmlFor="firstName" className="block text-sm mb-2">Your First Name *</label>
                   <input 
                     type="text" 
-                    id="name"
+                    id="firstName"
                     className="w-full px-4 py-3 border border-border bg-background focus:outline-none focus:ring-1 focus:ring-primary"
                     required
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm mb-2">Email *</label>
+                  <label htmlFor="surname" className="block text-sm mb-2">Your Surname *</label>
                   <input 
-                    type="email" 
-                    id="email"
+                    type="text" 
+                    id="surname"
                     className="w-full px-4 py-3 border border-border bg-background focus:outline-none focus:ring-1 focus:ring-primary"
                     required
                   />
@@ -99,7 +135,7 @@ const Contact = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="phone" className="block text-sm mb-2">Phone *</label>
+                  <label htmlFor="phone" className="block text-sm mb-2">Your Contact Number *</label>
                   <input 
                     type="tel" 
                     id="phone"
@@ -108,54 +144,34 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="suburb" className="block text-sm mb-2">Suburb *</label>
+                  <label htmlFor="email" className="block text-sm mb-2">Your Email Address *</label>
                   <input 
-                    type="text" 
-                    id="suburb"
+                    type="email" 
+                    id="email"
                     className="w-full px-4 py-3 border border-border bg-background focus:outline-none focus:ring-1 focus:ring-primary"
-                    placeholder="e.g. Mosman, Vaucluse"
                     required
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="service" className="block text-sm mb-2">Renovation Type *</label>
-                <select 
-                  id="service"
+                <label htmlFor="postcode" className="block text-sm mb-2">Your Suburb Postcode *</label>
+                <input 
+                  type="text" 
+                  id="postcode"
                   className="w-full px-4 py-3 border border-border bg-background focus:outline-none focus:ring-1 focus:ring-primary"
+                  placeholder="e.g. 2088"
                   required
-                >
-                  <option value="">Please select</option>
-                  <option value="bathroom">Bathroom Renovation</option>
-                  <option value="kitchen">Kitchen Renovation</option>
-                  <option value="laundry">Laundry Renovation</option>
-                  <option value="multiple">Multiple Spaces</option>
-                </select>
+                />
               </div>
 
               <div>
-                <label htmlFor="timeline" className="block text-sm mb-2">When are you looking to start?</label>
-                <select 
-                  id="timeline"
-                  className="w-full px-4 py-3 border border-border bg-background focus:outline-none focus:ring-1 focus:ring-primary"
-                >
-                  <option value="">Please select</option>
-                  <option value="immediately">Immediately</option>
-                  <option value="1-3months">1-3 months</option>
-                  <option value="3-6months">3-6 months</option>
-                  <option value="6plus">6+ months</option>
-                  <option value="planning">Just planning</option>
-                </select>
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm mb-2">Tell us about your project</label>
+                <label htmlFor="comments" className="block text-sm mb-2">Additional comments/Notes</label>
                 <textarea 
-                  id="message"
+                  id="comments"
                   rows={6}
                   className="w-full px-4 py-3 border border-border bg-background focus:outline-none focus:ring-1 focus:ring-primary"
-                  placeholder="Share your vision, any specific requirements, or questions you have..."
+                  placeholder="Share your enquiry or any questions you have..."
                 />
               </div>
 
@@ -164,10 +180,9 @@ const Contact = () => {
                   type="checkbox" 
                   id="consent"
                   className="mt-1"
-                  required
                 />
                 <label htmlFor="consent" className="text-sm text-muted-foreground">
-                  I agree to receive communication from Novalé regarding my renovation enquiry *
+                  By completing this form, and providing your details, you will be eligible to receive brand updates. I am happy to receive email updates.
                 </label>
               </div>
 
@@ -175,36 +190,13 @@ const Contact = () => {
                 type="submit"
                 className="text-sm tracking-wide px-8 py-3 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
               >
-                Get My Free Estimate
+                Send Message
               </button>
 
               <p className="text-xs text-muted-foreground">
-                * Required fields. Your information is kept confidential and will only be used 
-                to contact you about your renovation enquiry.
+                * Required fields. Your information is kept confidential.
               </p>
             </form>
-          </div>
-
-          {/* Trust Indicators */}
-          <div className="mt-16 pt-16 border-t border-border">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div className="bg-brand-teal/10 p-8 border border-brand-teal/20">
-                <div className="text-3xl font-serif mb-2 text-brand-teal">22+</div>
-                <p className="text-sm text-muted-foreground">Years Experience</p>
-              </div>
-              <div className="bg-brand-teal/10 p-8 border border-brand-teal/20">
-                <div className="text-3xl font-serif mb-2 text-brand-teal">ISO</div>
-                <p className="text-sm text-muted-foreground">9001 Certified</p>
-              </div>
-              <div className="bg-brand-teal/10 p-8 border border-brand-teal/20">
-                <div className="text-3xl font-serif mb-2 text-brand-teal">1000+</div>
-                <p className="text-sm text-muted-foreground">Happy Clients</p>
-              </div>
-              <div className="bg-brand-teal/10 p-8 border border-brand-teal/20">
-                <div className="text-3xl font-serif mb-2 text-brand-teal">5★</div>
-                <p className="text-sm text-muted-foreground">Award Winning</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>

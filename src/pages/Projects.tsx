@@ -123,17 +123,19 @@ const Projects = () => {
         </div>
 
         {/* CTA */}
-        <section className="mt-32 pt-32 border-t border-border text-center">
-          <h2 className="text-4xl font-serif mb-6">Ready for your own transformation?</h2>
-          <p className="text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Get a free online estimate and discover how we can create your dream space
-          </p>
-          <NavLink 
-            to="/contact"
-            className="inline-block text-sm tracking-wide px-8 py-3 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
-          >
-            Get Your Free Quote
-          </NavLink>
+        <section className="mt-32 py-32 px-6 lg:px-12 bg-primary text-primary-foreground -mx-6 lg:-mx-12">
+          <div className="container mx-auto text-center">
+            <h2 className="text-5xl font-serif mb-6">Ready for your own transformation?</h2>
+            <p className="text-lg mb-10 max-w-2xl mx-auto opacity-90">
+              Get a free online estimate and discover how we can create your dream space
+            </p>
+            <NavLink 
+              to="/contact"
+              className="inline-block text-sm tracking-wide px-8 py-3 border border-primary-foreground hover:bg-primary-foreground hover:text-primary transition-colors"
+            >
+              Start Your Journey
+            </NavLink>
+          </div>
         </section>
       </div>
     </div>

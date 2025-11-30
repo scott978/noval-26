@@ -1,5 +1,5 @@
 import { NavLink } from "@/components/NavLink";
-import { Star, CheckCircle2, Award, Shield, Clock, Paintbrush, FileCheck, Users, Phone, MapPin, ChevronDown } from "lucide-react";
+import { Star, CheckCircle2, Award, Shield, Clock, Paintbrush, FileCheck, Users, Phone, MapPin, ChevronDown, LayoutGrid, Sparkles } from "lucide-react";
 import heroKitchen from "@/assets/hero-kitchen.jpg";
 import projectKitchen from "@/assets/project-kitchen.jpg";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
@@ -162,13 +162,19 @@ const KitchenRenovations = () => {
                   to="/projects"
                   className="inline-block px-8 py-3 bg-white text-brand-teal hover:bg-background transition-colors text-sm tracking-wide"
                 >
-                  Projects
+                  <span className="flex items-center gap-2">
+                    <LayoutGrid className="w-4 h-4" />
+                    Projects
+                  </span>
                 </NavLink>
                 <NavLink
                   to="/pricing"
                   className="inline-block px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-brand-teal transition-colors text-sm tracking-wide"
                 >
-                  Style Quiz
+                  <span className="flex items-center gap-2">
+                    <Sparkles className="w-4 h-4" />
+                    Style Quiz
+                  </span>
                 </NavLink>
               </div>
             </div>

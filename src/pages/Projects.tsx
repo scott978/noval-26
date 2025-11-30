@@ -100,7 +100,7 @@ const Projects = () => {
   const [roomType, setRoomType] = useState<string>("any");
   const [location, setLocation] = useState<string>("any");
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const itemsPerPage = 3;
+  const itemsPerPage = 9;
 
   const filteredProjects = filter === "all" 
     ? projects 

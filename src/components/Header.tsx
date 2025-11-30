@@ -82,8 +82,9 @@ const Header = () => {
                 Services
               </NavLink>
               <NavLink 
-                to="/services#process" 
+                to="/process" 
                 className="text-sm tracking-wide transition-colors hover:text-brand-teal"
+                activeClassName="text-primary"
               >
                 Our Process
               </NavLink>

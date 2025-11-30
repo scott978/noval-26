@@ -154,19 +154,19 @@ const KitchenRenovations = () => {
           </div>
 
           {/* Find Your Style Banner */}
-          <div className="mt-16 bg-secondary/50 py-12 px-6">
-            <div className="max-w-3xl mx-auto text-center">
-              <h3 className="text-3xl font-serif mb-6">Find Your Style</h3>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="mt-16 bg-brand-teal py-12 px-6">
+            <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+              <h3 className="text-3xl font-serif text-white">Find Your Style</h3>
+              <div className="flex flex-col sm:flex-row gap-4">
                 <NavLink
                   to="/projects"
-                  className="inline-block px-8 py-3 bg-brand-teal text-white hover:bg-brand-teal-dark transition-colors text-sm tracking-wide"
+                  className="inline-block px-8 py-3 bg-white text-brand-teal hover:bg-background transition-colors text-sm tracking-wide"
                 >
                   Projects
                 </NavLink>
                 <NavLink
                   to="/pricing"
-                  className="inline-block px-8 py-3 border-2 border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white transition-colors text-sm tracking-wide"
+                  className="inline-block px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-brand-teal transition-colors text-sm tracking-wide"
                 >
                   Style Quiz
                 </NavLink>
@@ -271,7 +271,7 @@ const KitchenRenovations = () => {
                     <div className="border border-border bg-background">
                       <CollapsibleTrigger className="w-full">
                         <div className="flex items-center justify-between p-4 hover:bg-secondary/30 transition-colors">
-                          <h4 className="text-left font-serif text-base">{faq.question}</h4>
+                          <h4 className="text-left text-base font-medium">{faq.question}</h4>
                           <ChevronDown className="w-5 h-5 text-brand-teal transition-transform" />
                         </div>
                       </CollapsibleTrigger>

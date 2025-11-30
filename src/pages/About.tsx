@@ -14,18 +14,18 @@ const About = () => {
           />
           
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-6xl lg:text-7xl font-serif mb-12 fade-in">
+            <h1 className="text-3xl font-serif mb-12 fade-in">
               Enhancing lives for over 22 years
             </h1>
             
             <div className="prose prose-lg max-w-none">
-              <p className="text-xl text-muted-foreground leading-relaxed mb-8 fade-in">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8 fade-in">
                 At Novalé, we aim to lead the bathroom, kitchen and laundry renovation space 
                 by being refreshingly open, design-driven, knowledgeable, and professional. 
                 We are proud of pairing old school values with a new school approach.
               </p>
               
-              <p className="text-xl text-muted-foreground leading-relaxed fade-in">
+              <p className="text-lg text-muted-foreground leading-relaxed fade-in">
                 For over 22 years, we've been enhancing lives with stunning installations 
                 that are as functional as they are beautiful. Whether it's compact or large, 
                 our team expertly blends premium materials, quality craftsmanship, and timeless 
@@ -39,14 +39,14 @@ const About = () => {
       {/* Navigation Cards */}
       <section className="py-32 px-6 lg:px-12 bg-secondary/30">
         <div className="container mx-auto">
-          <h2 className="text-5xl font-serif mb-16 text-center">Discover More About Us</h2>
+          <h2 className="text-2xl font-serif mb-16 text-center">Discover More About Us</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <NavLink 
               to="/why-choose-us"
               className="group bg-background p-8 hover:shadow-lg transition-all duration-300"
             >
-              <h3 className="text-2xl font-serif mb-4 group-hover:text-brand-teal transition-colors">
+              <h3 className="text-xl font-serif mb-4 group-hover:text-brand-teal transition-colors">
                 Why Choose Us
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-4">
@@ -60,7 +60,7 @@ const About = () => {
               to="/who-is-novale"
               className="group bg-background p-8 hover:shadow-lg transition-all duration-300"
             >
-              <h3 className="text-2xl font-serif mb-4 group-hover:text-brand-teal transition-colors">
+              <h3 className="text-xl font-serif mb-4 group-hover:text-brand-teal transition-colors">
                 Who is Novalé
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-4">
@@ -74,7 +74,7 @@ const About = () => {
               to="/team"
               className="group bg-background p-8 hover:shadow-lg transition-all duration-300"
             >
-              <h3 className="text-2xl font-serif mb-4 group-hover:text-brand-teal transition-colors">
+              <h3 className="text-xl font-serif mb-4 group-hover:text-brand-teal transition-colors">
                 Our Team
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-4">
@@ -90,7 +90,7 @@ const About = () => {
       {/* Our Approach */}
       <section className="py-32 px-6 lg:px-12">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-5xl font-serif mb-16">Our approach</h2>
+          <h2 className="text-2xl font-serif mb-16">Our approach</h2>
           
           <div className="space-y-12">
             {[
@@ -116,7 +116,7 @@ const About = () => {
               },
             ].map((value, index) => (
               <div key={index} className="border-b border-border pb-8 fade-in">
-                <h3 className="text-2xl font-serif mb-3">{value.title}</h3>
+                <h3 className="text-xl font-serif mb-3">{value.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   {value.description}
                 </p>
@@ -129,7 +129,7 @@ const About = () => {
       {/* Accreditations CTA */}
       <section className="py-32 px-6 lg:px-12 bg-secondary/30">
         <div className="container mx-auto text-center max-w-4xl">
-          <h2 className="text-5xl font-serif mb-8">Our Accreditations</h2>
+          <h2 className="text-2xl font-serif mb-8">Our Accreditations</h2>
           <p className="text-lg text-muted-foreground mb-12">
             Our commitment to excellence has been recognized with multiple industry certifications 
             and awards. We're the first bathroom renovation company in Australia to receive ISO 9001 
@@ -137,19 +137,19 @@ const About = () => {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-brand-teal/10 p-6 border border-brand-teal/20">
-              <div className="text-2xl font-serif mb-2 text-brand-teal">ISO 9001</div>
+              <div className="text-xl font-serif mb-2 text-brand-teal">ISO 9001</div>
               <p className="text-xs text-muted-foreground">Quality Certified</p>
             </div>
             <div className="bg-brand-teal/10 p-6 border border-brand-teal/20">
-              <div className="text-2xl font-serif mb-2 text-brand-teal">Houzz</div>
+              <div className="text-xl font-serif mb-2 text-brand-teal">Houzz</div>
               <p className="text-xs text-muted-foreground">2021-2025 Awards</p>
             </div>
             <div className="bg-brand-teal/10 p-6 border border-brand-teal/20">
-              <div className="text-2xl font-serif mb-2 text-brand-teal">HIA</div>
+              <div className="text-xl font-serif mb-2 text-brand-teal">HIA</div>
               <p className="text-xs text-muted-foreground">NSW Finalist</p>
             </div>
             <div className="bg-brand-teal/10 p-6 border border-brand-teal/20">
-              <div className="text-2xl font-serif mb-2 text-brand-teal">MBA</div>
+              <div className="text-xl font-serif mb-2 text-brand-teal">MBA</div>
               <p className="text-xs text-muted-foreground">Member</p>
             </div>
           </div>
@@ -165,7 +165,7 @@ const About = () => {
       {/* CTA */}
       <section className="py-32 px-6 lg:px-12 bg-primary text-primary-foreground">
         <div className="container mx-auto text-center max-w-3xl">
-          <h2 className="text-5xl font-serif mb-6">Experience the Novalé difference</h2>
+          <h2 className="text-2xl font-serif mb-6">Experience the Novalé difference</h2>
           <p className="text-lg mb-10 opacity-90">
             Discover why thousands of Sydney homeowners have trusted us with their dream renovations
           </p>

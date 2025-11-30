@@ -132,32 +132,39 @@ const Process = () => {
       </section>
 
       {/* Why Choose Our Process Section */}
-      <section className="bg-secondary/30 py-24 mt-32">
+      <section className="bg-brand-teal py-24 mt-32">
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl font-serif mb-8">
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-2xl font-serif mb-8 text-white">
               Why Our Process Works
             </h2>
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
               <div className="p-6">
-                <div className="text-brand-teal text-3xl font-serif mb-4">15+</div>
-                <h3 className="font-semibold mb-2">Years Experience</h3>
-                <p className="text-sm text-muted-foreground">
+                <div className="text-white text-3xl font-serif mb-4">15+</div>
+                <h3 className="font-semibold mb-2 text-white">Years Experience</h3>
+                <p className="text-sm text-white/80">
                   Refined process perfected over thousands of projects
                 </p>
               </div>
               <div className="p-6">
-                <div className="text-brand-teal text-3xl font-serif mb-4">100%</div>
-                <h3 className="font-semibold mb-2">Quality Guaranteed</h3>
-                <p className="text-sm text-muted-foreground">
+                <div className="text-white text-3xl font-serif mb-4">100%</div>
+                <h3 className="font-semibold mb-2 text-white">Quality Guaranteed</h3>
+                <p className="text-sm text-white/80">
                   Comprehensive warranties on all work completed
                 </p>
               </div>
               <div className="p-6">
-                <div className="text-brand-teal text-3xl font-serif mb-4">5★</div>
-                <h3 className="font-semibold mb-2">Client Satisfaction</h3>
-                <p className="text-sm text-muted-foreground">
+                <div className="text-white text-3xl font-serif mb-4">5★</div>
+                <h3 className="font-semibold mb-2 text-white">Client Satisfaction</h3>
+                <p className="text-sm text-white/80">
                   Consistently rated excellent by our clients
+                </p>
+              </div>
+              <div className="p-6">
+                <div className="text-white text-3xl font-serif mb-4">24/7</div>
+                <h3 className="font-semibold mb-2 text-white">Support Available</h3>
+                <p className="text-sm text-white/80">
+                  Dedicated project manager throughout your renovation
                 </p>
               </div>
             </div>

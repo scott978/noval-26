@@ -1,19 +1,30 @@
 import { NavLink } from "@/components/NavLink";
 import { MapPin, Phone } from "lucide-react";
+import southSydneyImg from "@/assets/areas/south-sydney.jpg";
+import kellyvilleRichmondImg from "@/assets/areas/kellyville-richmond.jpg";
+import easternSuburbsImg from "@/assets/areas/eastern-suburbs.jpg";
+import northernBeachesImg from "@/assets/areas/northern-beaches.jpg";
+import sutherlandShireImg from "@/assets/areas/sutherland-shire.jpg";
+import hillsDistrictImg from "@/assets/areas/hills-district.jpg";
+import stGeorgeImg from "@/assets/areas/st-george.jpg";
+import innerWestImg from "@/assets/areas/inner-west.jpg";
+import upperNorthShoreImg from "@/assets/areas/upper-north-shore.jpg";
+import lowerNorthShoreImg from "@/assets/areas/lower-north-shore.jpg";
+import westernSydneyImg from "@/assets/areas/western-sydney.jpg";
 
 const AreasWeService = () => {
   const serviceAreas = [
-    { name: "South Sydney", slug: "south-sydney" },
-    { name: "Kellyville & Richmond", slug: "kellyville-richmond" },
-    { name: "Eastern Suburbs", slug: "eastern-suburbs" },
-    { name: "Northern Beaches", slug: "northern-beaches" },
-    { name: "Sutherland Shire", slug: "sutherland-shire" },
-    { name: "Hills District", slug: "hills-district" },
-    { name: "St George", slug: "st-george" },
-    { name: "Inner West", slug: "inner-west" },
-    { name: "Upper North Shore", slug: "upper-north-shore" },
-    { name: "Lower North Shore", slug: "lower-north-shore" },
-    { name: "Western Sydney", slug: "western-sydney" },
+    { name: "South Sydney", slug: "south-sydney", image: southSydneyImg },
+    { name: "Kellyville & Richmond", slug: "kellyville-richmond", image: kellyvilleRichmondImg },
+    { name: "Eastern Suburbs", slug: "eastern-suburbs", image: easternSuburbsImg },
+    { name: "Northern Beaches", slug: "northern-beaches", image: northernBeachesImg },
+    { name: "Sutherland Shire", slug: "sutherland-shire", image: sutherlandShireImg },
+    { name: "Hills District", slug: "hills-district", image: hillsDistrictImg },
+    { name: "St George", slug: "st-george", image: stGeorgeImg },
+    { name: "Inner West", slug: "inner-west", image: innerWestImg },
+    { name: "Upper North Shore", slug: "upper-north-shore", image: upperNorthShoreImg },
+    { name: "Lower North Shore", slug: "lower-north-shore", image: lowerNorthShoreImg },
+    { name: "Western Sydney", slug: "western-sydney", image: westernSydneyImg },
   ];
 
   const testimonials = [
@@ -69,21 +80,28 @@ const AreasWeService = () => {
             <NavLink
               key={index}
               to={`/areas/${area.slug}`}
-              className="group p-8 border border-border hover:border-brand-teal bg-background hover:bg-brand-teal/5 transition-all duration-300 fade-in"
+              className="group border border-border hover:border-brand-teal bg-background overflow-hidden transition-all duration-300 fade-in"
             >
-              <div className="flex items-start gap-4">
-                <MapPin className="w-6 h-6 text-brand-teal flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-lg font-serif mb-2 group-hover:text-brand-teal transition-colors">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img 
+                  src={area.image} 
+                  alt={`Renovations in ${area.name}`}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex items-start gap-3 mb-3">
+                  <MapPin className="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" />
+                  <h3 className="text-lg font-serif group-hover:text-brand-teal transition-colors">
                     {area.name}
                   </h3>
-                  <p className="text-sm text-muted-foreground">
-                    View renovation services in this area
-                  </p>
-                  <span className="text-sm text-brand-teal mt-3 inline-block group-hover:underline">
-                    Learn More →
-                  </span>
                 </div>
+                <p className="text-sm text-muted-foreground mb-3">
+                  View renovation services in this area
+                </p>
+                <span className="text-sm text-brand-teal inline-block group-hover:underline">
+                  Learn More →
+                </span>
               </div>
             </NavLink>
           ))}

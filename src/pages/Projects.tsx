@@ -126,7 +126,7 @@ const Projects = () => {
           <h1 className="text-6xl lg:text-7xl font-serif mb-8 fade-in">Our Projects</h1>
           <p className="text-xl text-muted-foreground max-w-2xl fade-in">
             Explore our portfolio of stunning bathroom, kitchen and laundry renovations 
-            across Sydney's most prestigious suburbs
+            across Sydney
           </p>
         </div>
 

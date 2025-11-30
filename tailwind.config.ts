@@ -13,6 +13,15 @@ export default {
       },
     },
     extend: {
+      fontSize: {
+        'xs': '0.75rem',      // 12px - small labels, captions
+        'sm': '0.875rem',     // 14px - form labels, small text
+        'base': '1rem',       // 16px - body text
+        'lg': '1.25rem',      // 20px - larger body, subheadings
+        'xl': '1.5rem',       // 24px - section headings
+        '2xl': '2.25rem',     // 36px - page titles
+        '3xl': '3.5rem',      // 56px - hero headings
+      },
       fontFamily: {
         serif: ['Cormorant Garamond', 'serif'],
         body: ['Inter', 'sans-serif'],

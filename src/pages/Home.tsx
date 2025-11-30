@@ -13,7 +13,7 @@ const Home = () => {
       <section className="relative h-[90vh] w-full bg-black">
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="container mx-auto px-6 lg:px-12 text-center">
-            <h1 className="text-7xl lg:text-8xl font-serif leading-tight text-background fade-in mb-12">
+            <h1 className="text-3xl font-serif leading-tight text-background fade-in mb-12">
               We Deliver<br />Dreams
             </h1>
             <div className="flex flex-wrap justify-center gap-4 mt-8">
@@ -87,7 +87,7 @@ const Home = () => {
       {/* Services Overview */}
       <section className="py-32 px-6 lg:px-12 bg-secondary/30">
         <div className="container mx-auto">
-          <h2 className="text-5xl font-serif mb-16 text-center">Our Services</h2>
+          <h2 className="text-2xl font-serif mb-16 text-center">Our Services</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
             {[
@@ -131,7 +131,7 @@ const Home = () => {
                   />
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300" />
                 </div>
-                <h3 className="text-2xl font-serif mb-4">{service.title}</h3>
+                <h3 className="text-xl font-serif mb-4">{service.title}</h3>
                 <p className="text-base text-muted-foreground mb-6 leading-relaxed">
                   {service.description}
                 </p>
@@ -150,7 +150,7 @@ const Home = () => {
       {/* Featured Projects */}
       <section className="py-32 px-6 lg:px-12">
         <div className="container mx-auto">
-          <h2 className="text-5xl font-serif mb-16">Our Projects</h2>
+          <h2 className="text-2xl font-serif mb-16">Our Projects</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -171,7 +171,7 @@ const Home = () => {
                   />
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300" />
                 </div>
-                <h3 className="text-2xl font-serif mb-1">{project.title}</h3>
+                <h3 className="text-xl font-serif mb-1">{project.title}</h3>
                 <p className="text-base text-muted-foreground">{project.location}</p>
               </NavLink>
             ))}
@@ -191,7 +191,7 @@ const Home = () => {
       {/* The Journey / Process */}
       <section className="py-32 px-6 lg:px-12 bg-secondary/30">
         <div className="container mx-auto">
-          <h2 className="text-5xl font-serif mb-16 text-center">The Journey</h2>
+          <h2 className="text-2xl font-serif mb-16 text-center">The Journey</h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -202,8 +202,8 @@ const Home = () => {
                 { number: "04", title: "Transformation", description: "Our expert team brings your dream space to life, keeping you informed every step of the way." },
               ].map((step, index) => (
                 <div key={index} className="fade-in">
-                  <div className="text-6xl font-serif text-brand-teal mb-4">{step.number}</div>
-                  <h3 className="text-2xl font-serif mb-3">{step.title}</h3>
+                  <div className="text-2xl font-serif text-brand-teal mb-4">{step.number}</div>
+                  <h3 className="text-xl font-serif mb-3">{step.title}</h3>
                   <p className="text-base text-muted-foreground leading-relaxed">
                     {step.description}
                   </p>
@@ -230,7 +230,7 @@ const Home = () => {
       {/* Philosophy Strip */}
       <section className="py-24 border-y border-border">
         <div className="container mx-auto px-6 lg:px-12">
-          <p className="text-5xl font-serif text-center max-w-4xl mx-auto leading-relaxed text-brand-teal">
+          <p className="text-2xl font-serif text-center max-w-4xl mx-auto leading-relaxed text-brand-teal">
             Our highly satisfied clients enjoy a stress-free renovation experience, 
             guided from start to finish by experts committed to bringing their vision to life
           </p>
@@ -241,7 +241,7 @@ const Home = () => {
       <section className="py-32 px-6 lg:px-12 bg-secondary/30">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-serif mb-6">Pricing & Guide</h2>
+            <h2 className="text-2xl font-serif mb-6">Pricing & Guide</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Explore our transparent pricing guides to understand what your renovation will cost. 
               Each guide includes detailed breakdowns, timelines, and what's included.
@@ -261,7 +261,7 @@ const Home = () => {
                 to={guide.link}
                 className="group block p-8 border-2 border-border hover:border-brand-teal bg-background hover:bg-brand-teal/5 transition-all duration-300"
               >
-                <h3 className="text-2xl font-serif mb-4 group-hover:text-brand-teal transition-colors">
+                <h3 className="text-xl font-serif mb-4 group-hover:text-brand-teal transition-colors">
                   {guide.title}
                 </h3>
                 <p className="text-base text-muted-foreground mb-4">
@@ -279,7 +279,7 @@ const Home = () => {
       {/* About Us Section */}
       <section className="py-32 px-6 lg:px-12">
         <div className="container mx-auto">
-          <h2 className="text-5xl font-serif mb-16 text-center">About Novalé</h2>
+          <h2 className="text-2xl font-serif mb-16 text-center">About Novalé</h2>
           
           <div className="mb-16">
             <img 
@@ -294,7 +294,7 @@ const Home = () => {
               to="/about/who-is-novale"
               className="group block p-8 border border-border hover:border-brand-teal transition-all duration-300"
             >
-              <h3 className="text-2xl font-serif mb-4 group-hover:text-brand-teal transition-colors">
+              <h3 className="text-xl font-serif mb-4 group-hover:text-brand-teal transition-colors">
                 Who is Novalé
               </h3>
               <p className="text-base text-muted-foreground mb-6 leading-relaxed">
@@ -309,7 +309,7 @@ const Home = () => {
               to="/about/why-choose-us"
               className="group block p-8 border border-border hover:border-brand-teal transition-all duration-300"
             >
-              <h3 className="text-2xl font-serif mb-4 group-hover:text-brand-teal transition-colors">
+              <h3 className="text-xl font-serif mb-4 group-hover:text-brand-teal transition-colors">
                 Why Choose Us
               </h3>
               <p className="text-base text-muted-foreground mb-6 leading-relaxed">
@@ -324,7 +324,7 @@ const Home = () => {
               to="/about"
               className="group block p-8 border border-border hover:border-brand-teal transition-all duration-300"
             >
-              <h3 className="text-2xl font-serif mb-4 group-hover:text-brand-teal transition-colors">
+              <h3 className="text-xl font-serif mb-4 group-hover:text-brand-teal transition-colors">
                 Accreditations
               </h3>
               <p className="text-base text-muted-foreground mb-6 leading-relaxed">
@@ -341,7 +341,7 @@ const Home = () => {
       {/* CTA Section */}
       <section className="py-32 px-6 lg:px-12 bg-primary text-primary-foreground">
         <div className="container mx-auto text-center">
-          <h2 className="text-5xl font-serif mb-6">Ready to create your dream space?</h2>
+          <h2 className="text-2xl font-serif mb-6">Ready to create your dream space?</h2>
           <p className="text-lg mb-10 max-w-2xl mx-auto opacity-90">
             Let's bring your vision to life with a stress-free renovation experience
           </p>

@@ -5,11 +5,11 @@ const Contact = () => {
   return (
     <div className="min-h-screen pt-32 pb-24">
       <div className="container mx-auto px-6 lg:px-12">
-        <h1 className="text-6xl lg:text-7xl font-serif mb-12 fade-in">
+        <h1 className="text-3xl font-serif mb-12 fade-in">
           Let's create your dream space
         </h1>
         
-        <p className="text-xl text-muted-foreground mb-16 fade-in">
+        <p className="text-lg text-muted-foreground mb-16 fade-in">
           Ready to transform your bathroom, kitchen or laundry? Get in touch for a free 
           consultation and online estimate. We'll provide accurate cost and timeline 
           expectations—it only takes 2 minutes!
@@ -17,7 +17,7 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
           <div className="fade-in">
-            <h2 className="text-2xl font-serif mb-6">Contact Details</h2>
+            <h2 className="text-xl font-serif mb-6">Contact Details</h2>
             <div className="space-y-4 text-muted-foreground">
               <div>
                 <p className="font-semibold text-foreground mb-1">Email</p>
@@ -43,7 +43,7 @@ const Contact = () => {
           </div>
 
           <div className="fade-in p-8 border border-border">
-            <h2 className="text-2xl font-serif mb-6">Why Get a Free Estimate?</h2>
+            <h2 className="text-xl font-serif mb-6">Why Get a Free Estimate?</h2>
             <div className="space-y-3 text-muted-foreground">
               <p>✓ Accurate cost expectations</p>
               <p>✓ Realistic timeline projections</p>
@@ -67,7 +67,7 @@ const Contact = () => {
       {/* Areas We Service - Full Width */}
       <div className="my-16 fade-in bg-primary text-primary-foreground py-16">
         <div className="container mx-auto px-6 lg:px-12">
-          <h2 className="text-3xl font-serif mb-6 text-center">Areas We Service</h2>
+          <h2 className="text-2xl font-serif mb-6 text-center">Areas We Service</h2>
           <p className="text-center opacity-90 mb-8">
             Novalé has a talented team of renovators servicing clients throughout all of Sydney
           </p>
@@ -116,7 +116,7 @@ const Contact = () => {
         </div>
 
         <div className="border-t border-border pt-16 fade-in">
-          <h2 className="text-2xl font-serif mb-2">General Enquires</h2>
+          <h2 className="text-xl font-serif mb-2">General Enquires</h2>
           <p className="text-muted-foreground mb-8">
             For general enquiries, please use the form below and one of our admin staff will be in contact
           </p>

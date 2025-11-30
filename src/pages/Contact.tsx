@@ -71,7 +71,7 @@ const Contact = () => {
           <p className="text-center opacity-90 mb-8">
             Novalé has a talented team of renovators servicing clients throughout all of Sydney
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-2 text-sm max-w-4xl mx-auto">
+          <div className="flex flex-wrap justify-center items-center gap-2 text-base max-w-4xl mx-auto">
             {[
               "South Sydney",
               "Kellyville & Richmond",

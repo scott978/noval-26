@@ -32,7 +32,7 @@ const Team = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <h1 className="text-5xl lg:text-6xl font-serif mb-6 fade-in">
+              <h1 className="text-3xl font-serif mb-6 fade-in">
                 Meet Our Team
               </h1>
             </div>
@@ -53,11 +53,11 @@ const Team = () => {
       {/* Founders */}
       <section className="py-20 px-6 bg-secondary/30">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-serif mb-12 text-center">Our Founders</h2>
+          <h2 className="text-2xl font-serif mb-12 text-center">Our Founders</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {teamMembers.map((member, index) => (
               <div key={index} className="bg-background p-8 fade-in">
-                <h3 className="text-2xl font-serif mb-2">{member.name}</h3>
+                <h3 className="text-xl font-serif mb-2">{member.name}</h3>
                 <p className="text-brand-teal mb-4">{member.role}</p>
                 <p className="text-muted-foreground leading-relaxed">
                   {member.description}
@@ -71,24 +71,24 @@ const Team = () => {
       {/* Team Values */}
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-serif mb-12 text-center">What Drives Us</h2>
+          <h2 className="text-2xl font-serif mb-12 text-center">What Drives Us</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center fade-in">
-              <h3 className="text-2xl font-serif mb-4">Excellence</h3>
+              <h3 className="text-xl font-serif mb-4">Excellence</h3>
               <p className="text-muted-foreground leading-relaxed">
                 We're committed to delivering the highest quality workmanship in every project, 
                 backed by our ISO 9001 certification.
               </p>
             </div>
             <div className="text-center fade-in">
-              <h3 className="text-2xl font-serif mb-4">Integrity</h3>
+              <h3 className="text-xl font-serif mb-4">Integrity</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Honest communication and transparent processes are at the heart of how we work 
                 with every client.
               </p>
             </div>
             <div className="text-center fade-in">
-              <h3 className="text-2xl font-serif mb-4">Passion</h3>
+              <h3 className="text-xl font-serif mb-4">Passion</h3>
               <p className="text-muted-foreground leading-relaxed">
                 We love what we do, and it shows in every detail of your renovation. Your dream 
                 becomes our mission.
@@ -101,7 +101,7 @@ const Team = () => {
       {/* CTA Section */}
       <section className="py-20 px-6 bg-secondary/30">
         <div className="max-w-4xl mx-auto text-center fade-in">
-          <h2 className="text-4xl font-serif mb-6">
+          <h2 className="text-2xl font-serif mb-6">
             Ready to Work With Our Team?
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">

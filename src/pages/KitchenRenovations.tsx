@@ -12,10 +12,10 @@ const KitchenRenovations = () => {
       <section className="relative h-[90vh] w-full bg-black">
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="container mx-auto px-6 lg:px-12 text-center">
-            <h1 className="text-6xl lg:text-7xl font-serif leading-tight text-background fade-in mb-6">
+            <h1 className="text-3xl font-serif leading-tight text-background fade-in mb-6">
               Kitchen Renovations<br />Sydney
             </h1>
-            <p className="text-xl lg:text-2xl text-background/90 mb-8 max-w-3xl mx-auto">
+            <p className="text-lg text-background/90 mb-8 max-w-3xl mx-auto">
               Transform your kitchen into a stunning, functional space with Sydney's most trusted renovation specialists
             </p>
             
@@ -23,11 +23,11 @@ const KitchenRenovations = () => {
             <div className="flex flex-col md:flex-row justify-center gap-8 mb-12 max-w-2xl mx-auto">
               <div className="bg-background/95 backdrop-blur-sm px-8 py-6 rounded-md">
                 <p className="text-sm text-muted-foreground mb-2">Price Range</p>
-                <p className="text-3xl font-bold text-brand-teal">$35,000 - $80,000+</p>
+                <p className="text-2xl font-bold text-brand-teal">$35,000 - $80,000+</p>
               </div>
               <div className="bg-background/95 backdrop-blur-sm px-8 py-6 rounded-md">
                 <p className="text-sm text-muted-foreground mb-2">Project Timeframe</p>
-                <p className="text-3xl font-bold text-brand-teal">4-8 weeks</p>
+                <p className="text-2xl font-bold text-brand-teal">4-8 weeks</p>
               </div>
             </div>
 
@@ -58,8 +58,8 @@ const KitchenRenovations = () => {
       {/* Why Choose Novale */}
       <section className="py-32 px-6 lg:px-12 bg-background">
         <div className="container mx-auto">
-          <h2 className="text-5xl font-serif mb-6 text-center">Why Choose Novalé</h2>
-          <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+          <h2 className="text-2xl font-serif mb-6 text-center">Why Choose Novalé</h2>
+          <p className="text-lg text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
             Industry-leading standards and service excellence
           </p>
 
@@ -122,8 +122,8 @@ const KitchenRenovations = () => {
       {/* Our Process Timeline */}
       <section className="py-32 px-6 lg:px-12 bg-secondary/30">
         <div className="container mx-auto">
-          <h2 className="text-5xl font-serif mb-6 text-center">Our Process</h2>
-          <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+          <h2 className="text-2xl font-serif mb-6 text-center">Our Process</h2>
+          <p className="text-lg text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
             A streamlined approach to transforming your kitchen
           </p>
 
@@ -199,7 +199,7 @@ const KitchenRenovations = () => {
                   />
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300" />
                 </div>
-                <h3 className="text-2xl font-serif mb-2">{project.title}</h3>
+                <h3 className="text-xl font-serif mb-2">{project.title}</h3>
                 <p className="text-base text-muted-foreground mb-1">{project.location} • {project.type}</p>
                 <p className="text-base text-brand-teal">{project.budget}</p>
               </div>
@@ -211,7 +211,7 @@ const KitchenRenovations = () => {
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
               <div>
                 <p className="text-lg text-white/90 mb-2">Dreaming of your new Kitchen?</p>
-                <h3 className="text-3xl font-serif text-white">Find your Style Here</h3>
+                <h3 className="text-2xl font-serif text-white">Find your Style Here</h3>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <NavLink
@@ -242,8 +242,8 @@ const KitchenRenovations = () => {
       {/* What Impacts Kitchen Renovation Costs */}
       <section className="py-32 px-6 lg:px-12 bg-secondary/30">
         <div className="container mx-auto">
-          <h2 className="text-5xl font-serif mb-6 text-center">What Impacts Your Kitchen Renovation Cost?</h2>
-          <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+          <h2 className="text-2xl font-serif mb-6 text-center">What Impacts Your Kitchen Renovation Cost?</h2>
+          <p className="text-lg text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
             Understanding the key factors that influence your kitchen renovation budget
           </p>
 
@@ -297,8 +297,8 @@ const KitchenRenovations = () => {
       {/* Detailed Pricing & Timeframe */}
       <section className="py-32 px-6 lg:px-12">
         <div className="container mx-auto">
-          <h2 className="text-5xl font-serif mb-6 text-center">Kitchen Renovation Pricing Guide</h2>
-          <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+          <h2 className="text-2xl font-serif mb-6 text-center">Kitchen Renovation Pricing Guide</h2>
+          <p className="text-lg text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
             Transparent pricing guides for every kitchen renovation type
           </p>
 
@@ -314,7 +314,7 @@ const KitchenRenovations = () => {
 
               {/* FAQs */}
               <div className="space-y-4">
-                <h3 className="text-2xl font-serif mb-6">Common Questions</h3>
+                <h3 className="text-xl font-serif mb-6">Common Questions</h3>
                 {[
                   {
                     question: "What's included in the price?",
@@ -432,8 +432,8 @@ const KitchenRenovations = () => {
       {/* Related Blog Section */}
       <section className="py-32 px-6 lg:px-12 bg-secondary/30">
         <div className="container mx-auto">
-          <h2 className="text-5xl font-serif mb-6 text-center">Kitchen Renovation Insights</h2>
-          <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+          <h2 className="text-2xl font-serif mb-6 text-center">Kitchen Renovation Insights</h2>
+          <p className="text-lg text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
             Expert tips and inspiration for your kitchen transformation
           </p>
 
@@ -478,8 +478,8 @@ const KitchenRenovations = () => {
       {/* Final CTA */}
       <section className="py-32 px-6 lg:px-12 bg-primary text-primary-foreground">
         <div className="container mx-auto text-center">
-          <h2 className="text-5xl font-serif mb-6">Ready to Transform Your Kitchen?</h2>
-          <p className="text-xl mb-12 max-w-3xl mx-auto opacity-90">
+          <h2 className="text-2xl font-serif mb-6">Ready to Transform Your Kitchen?</h2>
+          <p className="text-lg mb-12 max-w-3xl mx-auto opacity-90">
             Get started with a free consultation and detailed quote for your kitchen renovation
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

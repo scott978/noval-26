@@ -45,7 +45,7 @@ const BathroomProjects = () => {
       {/* Hero Section */}
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-5xl lg:text-6xl font-serif mb-8 fade-in">
+          <h1 className="text-3xl font-serif mb-8 fade-in">
             Bathroom Renovation Projects
           </h1>
           <p className="text-lg leading-relaxed text-muted-foreground max-w-3xl fade-in">
@@ -158,7 +158,7 @@ const BathroomProjects = () => {
                     <ArrowUpRight className="w-6 h-6 text-white" />
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-background translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                    <h3 className="text-2xl font-serif mb-2">{project.title}</h3>
+                    <h3 className="text-xl font-serif mb-2">{project.title}</h3>
                     <p className="text-sm">{project.location}</p>
                   </div>
                 </div>
@@ -171,7 +171,7 @@ const BathroomProjects = () => {
       {/* CTA Section */}
       <section className="py-20 px-6 bg-secondary/30">
         <div className="max-w-4xl mx-auto text-center fade-in">
-          <h2 className="text-4xl font-serif mb-6">
+          <h2 className="text-2xl font-serif mb-6">
             Ready to Create Your Dream Bathroom?
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">

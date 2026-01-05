@@ -27,10 +27,10 @@ const Pricing = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <h1 className="text-5xl lg:text-6xl font-serif mb-6 fade-in">
+              <h1 className="text-3xl font-serif mb-6 fade-in">
                 Bathroom Pricing & Guide
               </h1>
-              <p className="text-primary text-2xl flex items-center gap-2 fade-in">
+              <p className="text-primary text-xl flex items-center gap-2 fade-in">
                 Kellyville
                 <Info className="w-5 h-5" />
               </p>
@@ -52,9 +52,9 @@ const Pricing = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Essential */}
             <div className="border border-border p-8 fade-in relative group hover:shadow-lg transition-shadow">
-              <h3 className="text-2xl font-serif mb-4">Essential</h3>
+              <h3 className="text-xl font-serif mb-4">Essential</h3>
               <div className="mb-6">
-                <span className="text-4xl font-serif">$18,000</span>
+                <span className="text-2xl font-serif">$18,000</span>
                 <span className="text-muted-foreground"> - $25,000</span>
               </div>
               <p className="text-sm text-muted-foreground mb-6">
@@ -87,9 +87,9 @@ const Pricing = () => {
               <div className="absolute -top-4 left-8 bg-primary text-primary-foreground px-4 py-1 text-xs tracking-wide">
                 MOST POPULAR
               </div>
-              <h3 className="text-2xl font-serif mb-4">Premium</h3>
+              <h3 className="text-xl font-serif mb-4">Premium</h3>
               <div className="mb-6">
-                <span className="text-4xl font-serif">$25,000</span>
+                <span className="text-2xl font-serif">$25,000</span>
                 <span className="text-muted-foreground"> - $35,000</span>
               </div>
               <p className="text-sm text-muted-foreground mb-6">
@@ -121,9 +121,9 @@ const Pricing = () => {
 
             {/* Luxury */}
             <div className="border border-border p-8 fade-in relative group hover:shadow-lg transition-shadow">
-              <h3 className="text-2xl font-serif mb-4">Luxury</h3>
+              <h3 className="text-xl font-serif mb-4">Luxury</h3>
               <div className="mb-6">
-                <span className="text-4xl font-serif">$35,000</span>
+                <span className="text-2xl font-serif">$35,000</span>
                 <span className="text-muted-foreground"> +</span>
               </div>
               <p className="text-sm text-muted-foreground mb-6">
@@ -217,7 +217,7 @@ const Pricing = () => {
       {/* What's Included */}
       <section className="py-20 px-6 bg-secondary/30">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-serif mb-12 fade-in">What's Always Included</h2>
+          <h2 className="text-2xl font-serif mb-12 fade-in">What's Always Included</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
@@ -269,7 +269,7 @@ const Pricing = () => {
       {/* Blog Section */}
       <section className="py-20 px-6 bg-secondary/30">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-serif mb-12 fade-in">Pricing Guides & Insights</h2>
+          <h2 className="text-2xl font-serif mb-12 fade-in">Pricing Guides & Insights</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -319,7 +319,7 @@ const Pricing = () => {
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="max-w-4xl mx-auto text-center fade-in relative z-10">
-          <h2 className="text-4xl font-serif mb-6 text-white">
+          <h2 className="text-2xl font-serif mb-6 text-white">
             Get Your Free Online Estimate
           </h2>
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">

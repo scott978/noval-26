@@ -19,12 +19,12 @@ const WhoIsNovale = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <h1 className="text-5xl lg:text-6xl font-serif mb-6 fade-in">
+              <h1 className="text-3xl font-serif mb-6 fade-in">
                 Who is Novalé
               </h1>
             </div>
             <div className="space-y-6 fade-in">
-              <h2 className="text-3xl font-serif">Our Story</h2>
+              <h2 className="text-2xl font-serif">Our Story</h2>
               <p className="text-lg leading-relaxed text-muted-foreground">
                 At Novalé we set out to be the leaders in the bathroom renovation space by being 
                 refreshingly open, design driven, knowledgeable and professional. Old school values 
@@ -49,7 +49,7 @@ const WhoIsNovale = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="fade-in">
-              <h3 className="text-2xl font-serif mb-4">Detail</h3>
+              <h3 className="text-xl font-serif mb-4">Detail</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Here at Novalé, it's our dream to deliver your dream, and we are committed to getting 
                 every detail right, starting with design. A Novalé designer will ensure that every 
@@ -60,7 +60,7 @@ const WhoIsNovale = () => {
               </p>
             </div>
             <div className="fade-in">
-              <h3 className="text-2xl font-serif mb-4">Quality</h3>
+              <h3 className="text-xl font-serif mb-4">Quality</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Novalé is committed to achieving quality in every respect, from operational processes to 
                 workmanship and customer service. For this reason, we have sought out to achieve an ISO 9001 
@@ -70,7 +70,7 @@ const WhoIsNovale = () => {
               </p>
             </div>
             <div className="fade-in">
-              <h3 className="text-2xl font-serif mb-4">Family</h3>
+              <h3 className="text-xl font-serif mb-4">Family</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Founded by husband and wife duo Steve and Marina Novkovic, Novalé was established to bring 
                 positivity to an industry that was riddled with issues, such as inadequate and incomplete work. 
@@ -86,7 +86,7 @@ const WhoIsNovale = () => {
       {/* Team CTA Section */}
       <section className="py-20 px-6 bg-secondary/30">
         <div className="max-w-4xl mx-auto text-center fade-in">
-          <h2 className="text-4xl font-serif mb-6">
+          <h2 className="text-2xl font-serif mb-6">
             Meet the Novalé Team
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
@@ -105,7 +105,7 @@ const WhoIsNovale = () => {
       {/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center fade-in">
-          <h2 className="text-4xl font-serif mb-6">
+          <h2 className="text-2xl font-serif mb-6">
             Starting on Your Journey
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">

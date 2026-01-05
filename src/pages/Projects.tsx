@@ -123,7 +123,7 @@ const Projects = () => {
       <div className="container mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="mb-16">
-          <h1 className="text-6xl lg:text-7xl font-serif mb-8 fade-in">Our Projects</h1>
+          <h1 className="text-3xl font-serif mb-8 fade-in">Our Projects</h1>
           <p className="text-xl text-muted-foreground max-w-2xl fade-in">
             Explore our portfolio of stunning bathroom, kitchen and laundry renovations 
             across Sydney
@@ -309,7 +309,7 @@ const Projects = () => {
         {/* CTA */}
         <section className="mt-32 py-32 px-6 lg:px-12 bg-primary text-primary-foreground -mx-6 lg:-mx-12">
           <div className="container mx-auto text-center">
-            <h2 className="text-5xl font-serif mb-6">Ready for your own transformation?</h2>
+            <h2 className="text-2xl font-serif mb-6">Ready for your own transformation?</h2>
             <p className="text-lg mb-10 max-w-2xl mx-auto opacity-90">
               Get a free online estimate and discover how we can create your dream space
             </p>

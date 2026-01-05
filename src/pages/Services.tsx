@@ -55,7 +55,7 @@ const Services = () => {
     <div className="min-h-screen pt-32 pb-24">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-4xl mx-auto mb-24">
-          <h1 className="text-6xl lg:text-7xl font-serif mb-8 fade-in">Our Services</h1>
+          <h1 className="text-3xl font-serif mb-8 fade-in">Our Services</h1>
           <p className="text-xl text-muted-foreground fade-in">
             For over 22 years, Novalé has been delivering exceptional bathroom, kitchen and 
             laundry renovations across Sydney. We handle everything from design to installation, 
@@ -80,7 +80,7 @@ const Services = () => {
               </div>
               
               <div className={index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""}>
-                <h2 className="text-4xl font-serif mb-6">{service.title}</h2>
+                <h2 className="text-2xl font-serif mb-6">{service.title}</h2>
                 <p className="text-muted-foreground leading-relaxed mb-8">
                   {service.description}
                 </p>
@@ -110,7 +110,7 @@ const Services = () => {
         {/* The Journey Section */}
         <section className="mt-32 pt-32 border-t border-border">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-serif mb-8">The Journey</h2>
+            <h2 className="text-2xl font-serif mb-8">The Journey</h2>
             <p className="text-muted-foreground leading-relaxed mb-12">
               Our proven process ensures your renovation runs smoothly from start to finish. 
               You'll be guided by experts every step of the way, with clear communication and 
@@ -167,7 +167,7 @@ const Services = () => {
         {/* Why Choose Novalé */}
         <section className="mt-32 pt-32 border-t border-border">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-serif mb-12">Why Choose Novalé?</h2>
+            <h2 className="text-2xl font-serif mb-12">Why Choose Novalé?</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <img 
@@ -197,7 +197,7 @@ const Services = () => {
 
         {/* CTA */}
         <section className="mt-32 pt-32 border-t border-border text-center">
-          <h2 className="text-4xl font-serif mb-6">Ready to start your renovation?</h2>
+          <h2 className="text-2xl font-serif mb-6">Ready to start your renovation?</h2>
           <p className="text-muted-foreground mb-10 max-w-2xl mx-auto">
             Get a free online estimate and discover how Novalé can create your dream space
           </p>

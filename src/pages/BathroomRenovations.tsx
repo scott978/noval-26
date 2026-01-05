@@ -20,10 +20,10 @@ const BathroomRenovations = () => {
         />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="container mx-auto px-6 lg:px-12 text-center">
-            <h1 className="text-6xl lg:text-7xl font-serif leading-tight text-background fade-in mb-6">
+            <h1 className="text-3xl font-serif leading-tight text-background fade-in mb-6">
               Bathroom Renovations<br />Sydney
             </h1>
-            <p className="text-xl lg:text-2xl text-background/90 mb-12 max-w-3xl mx-auto">
+            <p className="text-lg text-background/90 mb-12 max-w-3xl mx-auto">
               Transform your bathroom into a stunning sanctuary with Sydney's most trusted renovation specialists
             </p>
             <NavLink
@@ -45,7 +45,7 @@ const BathroomRenovations = () => {
                 <Star key={i} className="w-10 h-10 fill-[#FBBC04] text-[#FBBC04]" />
               ))}
             </div>
-            <p className="text-2xl font-serif mb-8">Rated 5 Stars by Over 500 Happy Clients</p>
+            <p className="text-xl font-serif mb-8">Rated 5 Stars by Over 500 Happy Clients</p>
             <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12">
               <div className="flex items-center gap-2">
                 <span className="text-[#4285F4] text-2xl font-bold">G</span>
@@ -85,8 +85,8 @@ const BathroomRenovations = () => {
     {/* Projects */}
       <section className="py-32 px-6 lg:px-12 bg-secondary/30">
         <div className="container mx-auto">
-          <h2 className="text-5xl font-serif mb-6 text-center">Recent Projects</h2>
-          <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+          <h2 className="text-2xl font-serif mb-6 text-center">Recent Projects</h2>
+          <p className="text-lg text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
             See how we've transformed bathrooms across Sydney
           </p>
 
@@ -105,7 +105,7 @@ const BathroomRenovations = () => {
                   />
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300" />
                 </div>
-                <h3 className="text-2xl font-serif mb-2">{project.title}</h3>
+                <h3 className="text-xl font-serif mb-2">{project.title}</h3>
                 <p className="text-base text-muted-foreground mb-1">{project.location} • {project.type}</p>
                 <p className="text-base text-brand-teal">{project.budget}</p>
               </div>
@@ -117,7 +117,7 @@ const BathroomRenovations = () => {
     {/* Social Proof - Testimonials */}
     <section className="py-32 px-6 lg:px-12 bg-background">
       <div className="container mx-auto">
-        <h2 className="text-5xl font-serif mb-16 text-center">What Our Clients Say</h2>
+        <h2 className="text-2xl font-serif mb-16 text-center">What Our Clients Say</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
@@ -160,8 +160,8 @@ const BathroomRenovations = () => {
       {/* Pricing & Timeframe */}
       <section className="py-32 px-6 lg:px-12">
         <div className="container mx-auto">
-          <h2 className="text-5xl font-serif mb-6 text-center">Pricing & Timeframe</h2>
-          <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+          <h2 className="text-2xl font-serif mb-6 text-center">Pricing & Timeframe</h2>
+          <p className="text-lg text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
             Transparent pricing guides for every bathroom renovation
           </p>
 
@@ -216,7 +216,7 @@ const BathroomRenovations = () => {
               <div key={index} className="p-6 border-2 border-border hover:border-brand-teal bg-background transition-all duration-300 fade-in">
                 <h3 className="text-xl font-serif mb-3">{tier.title}</h3>
                 <div className="mb-4">
-                  <p className="text-2xl font-bold text-brand-teal mb-1">{tier.price}</p>
+                  <p className="text-xl font-bold text-brand-teal mb-1">{tier.price}</p>
                   <p className="text-sm text-muted-foreground flex items-center gap-2">
                     <Clock className="w-4 h-4" />
                     {tier.timeframe}
@@ -249,8 +249,8 @@ const BathroomRenovations = () => {
       {/* Service Areas */}
       <section className="py-32 px-6 lg:px-12">
         <div className="container mx-auto">
-          <h2 className="text-5xl font-serif mb-6 text-center">Areas We Service</h2>
-          <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+          <h2 className="text-2xl font-serif mb-6 text-center">Areas We Service</h2>
+          <p className="text-lg text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
             Novalé Bathrooms have a talented team of bathroom renovators servicing clients throughout all of Sydney
           </p>
 
@@ -282,7 +282,7 @@ const BathroomRenovations = () => {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center text-white">
                     <MapPin className="w-8 h-8 mx-auto mb-3" />
-                    <h3 className="text-2xl font-serif">{area.name}</h3>
+                    <h3 className="text-xl font-serif">{area.name}</h3>
                   </div>
                 </div>
               </NavLink>
@@ -304,8 +304,8 @@ const BathroomRenovations = () => {
       {/* FAQs */}
       <section className="py-32 px-6 lg:px-12 bg-secondary/30">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-5xl font-serif mb-6 text-center">Frequently Asked Questions</h2>
-          <p className="text-xl text-center text-muted-foreground mb-16">
+          <h2 className="text-2xl font-serif mb-6 text-center">Frequently Asked Questions</h2>
+          <p className="text-lg text-center text-muted-foreground mb-16">
             Everything you need to know about bathroom renovations
           </p>
 
@@ -368,7 +368,7 @@ const BathroomRenovations = () => {
       {/* Final CTA */}
       <section className="py-32 px-6 lg:px-12 bg-primary text-primary-foreground">
         <div className="container mx-auto text-center">
-          <h2 className="text-5xl font-serif mb-6">Start Your Bathroom Renovation Today</h2>
+          <h2 className="text-2xl font-serif mb-6">Start Your Bathroom Renovation Today</h2>
           <p className="text-lg mb-10 max-w-2xl mx-auto opacity-90">
             Book your free consultation and receive a transparent quote with 3D renders. No obligation, just expert advice.
           </p>

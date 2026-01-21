@@ -124,12 +124,12 @@ const AreasWeService = () => {
       </section>
 
       {/* Not Sure Section */}
-      <section className="bg-secondary/30 py-24">
-        <div className="container mx-auto px-6 lg:px-12 text-center">
+      <section className="bg-primary py-24">
+        <div className="container mx-auto px-6 lg:px-12 text-center text-primary-foreground">
           <h2 className="text-2xl font-serif mb-6">
             Not sure if you're within our coverage area?
           </h2>
-          <p className="text-base text-muted-foreground max-w-3xl mx-auto mb-8">
+          <p className="text-base max-w-3xl mx-auto mb-8 opacity-90">
             We're happy to check your area and talk to you about how we can help transform 
             your bathroom, kitchen or laundry into a comfortable and beautiful space, so click 
             the button below or give us a call on 1800 NOVALÉ to find out if we can renovate 
@@ -138,13 +138,13 @@ const AreasWeService = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <NavLink
               to="/contact"
-              className="inline-block text-sm tracking-wide px-8 py-3 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+              className="inline-block text-sm tracking-wide px-8 py-3 bg-background text-foreground hover:bg-background/90 transition-colors"
             >
               General Enquiries
             </NavLink>
             <a
               href="tel:1800668253"
-              className="inline-flex items-center gap-2 text-sm tracking-wide px-8 py-3 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+              className="inline-flex items-center gap-2 text-sm tracking-wide px-8 py-3 border border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-colors"
             >
               <Phone size={16} />
               Call 1800 NOVALÉ

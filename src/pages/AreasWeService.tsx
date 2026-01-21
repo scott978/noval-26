@@ -14,16 +14,16 @@ import westernSydneyImg from "@/assets/areas/western-sydney.jpg";
 
 const AreasWeService = () => {
   const serviceAreas = [
-    { name: "South Sydney", slug: "south-sydney", image: southSydneyImg },
-    { name: "Kellyville & Richmond", slug: "kellyville-richmond", image: kellyvilleRichmondImg },
-    { name: "Eastern Suburbs", slug: "eastern-suburbs", image: easternSuburbsImg },
     { name: "Northern Beaches", slug: "northern-beaches", image: northernBeachesImg },
-    { name: "Sutherland Shire", slug: "sutherland-shire", image: sutherlandShireImg },
-    { name: "Hills District", slug: "hills-district", image: hillsDistrictImg },
-    { name: "St George", slug: "st-george", image: stGeorgeImg },
-    { name: "Inner West", slug: "inner-west", image: innerWestImg },
+    { name: "Eastern Suburbs", slug: "eastern-suburbs", image: easternSuburbsImg },
     { name: "Upper North Shore", slug: "upper-north-shore", image: upperNorthShoreImg },
     { name: "Lower North Shore", slug: "lower-north-shore", image: lowerNorthShoreImg },
+    { name: "Inner West", slug: "inner-west", image: innerWestImg },
+    { name: "Hills District", slug: "hills-district", image: hillsDistrictImg },
+    { name: "St George", slug: "st-george", image: stGeorgeImg },
+    { name: "Sutherland Shire", slug: "sutherland-shire", image: sutherlandShireImg },
+    { name: "South Sydney", slug: "south-sydney", image: southSydneyImg },
+    { name: "Kellyville & Richmond", slug: "kellyville-richmond", image: kellyvilleRichmondImg },
     { name: "Western Sydney", slug: "western-sydney", image: westernSydneyImg },
   ];
 
@@ -41,12 +41,27 @@ const AreasWeService = () => {
     {
       name: "Elle",
       location: "Kellyville Ridge",
-      quote: "We are ecstatic, it's amazing! The detail they went to, they way it was constructed, we couldn't be happier."
+      quote: "We are ecstatic, it's amazing! The detail they went to, the way it was constructed, we couldn't be happier."
     },
     {
       name: "Candace",
       location: "Mosman NSW",
       quote: "Out of 10 I'm going to say 11. We're stoked, we couldn't be happier. I walk in there every morning and I feel like I live in a hotel."
+    },
+    {
+      name: "Jen",
+      location: "Hills District NSW",
+      quote: "The tradesmen were highly skilled. I can't rate Steve and his whole team highly enough. They showed great respect for our home."
+    },
+    {
+      name: "Tim & Julie",
+      location: "Roseville Chase",
+      quote: "We love it. We're extremely happy with it. It came out much better than we thought it would."
+    },
+    {
+      name: "Rhonda",
+      location: "Double Bay NSW",
+      quote: "Besides doing a great job, they were lovely people to work with. The team are nice, honest, diligent. When they said they'd do something, it got done."
     },
     {
       name: "Bill & Robyn Raeside",
@@ -69,7 +84,7 @@ const AreasWeService = () => {
         </h1>
         <p className="text-lg text-muted-foreground max-w-3xl fade-in">
           Novalé has a talented team of renovators servicing clients throughout all of Sydney. 
-          To find out more about the areas we service, simply click on your location below.
+          We service houses and apartments across the greater Sydney metropolitan area.
         </p>
       </section>
 
@@ -116,7 +131,9 @@ const AreasWeService = () => {
           </h2>
           <p className="text-base text-muted-foreground max-w-3xl mx-auto mb-8">
             We're happy to check your area and talk to you about how we can help transform 
-            your bathroom, kitchen or laundry into a comfortable and beautiful space.
+            your bathroom, kitchen or laundry into a comfortable and beautiful space, so click 
+            the button below or give us a call on 1800 NOVALÉ to find out if we can renovate 
+            your space (we probably can!).
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <NavLink

@@ -1,7 +1,9 @@
 import { NavLink } from "react-router-dom";
+import { Award, Heart, Sparkles, User } from "lucide-react";
 import heroImage from "@/assets/about-hero.jpg";
 
 const Team = () => {
+  const getInitials = (name: string) => name.charAt(0);
   const leadership = [
     {
       name: "Steve",
@@ -142,12 +144,19 @@ const Team = () => {
           <h2 className="text-2xl font-serif mb-12 text-center">Leadership & Management</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {leadership.map((member, index) => (
-              <div key={index} className="bg-background p-8 fade-in">
-                <h3 className="text-xl font-serif mb-2">{member.name}</h3>
-                <p className="text-sm text-brand-teal mb-4">{member.role}</p>
-                <p className="text-base text-muted-foreground leading-relaxed">
-                  {member.description}
-                </p>
+              <div key={index} className="bg-background p-8 fade-in flex gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center">
+                    <span className="text-2xl font-serif text-primary">{getInitials(member.name)}</span>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-serif mb-2">{member.name}</h3>
+                  <p className="text-sm text-brand-teal mb-4">{member.role}</p>
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    {member.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -161,6 +170,9 @@ const Team = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {designTeam.map((member, index) => (
               <div key={index} className="border border-border p-6 fade-in">
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <span className="text-xl font-serif text-primary">{getInitials(member.name)}</span>
+                </div>
                 <h3 className="text-xl font-serif mb-2">{member.name}</h3>
                 <p className="text-sm text-brand-teal mb-4">{member.role}</p>
                 <p className="text-base text-muted-foreground leading-relaxed">
@@ -179,6 +191,9 @@ const Team = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projectDelivery.map((member, index) => (
               <div key={index} className="bg-background p-6 fade-in">
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <span className="text-xl font-serif text-primary">{getInitials(member.name)}</span>
+                </div>
                 <h3 className="text-xl font-serif mb-2">{member.name}</h3>
                 <p className="text-sm text-brand-teal mb-4">{member.role}</p>
                 <p className="text-base text-muted-foreground leading-relaxed">
@@ -196,6 +211,9 @@ const Team = () => {
           <h2 className="text-2xl font-serif mb-12 text-center">What Drives Us</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center fade-in">
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                <Award className="w-8 h-8 text-primary" />
+              </div>
               <h3 className="text-xl font-serif mb-4">Excellence</h3>
               <p className="text-base text-muted-foreground leading-relaxed">
                 We're committed to delivering the highest quality workmanship in every project, 
@@ -203,6 +221,9 @@ const Team = () => {
               </p>
             </div>
             <div className="text-center fade-in">
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                <Heart className="w-8 h-8 text-primary" />
+              </div>
               <h3 className="text-xl font-serif mb-4">Integrity</h3>
               <p className="text-base text-muted-foreground leading-relaxed">
                 Honest communication and transparent processes are at the heart of how we work 
@@ -210,6 +231,9 @@ const Team = () => {
               </p>
             </div>
             <div className="text-center fade-in">
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                <Sparkles className="w-8 h-8 text-primary" />
+              </div>
               <h3 className="text-xl font-serif mb-4">Passion</h3>
               <p className="text-base text-muted-foreground leading-relaxed">
                 We love what we do, and it shows in every detail of your renovation. Your dream 

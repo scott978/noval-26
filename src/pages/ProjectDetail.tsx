@@ -85,43 +85,46 @@ const ProjectDetail = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Header */}
-      <section className="relative h-[60vh] min-h-[500px]">
-        <img
-          src={project.images[0]}
-          alt={project.title}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="absolute inset-0 flex flex-col justify-end pb-16">
-          <div className="container mx-auto px-6 lg:px-12">
-            {/* Breadcrumb */}
-            <nav className="flex items-center gap-2 text-sm text-white/70 mb-8">
-              <NavLink to="/" className="hover:text-white transition-colors flex items-center gap-1">
-                <Home className="w-4 h-4" />
-                <span>Home</span>
-              </NavLink>
-              <span>/</span>
-              <NavLink to="/projects" className="hover:text-white transition-colors">
-                Our Projects
-              </NavLink>
-              <span>/</span>
-              <NavLink to={categoryPath} className="hover:text-white transition-colors">
-                {project.category}
-              </NavLink>
-              <span>/</span>
-              <span className="text-white">{project.title}</span>
-            </nav>
-            
-            <p className="text-sm text-white/70 tracking-widest uppercase mb-3">
-              {project.category} Renovation
-            </p>
-            <h1 className="text-3xl text-white mb-4">{project.title}</h1>
-            <p className="text-xl text-primary font-serif italic mb-6">{project.mood}</p>
-            <p className="text-white/80 max-w-2xl text-lg leading-relaxed">
-              {project.description}
-            </p>
-          </div>
+      {/* Hero Image */}
+      <section className="pt-24">
+        <div className="w-full h-[50vh] min-h-[400px]">
+          <img
+            src={project.images[0]}
+            alt={project.title}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </section>
+
+      {/* Project Info */}
+      <section className="py-16">
+        <div className="container mx-auto px-6 lg:px-12">
+          {/* Breadcrumb */}
+          <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
+            <NavLink to="/" className="hover:text-foreground transition-colors flex items-center gap-1">
+              <Home className="w-4 h-4" />
+              <span>Home</span>
+            </NavLink>
+            <span>/</span>
+            <NavLink to="/projects" className="hover:text-foreground transition-colors">
+              Our Projects
+            </NavLink>
+            <span>/</span>
+            <NavLink to={categoryPath} className="hover:text-foreground transition-colors">
+              {project.category}
+            </NavLink>
+            <span>/</span>
+            <span className="text-foreground">{project.title}</span>
+          </nav>
+          
+          <p className="text-sm text-muted-foreground tracking-widest uppercase mb-3">
+            {project.category} Renovation
+          </p>
+          <h1 className="text-3xl mb-4">{project.title}</h1>
+          <p className="text-xl text-primary font-serif italic mb-6">{project.mood}</p>
+          <p className="text-muted-foreground max-w-2xl text-lg leading-relaxed">
+            {project.description}
+          </p>
         </div>
       </section>
 

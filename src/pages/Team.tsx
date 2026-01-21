@@ -143,20 +143,16 @@ const Team = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl font-serif mb-12 text-center">Leadership & Management</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {leadership.map((member, index) => (
-              <div key={index} className="bg-background p-8 fade-in flex gap-6">
-                <div className="flex-shrink-0">
-                  <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center">
-                    <span className="text-2xl font-serif text-primary">{getInitials(member.name)}</span>
-                  </div>
+          {leadership.map((member, index) => (
+              <div key={index} className="bg-background p-8 fade-in">
+                <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <span className="text-2xl font-serif text-primary">{getInitials(member.name)}</span>
                 </div>
-                <div>
-                  <h3 className="text-xl font-serif mb-2">{member.name}</h3>
-                  <p className="text-sm text-brand-teal mb-4">{member.role}</p>
-                  <p className="text-base text-muted-foreground leading-relaxed">
-                    {member.description}
-                  </p>
-                </div>
+                <h3 className="text-xl font-serif mb-2">{member.name}</h3>
+                <p className="text-sm text-brand-teal mb-4">{member.role}</p>
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  {member.description}
+                </p>
               </div>
             ))}
           </div>

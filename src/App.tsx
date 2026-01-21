@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
+import ProjectDetail from "./pages/ProjectDetail";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import WhyChooseUs from "./pages/WhyChooseUs";
@@ -44,6 +45,7 @@ const App = () => (
           <Route path="/who-is-novale" element={<WhoIsNovale />} />
           <Route path="/team" element={<Team />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:slug" element={<ProjectDetail />} />
           <Route path="/bathroom-projects" element={<BathroomProjects />} />
           <Route path="/bathroom-renovations" element={<BathroomRenovations />} />
           <Route path="/kitchen-renovations" element={<KitchenRenovations />} />

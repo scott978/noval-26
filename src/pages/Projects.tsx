@@ -9,86 +9,98 @@ type ProjectCategory = "all" | "bathroom" | "kitchen" | "laundry";
 
 const projects = [
   { 
-    id: 1, 
+    id: 1,
+    slug: "stanmore",
     image: projectBathroom, 
-    title: "Vaucluse Bathroom", 
-    location: "Vaucluse, Sydney", 
+    title: "Stanmore", 
+    location: "Stanmore, Sydney", 
     category: "bathroom" as ProjectCategory 
   },
   { 
-    id: 2, 
+    id: 2,
+    slug: "mosman",
     image: projectKitchen, 
-    title: "Mosman Kitchen", 
+    title: "Mosman", 
     location: "Mosman, Sydney", 
     category: "kitchen" as ProjectCategory 
   },
   { 
-    id: 3, 
+    id: 3,
+    slug: "double-bay",
     image: projectLaundry, 
-    title: "Double Bay Laundry", 
+    title: "Double Bay", 
     location: "Double Bay, Sydney", 
     category: "laundry" as ProjectCategory 
   },
   { 
-    id: 4, 
+    id: 4,
+    slug: "randwick",
     image: projectBathroom, 
-    title: "Bellevue Hill Ensuite", 
-    location: "Bellevue Hill, Sydney", 
+    title: "Randwick", 
+    location: "Randwick, Sydney", 
     category: "bathroom" as ProjectCategory 
   },
   { 
     id: 5, 
+    slug: "rose-bay",
     image: projectKitchen, 
-    title: "Rose Bay Kitchen", 
+    title: "Rose Bay", 
     location: "Rose Bay, Sydney", 
     category: "kitchen" as ProjectCategory 
   },
   { 
-    id: 6, 
+    id: 6,
+    slug: "paddington",
     image: projectLaundry, 
-    title: "Paddington Laundry", 
+    title: "Paddington", 
     location: "Paddington, Sydney", 
     category: "laundry" as ProjectCategory 
   },
   { 
-    id: 7, 
+    id: 7,
+    slug: "bondi-beach",
     image: projectBathroom, 
-    title: "Bondi Beach Bathroom", 
+    title: "Bondi Beach", 
     location: "Bondi Beach, Sydney", 
     category: "bathroom" as ProjectCategory 
   },
   { 
-    id: 8, 
+    id: 8,
+    slug: "surry-hills",
     image: projectKitchen, 
-    title: "Surry Hills Kitchen", 
+    title: "Surry Hills", 
     location: "Surry Hills, Sydney", 
     category: "kitchen" as ProjectCategory 
   },
   { 
-    id: 9, 
+    id: 9,
+    slug: "darlinghurst",
     image: projectLaundry, 
-    title: "Darlinghurst Laundry", 
+    title: "Darlinghurst", 
     location: "Darlinghurst, Sydney", 
     category: "laundry" as ProjectCategory 
   },
   { 
-    id: 10, 
+    id: 10,
+    slug: "coogee",
     image: projectBathroom, 
-    title: "Coogee Master Bathroom", 
+    title: "Coogee", 
     location: "Coogee, Sydney", 
     category: "bathroom" as ProjectCategory 
   },
   { 
-    id: 11, 
+    id: 11,
+    slug: "glebe",
     image: projectKitchen, 
-    title: "Glebe Modern Kitchen", 
+    title: "Glebe", 
     location: "Glebe, Sydney", 
     category: "kitchen" as ProjectCategory 
   },
   { 
-    id: 12, 
+    id: 12,
+    slug: "pyrmont",
     image: projectLaundry, 
-    title: "Pyrmont Laundry Room", 
+    title: "Pyrmont", 
     location: "Pyrmont, Sydney", 
     category: "laundry" as ProjectCategory 
   },
@@ -245,7 +257,7 @@ const Projects = () => {
           {currentProjects.map((project) => (
             <NavLink
               key={project.id}
-              to={`/projects/${project.category}/${project.id}`}
+              to={`/projects/${project.slug}`}
               className="group block fade-in"
             >
               <div className="relative overflow-hidden mb-4">
